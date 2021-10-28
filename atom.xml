@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://socrates1100.github.io</id>
     <title>Socrates&apos; Blogs</title>
-    <updated>2021-10-28T15:52:24.049Z</updated>
+    <updated>2021-10-28T23:46:48.845Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://socrates1100.github.io"/>
     <link rel="self" href="https://socrates1100.github.io/atom.xml"/>
@@ -10,21 +10,6 @@
     <logo>https://socrates1100.github.io/images/avatar.png</logo>
     <icon>https://socrates1100.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Socrates&apos; Blogs</rights>
-    <entry>
-        <title type="html"><![CDATA[隐马尔科夫模型（HMM）]]></title>
-        <id>https://socrates1100.github.io/post/yin-ma-er-ke-fu-mo-xing-hmm/</id>
-        <link href="https://socrates1100.github.io/post/yin-ma-er-ke-fu-mo-xing-hmm/">
-        </link>
-        <updated>2021-10-28T10:31:15.000Z</updated>
-        <summary type="html"><![CDATA[<p>由于生信分析工作中很多软件算法使用到了隐马尔科夫模型，比如基因预测（GENSCAN）、功能基因组注释（ChromHMM），和群体单体型分型（Shapeit）。为了更好的理解工具背后的算法，这里想尝试学习并理解隐马尔科夫模型的基本原理。<br>
-<img src="https://socrates1100.github.io/post-images/1635417105575.png" alt="" loading="lazy"></p>
-]]></summary>
-        <content type="html"><![CDATA[<p>由于生信分析工作中很多软件算法使用到了隐马尔科夫模型，比如基因预测（GENSCAN）、功能基因组注释（ChromHMM），和群体单体型分型（Shapeit）。为了更好的理解工具背后的算法，这里想尝试学习并理解隐马尔科夫模型的基本原理。<br>
-<img src="https://socrates1100.github.io/post-images/1635417105575.png" alt="" loading="lazy"></p>
-<!-- more -->
-<p><strong>一、前言</strong></p>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[Socrates's Blog]]></title>
         <id>https://socrates1100.github.io/post/hello-world/</id>
