@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://socrates1100.github.io</id>
+    <id>http://localhost:4001</id>
     <title>Socrates&apos; Blogs</title>
-    <updated>2021-10-29T00:15:49.415Z</updated>
+    <updated>2021-10-29T00:19:54.829Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://socrates1100.github.io"/>
-    <link rel="self" href="https://socrates1100.github.io/atom.xml"/>
+    <link rel="alternate" href="http://localhost:4001"/>
+    <link rel="self" href="http://localhost:4001/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://socrates1100.github.io/images/avatar.png</logo>
-    <icon>https://socrates1100.github.io/favicon.ico</icon>
+    <logo>http://localhost:4001/images/avatar.png</logo>
+    <icon>http://localhost:4001/favicon.ico</icon>
     <rights>All rights reserved 2021, Socrates&apos; Blogs</rights>
     <entry>
         <title type="html"><![CDATA[Socrates's Blog]]></title>
-        <id>https://socrates1100.github.io/post/hello-world/</id>
-        <link href="https://socrates1100.github.io/post/hello-world/">
+        <id>http://localhost:4001/post/hello-world/</id>
+        <link href="http://localhost:4001/post/hello-world/">
         </link>
         <updated>2021-10-27T16:00:00.000Z</updated>
-        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://socrates1100.github.io/post-images/1635435563197.jpg" alt="" loading="lazy"></figure>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="http://localhost:4001/post-images/1635435563197.jpg" alt="" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[关于]]></title>
-        <id>https://socrates1100.github.io/post/关于博主/</id>
-        <link href="https://socrates1100.github.io/post/关于博主/">
+        <id>http://localhost:4001/post/关于博主/</id>
+        <link href="http://localhost:4001/post/关于博主/">
         </link>
         <updated>2021-10-26T11:09:48.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
