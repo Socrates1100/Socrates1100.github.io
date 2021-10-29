@@ -1,337 +1,730 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    
-    <meta charset="utf-8" />
-<title>
-    Friends | Socrates&#39; Blogs
-</title>
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-<meta http-equiv="x-dns-prefetch-control" content="on">
-<link rel="dns-prefetch" href="http://localhost:4001">
+  <meta charset="UTF-8" />
 
-<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<meta name="author" content="Socrates">
-<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="keywords" content="">
-<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<meta name="description" content="温故而知新">
+<meta name="theme-color" content="">
+<title>Socrates&#39; Blogs</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1635519223108">
+<link rel="stylesheet" href="/media/css/pisces.css">
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link
+  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xiangyi715/Gridea-Chic-Unique@1.0.3/assets/media/css/style.min.css" />
+<link href="/media/hljs/styles/github.css"
+  rel="stylesheet">
 
-<link rel="stylesheet" href="http://localhost:4001/styles/main.css" />
+<link rel="stylesheet" href="/styles/main.css">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xiangyi715/Gridea-Chic-Unique@1.0.2/assets/media/css/tags.css" />
+<script src="/media/js/jquery.js"></script>
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 
-<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
 
 
-<!-- 原  
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
--->
-<!--
-<script src="https://src.wangriyu.wang/lib/Aplayer/APlayer.min.js"></script>
--->
-<script src="https://cdn.jsdelivr.net/gh/xiangyi715/Gridea-Chic-Unique@1.0.3/assets/media/script/APlayer.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
-    
 
-	<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 
-        <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
 
-	<script src="https://cdn.jsdelivr.net/gh/xiangyi715/Gridea-Chic-Unique@1.0.3/assets/media/script/tocbot.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/xiangyi715/Gridea-Chic-Unique@1.0.3/assets/media/script/script.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/xiangyi715/Gridea-Chic-Unique@1.0.3/assets/media/script/icon.min.js"></script>
-
-	<script src="https://cdn.jsdelivr.net/gh/xiangyi715/Gridea-Chic-Unique@1.0.2/assets/media/script/loading.js" />
-
-        <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/highlight.min.js"></script>
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/atelier-estuary-dark.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
-        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
-                
-			<!-- 百度统计 -->
-		    
-
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xiangyi715/Gridea-Chic-Unique@1.0.3/assets/media/live2d/css/live2d.css" />
 
 </head>
+
 <body>
-    <div class="wrapper" id="nav">
-        <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo">
-                <a href="http://localhost:4001">
-                    Socrates&#39; Blogs
-                </a>
-            </div>
-
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/post/hello-world/">
-                        首页
-                    </a>
-                    
-                    <a class="menu-item" href="/archives">
-                        归档
-                    </a>
-                    
-                    <a class="menu-item" href="/tags">
-                        标签
-                    </a>
-                    
-                    <a class="menu-item" href="/post/about">
-                        关于
-                    </a>
-                    
-                        <input id="switch_default" type="checkbox" class="switch_default">
-                        <label for="switch_default" class="toggleBtn"></label>
-            </div>
-
-            <form id="gridea-search-form" data-update="1635515716234" action="/search/index.html">
-                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="🔍Search..." style = "-webkit-border-radius:8px;
-				   -moz-border-radius:8px;
-				   -ms-border-radius:8px;
-				   -o-border-radius:8px;
-				   border-radius:8px;
-				   border:1px solid #e7f3f9;
-				   outline:none;
-				   padding:7px 0px;
-				   BACKGROUND-COLOR: transparent">
-            </form>
-        </div>
-
-    </nav>
-
+  <div class="head-top-line"></div>
+  <div class="header-box">
     
-        <nav class="navbar-mobile" id="nav-mobile">
-            <div class="container">
-                <div class="navbar-header">
-                    <div>
-                        <a href="http://localhost:4001">
-                            Socrates&#39; Blogs
-                        </a>
-                        <!--en-->
-                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
-                        <!--zh-->
-                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;\u6697\u9ED1</a>
-                    </div>
-                    <form id="gridea-search-form" data-update="1635515716234" action="/search/index.html">
-                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="🔍Search..." style = "-webkit-border-radius:8px;
-				   -moz-border-radius:8px;
-				   -ms-border-radius:8px;
-				   -o-border-radius:8px;
-				   border-radius:8px;
-				   border:1px solid #62a3d3;
-				   outline:none;
-				   padding:7px 0px;
-				   BACKGROUND-COLOR: transparent">
-                    </form>
-                    <!--en-->
-                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
-                    <!--zh-->
-                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+<div class="pisces">
+  <header class="header  ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>Socrates&#39; Blogs</span>
+            </a>  
+          
+        </div>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/hello-world//" target="_self">
+                  <i class="fa fa-globe"></i> 首页
+                </a>
+              
+            </li>
+          
+            
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/archives/" target="_self">
+                  <i class="fa fa-archive"></i> 归档
+                </a>
+              
+            </li>
+          
+            
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/tags/" target="_self">
+                  <i class="fa fa-tags"></i> 标签
+                </a>
+              
+            </li>
+          
+            
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/about/" target="_self">
+                  <i class="fa fa-user"></i> 关于
+                </a>
+              
+            </li>
+          
+          
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
 
-                </div>
-                <div class="menu" id="mobile-menu">
-                    
-                        <a class="menu-item" href="/post/hello-world/">
-                            首页
-                        </a>
-                        
-                        <a class="menu-item" href="/archives">
-                            归档
-                        </a>
-                        
-                        <a class="menu-item" href="/tags">
-                            标签
-                        </a>
-                        
-                        <a class="menu-item" href="/post/about">
-                            关于
-                        </a>
-                        
-                </div>
-            </div>
-        </nav>
-</header>
+<script type="text/javascript"> 
+ 
+  let showNav = true;
 
-<style>
-input:focus{
-/* 
-            outline: 0;
-	    border: 1px solid #f95d5d;
-	    box-shadow: 0px 0px 10px 0px #f95d5d;
-*/
-	    border-style:solid;  
-            border-color: #03a9f4;  
-            box-shadow: 0 0 15px #03a9f4;
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
   }
-</style>
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+      <div
+        class="section-layout pisces ">
+        <div class="section-layout-wrapper">
+          <div id="sidebarMeta" class="sidebar">
+    
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name"></p>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">2</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">0</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+  
+  
+
+  
+
+
+
+</div>
+</div>
+<script>
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = '';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
+      }
+    });
+  }
+  </script>
+            <div class="section-box pisces box-shadow-wrapper">
+              <section class="friends-section bg-color slide-down-in">
+                <div class="firends-box" align="center">
+                  <h1 class="firends-title" itemprop="name headline">
+                    
+                  </h1>
+                  
+                </div>
+                <hr>
+                <div style="text-align:center">
+                  <span class="with-love">
+                    <i class="fa fa-heart"></i>
+                  </span>
+                  <span class="language" data-lan="leave-message">如需添加友链,可以在关于中找到我的联系方式告知我</span>
+                  <span class="with-love">
+                    <i class="fa fa-heart"></i>
+                  </span>
+                </div>
+                <hr>
+                <div class="friends-note">
+                  <p><strong class="language" data-lan="format">友链格式：</strong></p>
+                  <ul>
+                    <li><span class="language" data-lan="site-name">网站名称：</span>
+                      Socrates&#39; Blogs
+                    </li>
+                    <li><span class="language" data-lan="site-link">网站地址：</span><a href="https://www.yuzhang.wang/"
+                        data-pjax-state="">https://www.yuzhang.wang</a></li>
+                    <li><span class="language" data-lan="site-desc">网站描述：</span>
+                      温故而知新
+                    </li>
+                    <li><span class="language" data-lan="site-img">网站头像：</span>
+                      <a
+                        href="https://cdn.jsdelivr.net/gh/YuZhangWang/Creative_pictures01@main/img/20210907012640.png">https://cdn.jsdelivr.net/gh/YuZhangWang/Creative_pictures01@main/img/20210907012640.png</a>
+                    </li>
+                  </ul>
+                </div>
+                
+  
+    
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
 
 <script>
+  var gitalk = new Gitalk({
+    clientID: '0d86584f299e8b2de15e',
+    clientSecret: 'b152ace99965ddd80f563c3bd6cac47082c943b5',
+    repo: 'socrates1100.github.io',
+    owner: 'Socrates',
+    admin: ['Socrates'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+  gitalk.render('gitalk-container')
+</script>
+    
+    
+  
 
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementById("menu-toggle-en");
-        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+              </section>
+            </div>
+        </div>
+      </div>
+      <div class="footer-box">
+  <footer class="footer">
+    <center>
+      已运行:<span id="run_time"></span>
+      <span class="post-meta-divider">|</span>
+      已咕咕:<span id="gugu_time"></span>
+    </center>
 
-        var mobileMenu = document.getElementById("mobile-menu");
-        if (toggleMenu.display != "none") {
-            if (toggleMenu.classList.contains("active")) {
-                toggleMenu.classList.remove("active")
-                mobileMenu.classList.remove("active")
+    总字数:<span id="word_count"></span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_pv">浏览数:<span id="busuanzi_value_site_pv"></span> 次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">访客数:<span id="busuanzi_value_site_uv"></span> 人</span>
+
+    <script>
+      function runTime() {
+        str = "";
+        BirthDay = new Date("January 30,2019");
+        today = new Date();
+        timeold = today.getTime() - BirthDay.getTime();
+        msPerDay = 24 * 60 * 60 * 1000;
+        e_daysold = timeold / msPerDay;
+        daysold = Math.floor(e_daysold);
+        str += daysold + "天";
+        return str;
+      }
+      setInterval(function () {
+        $("#run_time").html(runTime());
+      }, 1000);
+    </script>
+
+    <script>
+      function guguTime() {
+        str = "";
+        guguDay = new Date(document.lastModified);
+        today = new Date();
+        timeold = today.getTime() - guguDay.getTime();
+        msPerDay = 24 * 60 * 60 * 1000;
+        e_daysold = timeold / msPerDay;
+        daysold = Math.floor(e_daysold);
+        str += daysold + "天";
+        return str;
+      }
+      setInterval(function () {
+        $("#gugu_time").html(guguTime());
+      }, 1000);
+    </script>
+
+    <script>
+      function site() {
+
+        return 275.6 + "k";
+      };
+
+      setInterval(function () {
+        $("#word_count").html(site());
+      }, 1000);
+    </script>
+
+    <div class="copyright">
+      Created by
+      <a href="https://github.com/YuZhangWang" target="_blank">YuZhangWang</a>
+      ©2019-Present
+      <span class="post-meta-divider">|</span>
+      Powered By
+      <a href="https://github.com/YuZhangWang/YuZhangWang.github.io" target="_blank">Github</a>
+      <span class="post-meta-divider">|</span>
+      Theme By
+      <a href="https://github.com/theme-next/hexo-theme-next" target="_blank">Next</a>
+    </div>
+    <div class="poweredby">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+  </footer>
+  
+    
+        <div class="pisces back-to-top" id="back_to_top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span class="scrollpercent"> <span id="back_to_top_text">0</span>% </span>
+            
+        </div>
+        
+          
+            
+                
+                  
+                        
+                          
+
+                            
+</div>
+<script>
+  let sideBarOpen = "sidebar-open";
+  let body = document.body;
+  let back2Top = document.querySelector("#back_to_top"),
+    back2TopText = document.querySelector("#back_to_top_text"),
+    drawerBox = document.querySelector("#drawer_box"),
+    rightSideBar = document.querySelector(".sidebar"),
+    viewport = document.querySelector("body");
+
+  function scrollAnimation(currentY, targetY) {
+    let needScrollTop = targetY - currentY;
+    let _currentY = currentY;
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10);
+      _currentY += dist;
+      window.scrollTo(_currentY, currentY);
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY);
+      } else {
+        window.scrollTo(_currentY, targetY);
+      }
+    }, 1);
+  }
+
+  back2Top.addEventListener("click", function (e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+
+  window.addEventListener("scroll", function (e) {
+    let percent =
+      (document.scrollingElement.scrollTop /
+        (document.scrollingElement.scrollHeight -
+          document.scrollingElement.clientHeight)) *
+      100;
+    if (percent > 1 && !back2Top.classList.contains("back-top-active")) {
+      back2Top.classList.add("back-top-active");
+    }
+    if (percent == 0) {
+      back2Top.classList.remove("back-top-active");
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+  let hasCacu = false;
+  window.addEventListener("resize", function (e) {
+    calcuHeight();
+  });
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (
+      (!hasCacu && back2Top.classList.contains("pisces")) ||
+      back2Top.classList.contains("gemini")
+    ) {
+      let sideBar = document.querySelector(".sidebar");
+      let navUl = document.querySelector("#site_nav");
+      sideBar.style =
+        "margin-top:" + (navUl.offsetHeight + navUl.offsetTop + 15) + "px;";
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+
+  let open = false,
+    MOTION_TIME = 300,
+    RIGHT_MOVE_DIS = "320px";
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll(".right-motion");
+    let right = drawerBox.classList.contains("right");
+
+    let transitionDir = right
+      ? "transition.slideRightIn"
+      : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS,
+      };
+      closeProp = {
+        paddingRight: "0px",
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS,
+      };
+      closeProp = {
+        paddingLeft: "0px",
+      };
+    }
+
+    drawerBox.onclick = function () {
+      open = !open;
+      jQuery.Velocity(rightSideBar, "stop");
+      jQuery.Velocity(viewport, "stop");
+      jQuery.Velocity(rightMotions, "stop");
+      if (open) {
+        jQuery.Velocity(
+          rightSideBar,
+          {
+            width: RIGHT_MOVE_DIS,
+          },
+          {
+            duration: MOTION_TIME,
+            begin: function () {
+              jQuery.Velocity(rightMotions, transitionDir, {});
+            },
+          }
+        );
+        jQuery.Velocity(viewport, openProp, {
+          duration: MOTION_TIME,
+        });
+      } else {
+        jQuery.Velocity(
+          rightSideBar,
+          {
+            width: "0px",
+          },
+          {
+            duration: MOTION_TIME,
+            begin: function () {
+              jQuery.Velocity(rightMotions, {
+                opacity: 0,
+              });
+            },
+          }
+        );
+        jQuery.Velocity(viewport, closeProp, {
+          duration: MOTION_TIME,
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle("muse-line");
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    };
+  }
+
+  // 链接跳转
+  let newWindow = "";
+  if (newWindow === "true") {
+    let links = document.querySelectorAll(".post-body a");
+    links.forEach((item) => {
+      if (!item.classList.contains("btn")) {
+        item.setAttribute("target", "_blank");
+      }
+    });
+  }
+
+  let faSearch = document.querySelector("#fa_search");
+  faSearch &&
+    faSearch.addEventListener("click", function () {
+      document.querySelector("#search_mask").style = "";
+    });
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+
+  // 离开当前页title变化
+  var leaveTitle = "";
+  var normal_title = document.title;
+  if (leaveTitle) {
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState == "hidden") {
+        normal_title = document.title;
+        document.title = leaveTitle;
+      } else {
+        document.title = normal_title;
+      }
+    });
+  }
+</script>
+
+<link rel="stylesheet" href="/media/css/jquery.fancybox.css" />
+<script src="/media/js/jquery.fancybox.js"></script>
+
+<script>
+  let images = document.querySelectorAll(".section img");
+  images.forEach((image) => {
+    var parent = image.parentElement;
+    var next = image.nextElementSibling;
+    parent.removeChild(image);
+    var aelem = document.createElement("a");
+    aelem.href = image.src;
+    aelem.dataset["fancybox"] = "images";
+    aelem.dataset["rel"] = "fancybox-button";
+    aelem.classList.add("fancybox");
+    aelem.appendChild(image);
+    parent.insertBefore(aelem, next);
+  });
+</script>
+  </div>
+</body>
+
+      <input hidden id="copy" />
+      <script>
+        !function () {
+          let times = document.querySelectorAll('.publish-time');
+          for (let i = 0; i < times.length; i++) {
+            let date = times[i].dataset.t;
+            let time = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);
+            if (time < 60) {
+              str = time + '秒之前';
+            } else if (time < 3600) {
+              str = Math.floor(time / 60) + '分钟之前';
+            } else if (time >= 3600 && time < 86400) {
+              str = Math.floor(time / 3600) + '小时之前';
+            } else if (time >= 86400 && time < 259200) {
+              str = Math.floor(time / 86400) + '天之前';
             } else {
-                toggleMenu.classList.add("active")
-                mobileMenu.classList.add("active")
+              str = times[i].textContent;
             }
-        } else if (toggleMenu_zh.display != "none") {
-            if (toggleMenu_zh.classList.contains("active")) {
-                toggleMenu_zh.classList.remove("active")
-                mobileMenu.classList.remove("active")
-            } else {
-                toggleMenu_zh.classList.add("active")
-                mobileMenu.classList.add("active")
-            }
+            times[i].textContent = str;
+          }
+        }();
+      </script>
+
+      <script>
+        let language = '';
+        if (language !== '') {
+          let map = new Map();
+          if (language === 'en') {
+            map.set('search', 'Search');
+            map.set('category', 'Categories');
+            map.set('article', 'Articles');
+            map.set('tag', 'Tags');
+            map.set('top', 'Top');
+            map.set('publish', 'published');
+            map.set('minute', ' minutes');
+            map.set('read-more', 'Read More');
+            map.set('view', 'View');
+            map.set('words', ' words');
+            map.set('category-in', 'category in');
+            map.set('preview', 'Meta');
+            map.set('index', 'Toc');
+            map.set('no-archives', "You haven't created yet");
+            map.set('archives', " articles in total");
+            map.set('cloud-tags', " tags in total");
+            map.set('copyright', "Copyright: ");
+            map.set('author', "Author: ");
+            map.set('link', "Link: ");
+            map.set('leave-message', "Leave a message");
+            map.set('format', "Links Format");
+            map.set('site-name', "Name: ");
+            map.set('site-link', "Link: ");
+            map.set('site-desc', "Desc: ");
+            map.set('stat', " related results, taking ");
+            map.set('stat-time', " ms");
+            map.set('site-img', "Image: ");
+          }
+
+          if (map.size > 0) {
+            let lanElems = document.querySelectorAll('.language');
+            lanElems.forEach(elem => {
+              let lan = elem.dataset.lan, text = map.get(lan);
+              if (elem.__proto__ === HTMLInputElement.prototype) {
+                elem.placeholder = text
+              } else {
+                if (elem.dataset.count) {
+                  text = elem.dataset.count + text;
+                }
+                elem.textContent = text;
+              }
+            })
+          }
         }
 
-    }
-</script>
+        window.Clipboard = (function (window, document, navigator) {
+          var textArea,
+            copy;
 
-    <div class="main">
-        <div class="container">
-            <article class="post-wrap">
-                <header class="post-header">
-                    <h1 class="post-title zh">
-                        &#x53CB;&#x94FE;
-                    </h1>
-                    <h1 class="post-title en">
-                        Friends
-                    </h1>
-                </header>
-                <div class="post-content">
-                    
-                    
+          // 判断是不是ios端
+          function isOS() {
+            return navigator.userAgent.match(/ipad|iphone/i);
+          }
+          //创建文本元素
+          function createTextArea(text) {
+            textArea = document.createElement('textArea');
+            textArea.value = text;
+            textArea.style.width = 0;
+            textArea.style.height = 0;
+            textArea.clientHeight = 0;
+            textArea.clientWidth = 0;
+            document.body.appendChild(textArea);
+          }
+          //选择内容
+          function selectText() {
+            var range,
+              selection;
 
-                    <div class="friend-box">
-        		   <ul>
-	        	   <li>
-			<a href="https://xiangyiblog.now.sh" target="_blank">
-                        <img class="friend-avatar" src="https://i.loli.net/2020/03/11/uDnxAlKdjmagczv.jpg">
-			</a>
-			   </li>
-			   </ul>
-                        <div class="flink-info">
-                            <a href="https://xiangyiblog.now.sh" target="_blank">
-                                xiangyi
-                            </a>
-                            <br />
-                            xiangyi&#39;s 黑板报
-                        </div>
-                    </div>
-                    
+            if (isOS()) {
+              range = document.createRange();
+              range.selectNodeContents(textArea);
+              selection = window.getSelection();
+              selection.removeAllRanges();
+              selection.addRange(range);
+              textArea.setSelectionRange(0, 999999);
+            } else {
+              textArea.select();
+            }
+          }
 
-                    <div class="friend-box">
-        		   <ul>
-	        	   <li>
-			<a href="https://blog.itjoker.cn" target="_blank">
-                        <img class="friend-avatar" src="">
-			</a>
-			   </li>
-			   </ul>
-                        <div class="flink-info">
-                            <a href="https://blog.itjoker.cn" target="_blank">
-                                ITJoker
-                            </a>
-                            <br />
-                            
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-            </article>
-        </div>
-    </div>
-    </div>
-    		   
-			    <div id="player"></div>
-			    
-		
-<footer id="footer" class="footer" style="height: 0px">
+          //复制到剪贴板
+          function copyToClipboard() {
+            try {
+              document.execCommand("Copy")
+            } catch (err) {
+              alert("复制错误！请手动复制！")
+            }
+            document.body.removeChild(textArea);
+          }
 
-            <div class="copyright">
-                Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-                    <b id="hitokoto"></b><br>
-                    <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
-            <path
-                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
-                fill="#93b5cf"></path>
-        </svg>
+          copy = function (text) {
+            createTextArea(text);
+            selectText();
+            copyToClipboard();
+          };
 
-                    Socrates&#39; Blogs &copy;Copyright
-                        <script>
-                            var date = new Date();
-                            document.write("" + date.getFullYear());
-                        </script> <img src="https://i.loli.net/2020/03/31/kG71rUoEW5YQq4h.gif"  alt="dandan" />
-                        | 本站已经运行了
-                <strong><script type="text/javascript">		
+          return {
+            copy: copy
+          };
+        })(window, document, navigator);
 
-                var urodz= new Date("2021/10/25");
-                var now = new Date();
-                var ile = now.getTime() - urodz.getTime();
-                var dni = Math.floor(ile / (1000 * 60 * 60 * 24));
-                document.write(+dni)
-                </script>
-                </strong>天 | 🗞
-		<a class="rss" href="http://localhost:4001/atom.xml" target="_blank"><strong>RSS</strong></a>
-            </div>
+        function copyCode(e) {
+          if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+            let code = e.currentTarget.querySelector('code');
+            var text = code.innerText;
+            if (e.srcElement.textContent === '复制成功') {
+              return;
+            }
+            e.srcElement.textContent = '复制成功';
+            (function (elem) {
+              setTimeout(() => {
+                if (elem.textContent === '复制成功') {
+                  elem.textContent = '复制代码'
+                }
+              }, 1000);
+            })(e.srcElement)
+            Clipboard.copy(text);
+          }
+        }
 
-<!-- commentTyping -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xiangyi715/Gridea-Chic-Unique@1.0.2/assets/media/script/commentTyping.js"></script>
+        let pres = document.querySelectorAll('pre');
+        pres.forEach(pre => {
+          let code = pre.querySelector('code');
+          let copyElem = document.createElement('span');
+          copyElem.classList.add('copy-code');
+          copyElem.textContent = '复制代码';
+          pre.appendChild(copyElem);
+          pre.onclick = copyCode
+        })
 
-<!-- Click loveHeart -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xiangyi715/Gridea-Chic-Unique@1.0.3/assets/media/script/love.js"></script>
-        </footer>
+      </script>
+      <script src="/media/js/motion.js"></script>
 
+      
+        <script
+          src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+        <script>
+          var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 200
+          });
+        </script>
         
+          
+            
 
-                <script>
-			
-
-                    function LoadPlayer() {
-                        var music_array = [];
-                        
-                        music_array.push({
-                            name: '',
-                            url: '',
-                            artist: '',
-                            cover: '',
-//			    lrc: "http://localhost:4001/media/music_lrc/rangjiu.lrc"
-                        });
-                        
-                        console.log(" MusicList: " + music_array);
-                        
-                        const ap = new APlayer({
-                            container: document.getElementById('player'),
-                            fixed: true,
-                            audio: music_array
-                        });
-                        
-                    }
-
-                    LoadPlayer();
-                    
-
-                    
-//                    hitokoto();
-                    hljs.initHighlighting();
-		    console.clear();
-                    console.log("\n %c \u26a1Theme:Chic-Unique Author's Blog:https://github.com/xiangyi715  Write By xiangyi  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
-</script>
                 
 
-<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
-    </body>
 </html>
