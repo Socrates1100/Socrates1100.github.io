@@ -2,389 +2,1760 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-<title>
-    Socrates&#39; Blogs
-</title>
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-<meta http-equiv="x-dns-prefetch-control" content="on">
-<link rel="dns-prefetch" href="https://socrates1100.github.io">
+  <meta charset="UTF-8" />
 
-<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<meta name="author" content="Socrates">
-<meta name="description" content="">
-<meta name="keywords" content="">
-<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="Socrates个人博客">
+<meta name="description" content="温故而知新">
+<meta name="theme-color" content="#000">
+<title>Socrates&#39; Blogs</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1635522839118">
+<link rel="stylesheet" href="/media/css/pisces.css">
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link
+  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xiangyi715/Gridea-Chic-Unique@1.0.3/assets/media/css/style.min.css" />
+<link href="/media/hljs/styles/default.css"
+  rel="stylesheet">
 
-<link rel="stylesheet" href="https://socrates1100.github.io/styles/main.css" />
+<link rel="stylesheet" href="/styles/main.css">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xiangyi715/Gridea-Chic-Unique@1.0.2/assets/media/css/tags.css" />
-
-<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-
-<!-- 原  
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
--->
-<!--
-<script src="https://src.wangriyu.wang/lib/Aplayer/APlayer.min.js"></script>
--->
-<script src="https://cdn.jsdelivr.net/gh/xiangyi715/Gridea-Chic-Unique@1.0.3/assets/media/script/APlayer.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
-    
-
-	<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-
-        <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
-
-	<script src="https://cdn.jsdelivr.net/gh/xiangyi715/Gridea-Chic-Unique@1.0.3/assets/media/script/tocbot.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/xiangyi715/Gridea-Chic-Unique@1.0.3/assets/media/script/script.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/xiangyi715/Gridea-Chic-Unique@1.0.3/assets/media/script/icon.min.js"></script>
-
-	<script src="https://cdn.jsdelivr.net/gh/xiangyi715/Gridea-Chic-Unique@1.0.2/assets/media/script/loading.js" />
-
-        <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/highlight.min.js"></script>
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/atelier-estuary-dark.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
-        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
-                
-			<!-- 百度统计 -->
-		    
+<script src="/media/js/jquery.js"></script>
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 
 
-    <meta name="baidu-site-verification" content="4oa5qekqCQ" />   <!-- 百度验证 -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xiangyi715/Gridea-Chic-Unique@1.0.3/assets/media/live2d/css/live2d.css" />
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-<!--
-<base target="_blank" />
--->
+
+
+
+
 </head>
 
-<body onload="load()">
-
-    <div class="wrapper">
-
-        <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo">
-                <a href="https://socrates1100.github.io">
-                    Socrates&#39; Blogs
-                </a>
-            </div>
-
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/posts/index.html">
-                        首页
-                    </a>
-                    
-                    <a class="menu-item" href="/archives">
-                        归档
-                    </a>
-                    
-                    <a class="menu-item" href="/tags">
-                        标签
-                    </a>
-                    
-                    <a class="menu-item" href="/post/about">
-                        关于
-                    </a>
-                    
-                        <input id="switch_default" type="checkbox" class="switch_default">
-                        <label for="switch_default" class="toggleBtn"></label>
-            </div>
-
-            <form id="gridea-search-form" data-update="1635481524205" action="/search/index.html">
-                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="🔍Search..." style = "-webkit-border-radius:8px;
-				   -moz-border-radius:8px;
-				   -ms-border-radius:8px;
-				   -o-border-radius:8px;
-				   border-radius:8px;
-				   border:1px solid #e7f3f9;
-				   outline:none;
-				   padding:7px 0px;
-				   BACKGROUND-COLOR: transparent">
-            </form>
-        </div>
-
-    </nav>
-
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
     
-        <nav class="navbar-mobile" id="nav-mobile">
-            <div class="container">
-                <div class="navbar-header">
-                    <div>
-                        <a href="https://socrates1100.github.io">
-                            Socrates&#39; Blogs
-                        </a>
-                        <!--en-->
-                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
-                        <!--zh-->
-                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;\u6697\u9ED1</a>
-                    </div>
-                    <form id="gridea-search-form" data-update="1635481524205" action="/search/index.html">
-                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="🔍Search..." style = "-webkit-border-radius:8px;
-				   -moz-border-radius:8px;
-				   -ms-border-radius:8px;
-				   -o-border-radius:8px;
-				   border-radius:8px;
-				   border:1px solid #62a3d3;
-				   outline:none;
-				   padding:7px 0px;
-				   BACKGROUND-COLOR: transparent">
-                    </form>
-                    <!--en-->
-                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
-                    <!--zh-->
-                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
-
-                </div>
-                <div class="menu" id="mobile-menu">
-                    
-                        <a class="menu-item" href="/posts/index.html">
-                            首页
-                        </a>
-                        
-                        <a class="menu-item" href="/archives">
-                            归档
-                        </a>
-                        
-                        <a class="menu-item" href="/tags">
-                            标签
-                        </a>
-                        
-                        <a class="menu-item" href="/post/about">
-                            关于
-                        </a>
-                        
-                </div>
-            </div>
-        </nav>
-</header>
-
-<style>
-input:focus{
-/* 
-            outline: 0;
-	    border: 1px solid #f95d5d;
-	    box-shadow: 0px 0px 10px 0px #f95d5d;
-*/
-	    border-style:solid;  
-            border-color: #03a9f4;  
-            box-shadow: 0 0 15px #03a9f4;
-  }
-</style>
-
-<script>
-
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementById("menu-toggle-en");
-        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
-
-        var mobileMenu = document.getElementById("mobile-menu");
-        if (toggleMenu.display != "none") {
-            if (toggleMenu.classList.contains("active")) {
-                toggleMenu.classList.remove("active")
-                mobileMenu.classList.remove("active")
-            } else {
-                toggleMenu.classList.add("active")
-                mobileMenu.classList.add("active")
-            }
-        } else if (toggleMenu_zh.display != "none") {
-            if (toggleMenu_zh.classList.contains("active")) {
-                toggleMenu_zh.classList.remove("active")
-                mobileMenu.classList.remove("active")
-            } else {
-                toggleMenu_zh.classList.add("active")
-                mobileMenu.classList.add("active")
-            }
-        }
-
-    }
-</script>
-
-
-            <div class="main">
-                <div class="container">
-                    <div class="intro">
-                        <div class="avatar">
-<!--
-                            <a href="https://socrates1100.github.io"><img src="https://socrates1100.github.io/images/avatar.png?v=1635481524205"></a>
--->
-                            <a href="https://socrates1100.github.io"><img src=""></a>
-                        </div>
-                        <div class="nickname">
-                            Socrates
-                        </div>
-			<div class="keywords">
-			    
-			</div>
-                        <div class="description">
-                            
-                        </div>
-                        <div class="links">
-                            
-                                
-                                        
-                                
-                                        
-                                
-                                        
-                                
-                                        
-                                
-                                        
-                                
-                                        
-                                
-                                        
-                                
-                                        
-                                
-                                        
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="pisces">
+  <header class="header  ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>Socrates&#39; Blogs</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">记录生命，记录生活</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/hello-world//" target="_self">
+                  <i class="fa fa-globe"></i> 首页
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/archives/" target="_self">
+                  <i class="fa fa-archive"></i> 归档
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/tags/" target="_self">
+                  <i class="fa fa-tags"></i> 标签
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/about/" target="_self">
+                  <i class="fa fa-user"></i> 关于
+                </a>
+              
+            </li>
+          
+          
+            
+              <li class="nav-item ">
+                <a href="/friends/" target="_self">
+                  
+                    <i class="fa fa-address-book"></i> 友情链接
+                  
+                </a>
+              </li>
+            
+          
+          
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
     </div>
-<!--QQ mail-->
-
-<div id="QQmail">
-<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?
-t=qm_mailme&email=“联系请email我”mv74530@126.com"
-style="text-decoration:none;right: 0px;"><img src="https://i.loli.net/2020/03/13/VuiSEHAqMxwsL8P.png"/></a>
-
-</div>
-<!-- weather -->
-
-<script type="text/javascript">
-WIDGET = {FID: 'kXY2Oi8Kwh'}
-</script>
-<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
-
-<!-- type -->
-<script>
-    var typed = new Typed("#subtitle", {
-        strings: ['', '', ''],
-        startDelay: 10,
-        typeSpeed: 200,
-        loop: true,
-        backSpeed: 100,
-        showCursor: true
-    });
-</script>
-<!-- head title-->
-<script>
-    var titleTime;
-    document.addEventListener("visibilitychange", function() {
-        document.hidden ? (document.title = "😥" + OriginTitile, clearTimeout(titleTime)) : (document.title = "😝" + OriginTitile, titleTime = setTimeout(function() {
-            document.title = OriginTitile
-        }, 2E3))
-    });
-    var OriginTitile = document.title;
-</script>
-<!-- Preloading -->
-<div id="loading">
-	<div id="loading-center">
-		<div id="loading-center-absolute">
-			<div class="object" id="object_one"></div>
-			<div class="object" id="object_two"></div>
-			<div class="object" id="object_three"></div>
-			<div class="object" id="object_four"></div>
-			<div class="object" id="object_five"></div>
-			<div class="object" id="object_six"></div>
-			<div class="object" id="object_seven"></div>
-			<div class="object" id="object_eight"></div>
-			<div class="object" id="object_nine"></div>
-		</div>
-	</div>
+  </header>
 </div>
 
-<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<script type="text/javascript"> 
+ 
+  let showNav = true;
 
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+    <div
+      class="section-layout pisces ">
+      <div class="section-layout-wrapper">
+        <div id="sidebarMeta" class="sidebar">
+    
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">Socrates</p>
+    
+    <div class="site-description right-motion">
+      
+      
+      
+        <p>科研菜狗</p>
+      
+      
+    </div>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">2</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">0</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="https://socrates1100.github.io/atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
+    
+  
+  
+
+
+
+</div>
+</div>
+<script>
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = 'pisces';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
+      }
+    });
+  }
+  </script>
+        <div class="section-box pisces">
+          <section class="section bg-color posts-expand slide-down-in">
+            
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://socrates1100.github.io/post/hello-world/"> Socrates&#39;s Blog </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item">
+      <i class="fa fa-thumb-tack"></i>
+      <span class="language" data-lan="top">置顶</span>
+      <span class="post-meta-divider">|</span>
+    </span>
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2021-10-28 00:00:00">2021-10-26</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span
+        >0<span class="language" data-lan="minute"
+          >分钟</span
+        ></span
+      >
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span
+        >0<span class="pc-show language" data-lan="words"
+          >字数</span
+        ></span
+      >
+    </span>
+    
+  </div>
+</section>
+
+      <div class="post-body">
+        
+        
+          
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            
+            
+              
+              
+              
+            
+              
+              
+            
+              <p><figure data-type="image" tabindex="1"><img src="https://socrates1100.github.io/post-images/1635435563197.jpg" alt="" loading="lazy"></figure>
+
+                
+              <p>
+            
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://socrates1100.github.io/post/hello-world/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://socrates1100.github.io/post/about/"> 关于 </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2021-10-26 19:09:48">2021-10-26</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span
+        >1<span class="language" data-lan="minute"
+          >分钟</span
+        ></span
+      >
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span
+        >47<span class="pc-show language" data-lan="words"
+          >字数</span
+        ></span
+      >
+    </span>
+    
+  </div>
+</section>
+
+      <div class="post-body">
+        
+        
+          
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+            
+              <p><blockquote>
+<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
+</blockquote>
+
+                
+              <p>
+            
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://socrates1100.github.io/post/about/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+  
+            
+            
+<div class="page bg-color">
+  <ul class="pagination-ul">
+    
+    
+      
+        <li class="pagination-li pagination-active">
+            <a href="/page/../">
+              1
+            </a>
+        </li>
+      
+    
+    
+  </ul>
+</div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+  <footer class="footer">
+    <center>
+      已运行:<span id="run_time"></span>
+      <span class="post-meta-divider">|</span>
+      已咕咕:<span id="gugu_time"></span>
+    </center>
+
+    总字数:<span id="word_count"></span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_pv">浏览数:<span id="busuanzi_value_site_pv"></span> 次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">访客数:<span id="busuanzi_value_site_uv"></span> 人</span>
+
+    <script>
+      function runTime() {
+        str = "";
+        BirthDay = new Date("January 30,2019");
+        today = new Date();
+        timeold = today.getTime() - BirthDay.getTime();
+        msPerDay = 24 * 60 * 60 * 1000;
+        e_daysold = timeold / msPerDay;
+        daysold = Math.floor(e_daysold);
+        str += daysold + "天";
+        return str;
+      }
+      setInterval(function () {
+        $("#run_time").html(runTime());
+      }, 1000);
+    </script>
+
+    <script>
+      function guguTime() {
+        str = "";
+        guguDay = new Date(document.lastModified);
+        today = new Date();
+        timeold = today.getTime() - guguDay.getTime();
+        msPerDay = 24 * 60 * 60 * 1000;
+        e_daysold = timeold / msPerDay;
+        daysold = Math.floor(e_daysold);
+        str += daysold + "天";
+        return str;
+      }
+      setInterval(function () {
+        $("#gugu_time").html(guguTime());
+      }, 1000);
+    </script>
+
+    <script>
+      function site() {
+
+        return 275.6 + "k";
+      };
+
+      setInterval(function () {
+        $("#word_count").html(site());
+      }, 1000);
+    </script>
+
+    <div class="copyright">
+      Created by
+      <a href="https://github.com/YuZhangWang" target="_blank">YuZhangWang</a>
+      ©2019-Present
+      <span class="post-meta-divider">|</span>
+      Powered By
+      <a href="https://github.com/YuZhangWang/YuZhangWang.github.io" target="_blank">Github</a>
+      <span class="post-meta-divider">|</span>
+      Theme By
+      <a href="https://github.com/theme-next/hexo-theme-next" target="_blank">Next</a>
+    </div>
+    <div class="poweredby">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+  </footer>
+  
+    
+        <div class="pisces back-to-top" id="back_to_top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span class="scrollpercent"> <span id="back_to_top_text">0</span>% </span>
+            
+        </div>
+        
+                  
+                    
+<link rel="stylesheet" href="/media/live2d/css/live2d.css" />
+<div class="box-scale">
+  <div id="landlord" style="left: 5px;bottom: px;"
+    data-key="">
+    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+    
+
+      <div class="message" style="opacity:0"></div>
+      <div class="live_talk_input_body">
+        <div class="live_talk_input_name_body">
+          <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off"
+            placeholder="你的名字" />
+        </div>
+        <div class="live_talk_input_text_body">
+          <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off"
+            placeholder="要和我聊什么呀？" />
+          <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
+        </div>
+      </div>
+      <input name="live_talk" id="live_talk" value="1" type="hidden" />
+      <div class="live_ico_box">
+        <div class="live_ico_item type_info" id="showInfoBtn"></div>
+        <div class="live_ico_item type_talk" id="showTalkBtn"></div>
+        
+        <div class="live_ico_item type_youdu" id="youduButton"></div>
+        <div class="live_ico_item type_quit" id="hideButton"></div>
+        <input name="live_statu_val" id="live_statu_val" value="0" type="hidden" />
+        <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+        <input id="duType" value="douqilai" type="hidden">
+        
+      </div>
+    
+  </div>
+</div>
+<div id="open_live2d">召唤看板娘</div>
+<script>
+  var message_Path = 'https://cdn.jsdelivr.net/gh/hsxyhao/live2d.github.io@master/';
+  let landlord = document.querySelector('#landlord');
+  var apiKey = landlord.dataset.key;
+</script>
+<script type="text/javascript" src="/media/live2d/js/live2d.js"></script>
+<script>
+	var home_Path = document.location.protocol + '//' + window.document.location.hostname + ":" + window.document.location.port + '/';
+	var userAgent = window.navigator.userAgent.toLowerCase();
+	var norunAI = ["android", "iphone", "ipod", "ipad", "windows phone", "mqqbrowser", "msie", "trident/7.0"];
+	var norunFlag = false;
+
+	for (var i = 0; i < norunAI.length; i++) {
+		if (userAgent.indexOf(norunAI[i]) > -1) {
+			norunFlag = true;
+			break;
+		}
+	}
+
+	if (!window.WebGLRenderingContext) {
+		norunFlag = true;
+	}
+
+	if (!norunFlag) {
+		var hitFlag = false;
+		var AIFadeFlag = false;
+		var liveTlakTimer = null;
+		var sleepTimer_ = null;
+		var AITalkFlag = false;
+		var talkNum = 0;
+		(function () {
+			function renderTip(template, context) {
+				var tokenReg = /(\\)?\{([^\{\}\\]+)(\\)?\}/g;
+				return template.replace(tokenReg, function (word, slash1, token, slash2) {
+					if (slash1 || slash2) {
+						return word.replace('\\', '');
+					}
+					var variables = token.replace(/\s/g, '').split('.');
+					var currentObject = context;
+					var i, length, variable;
+					for (i = 0, length = variables.length; i < length; ++i) {
+						variable = variables[i];
+						currentObject = currentObject[variable];
+						if (currentObject === undefined || currentObject === null) return '';
+					}
+					return currentObject;
+				});
+			}
+
+			String.prototype.renderTip = function (context) {
+				return renderTip(this, context);
+			};
+
+			var re = /x/;
+			re.toString = function () {
+				showMessage('哈哈，你打开了控制台，是想要看看我的秘密吗？', 5000);
+				return '';
+			};
+
+			$(document).on('copy', function () {
+				showMessage('你都复制了些什么呀，转载要记得加上出处哦~~', 5000);
+			});
+
+			function initTips() {
+				$.ajax({
+					cache: true,
+					url: message_Path + 'message.json',
+					dataType: "json",
+					success: function (result) {
+						$.each(result.mouseover, function (index, tips) {
+							$(tips.selector).mouseover(function () {
+								var text = tips.text;
+								if (Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
+								text = text.renderTip({ text: $(this).text() });
+								showMessage(text, 3000);
+								talkValTimer();
+								clearInterval(liveTlakTimer);
+								liveTlakTimer = null;
+							});
+							$(tips.selector).mouseout(function () {
+								showHitokoto();
+								if (liveTlakTimer == null) {
+									liveTlakTimer = window.setInterval(function () {
+										showHitokoto();
+									}, 15000);
+								};
+							});
+						});
+						$.each(result.click, function (index, tips) {
+							$(tips.selector).click(function () {
+								if (hitFlag) {
+									return false
+								}
+								hitFlag = true;
+								setTimeout(function () {
+									hitFlag = false;
+								}, 8000);
+								var text = tips.text;
+								if (Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
+								text = text.renderTip({ text: $(this).text() });
+								showMessage(text, 3000);
+							});
+							clearInterval(liveTlakTimer);
+							liveTlakTimer = null;
+							if (liveTlakTimer == null) {
+								liveTlakTimer = window.setInterval(function () {
+									showHitokoto();
+								}, 15000);
+							};
+						});
+					}
+				});
+			}
+			initTips();
+
+			var text;
+			if (document.referrer !== '') {
+				var referrer = document.createElement('a');
+				referrer.href = document.referrer;
+				text = '嗨！来自 <span style="color:#0099cc;">' + referrer.hostname + '</span> 的朋友！';
+				var domain = referrer.hostname.split('.')[1];
+				if (domain == 'baidu') {
+					text = '嗨！ 来自 百度搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				} else if (domain == 'so') {
+					text = '嗨！ 来自 360搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				} else if (domain == 'google') {
+					text = '嗨！ 来自 谷歌搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				}
+			} else {
+				if (window.location.href == home_Path) { //主页URL判断，需要斜杠结尾
+					var now = (new Date()).getHours();
+					if (now > 23 || now <= 5) {
+						text = '你是夜猫子呀？这么晚还不睡觉，明天起的来嘛？';
+					} else if (now > 5 && now <= 7) {
+						text = '早上好！一日之计在于晨，美好的一天就要开始了！';
+					} else if (now > 7 && now <= 11) {
+						text = '上午好！工作顺利嘛，不要久坐，多起来走动走动哦！';
+					} else if (now > 11 && now <= 14) {
+						text = '中午了，工作了一个上午，现在是午餐时间！';
+					} else if (now > 14 && now <= 17) {
+						text = '午后很容易犯困呢，今天的运动目标完成了吗？';
+					} else if (now > 17 && now <= 19) {
+						text = '傍晚了！窗外夕阳的景色很美丽呢，最美不过夕阳红~~';
+					} else if (now > 19 && now <= 21) {
+						text = '晚上好，今天过得怎么样？';
+					} else if (now > 21 && now <= 23) {
+						text = '已经这么晚了呀，早点休息吧，晚安~~';
+					} else {
+						text = '嗨~ 快来逗我玩吧！';
+					}
+				} else {
+					text = '欢迎阅读<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				}
+			}
+			showMessage(text, 12000);
+		})();
+
+		liveTlakTimer = setInterval(function () {
+			showHitokoto();
+		}, 15000);
+
+		function showHitokoto() {
+			if (sessionStorage.getItem("Sleepy") !== "1") {
+				if (!AITalkFlag) {
+					$.getJSON('https://v1.hitokoto.cn/', function (result) {
+						talkValTimer();
+						showMessage(result.hitokoto, 0);
+					});
+				}
+			} else {
+				hideMessage(0);
+				if (sleepTimer_ == null) {
+					sleepTimer_ = setInterval(function () {
+						checkSleep();
+					}, 200);
+				}
+			}
+		}
+
+		function checkSleep() {
+			var sleepStatu = sessionStorage.getItem("Sleepy");
+			if (sleepStatu !== '1') {
+				talkValTimer();
+				showMessage('你回来啦~', 0);
+				clearInterval(sleepTimer_);
+				sleepTimer_ = null;
+			}
+		}
+
+		function showMessage(text, timeout) {
+			if (Array.isArray(text)) text = text[Math.floor(Math.random() * text.length + 1) - 1];
+			$('.message').stop();
+			$('.message').html(text);
+			$('.message').fadeTo(200, 1);
+			//if (timeout === null) timeout = 5000;
+			//hideMessage(timeout);
+		}
+		function talkValTimer() {
+			$('#live_talk').val('1');
+		}
+
+		function hideMessage(timeout) {
+			//$('.message').stop().css('opacity',1);
+			if (timeout === null) timeout = 5000;
+			$('.message').delay(timeout).fadeTo(200, 0);
+		}
+
+		function initLive2d() {
+			$('#hideButton').on('click', function () {
+				if (AIFadeFlag) {
+					return false;
+				} else {
+					AIFadeFlag = true;
+					localStorage.setItem("live2dhidden", "0");
+					$('#landlord').fadeOut(200);
+					$('#open_live2d').delay(200).fadeIn(200);
+					setTimeout(function () {
+						AIFadeFlag = false;
+					}, 300);
+				}
+			});
+			$('#open_live2d').on('click', function () {
+				if (AIFadeFlag) {
+					return false;
+				} else {
+					AIFadeFlag = true;
+					localStorage.setItem("live2dhidden", "1");
+					$('#open_live2d').fadeOut(200);
+					$('#landlord').delay(200).fadeIn(200);
+					setTimeout(function () {
+						AIFadeFlag = false;
+					}, 300);
+				}
+			});
+			$('#youduButton').on('click', function () {
+				if ($('#youduButton').hasClass('doudong')) {
+					var typeIs = $('#youduButton').attr('data-type');
+					$('#youduButton').removeClass('doudong');
+					$('body').removeClass(typeIs);
+					$('#youduButton').attr('data-type', '');
+				} else {
+					var duType = $('#duType').val();
+					var duArr = duType.split(",");
+					var dataType = duArr[Math.floor(Math.random() * duArr.length)];
+
+					$('#youduButton').addClass('doudong');
+					$('#youduButton').attr('data-type', dataType);
+					$('body').addClass(dataType);
+				}
+			});
+			if (apiKey) {
+				$('#showInfoBtn').on('click', function () {
+					var live_statu = $('#live_statu_val').val();
+					if (live_statu == "0") {
+						return
+					} else {
+						$('#live_statu_val').val("0");
+						$('.live_talk_input_body').fadeOut(500);
+						AITalkFlag = false;
+						showHitokoto();
+						$('#showTalkBtn').show();
+						$('#showInfoBtn').hide();
+					}
+				});
+				$('#showTalkBtn').on('click', function () {
+					var live_statu = $('#live_statu_val').val();
+					if (live_statu == "1") {
+						return
+					} else {
+						$('#live_statu_val').val("1");
+						$('.live_talk_input_body').fadeIn(500);
+						AITalkFlag = true;
+						$('#showTalkBtn').hide();
+						$('#showInfoBtn').show();
+
+					}
+				});
+				$('#talk_send').on('click', function () {
+					var info_ = $('#AIuserText').val();
+					var userid_ = $('#AIuserName').val();
+					if (info_ == "") {
+						showMessage('写点什么吧！', 0);
+						return;
+					}
+					if (userid_ == "") {
+						showMessage('聊之前请告诉我你的名字吧！', 0);
+						return;
+					}
+					showMessage('思考中~', 0);
+					let protocol = window.location.protocol.indexOf("s") > 0 ? "https" : "http";
+					$.ajax({
+						type: "get",
+						url: `${protocol}://www.tuling123.com/openapi/api?key=${apiKey}&info=${info_}`,
+						dataType: "json",
+						success: function (res) {
+							talkValTimer();
+							showMessage(res.text, 0);
+							$('#AIuserText').val("");
+							sessionStorage.setItem("live2duser", userid_);
+						},
+						error: function (e) {
+							talkValTimer();
+							showMessage('似乎有什么错误，请和站长联系！', 0);
+						}
+					});
+				});
+			} else {
+				$('#showInfoBtn').hide();
+				$('#showTalkBtn').hide();
+			}
+			//获取音乐信息初始化
+			var bgmListInfo = $('input[name=live2dBGM]');
+			if (bgmListInfo.length == 0) {
+				$('#musicButton').hide();
+			} else {
+				var bgmPlayNow = parseInt($('#live2d_bgm').attr('data-bgm'));
+				var bgmPlayTime = 0;
+				var live2dBGM_Num = sessionStorage.getItem("live2dBGM_Num");
+				var live2dBGM_PlayTime = sessionStorage.getItem("live2dBGM_PlayTime");
+				if (live2dBGM_Num) {
+					if (live2dBGM_Num <= $('input[name=live2dBGM]').length - 1) {
+						bgmPlayNow = parseInt(live2dBGM_Num);
+					}
+				}
+				if (live2dBGM_PlayTime) {
+					bgmPlayTime = parseInt(live2dBGM_PlayTime);
+				}
+				var live2dBGMSrc = bgmListInfo.eq(bgmPlayNow).val();
+				$('#live2d_bgm').attr('data-bgm', bgmPlayNow);
+				$('#live2d_bgm').attr('src', live2dBGMSrc);
+				$('#live2d_bgm')[0].currentTime = bgmPlayTime;
+				$('#live2d_bgm')[0].volume = 0.5;
+				var live2dBGM_IsPlay = sessionStorage.getItem("live2dBGM_IsPlay");
+				var live2dBGM_WindowClose = sessionStorage.getItem("live2dBGM_WindowClose");
+				if (live2dBGM_IsPlay == '0' && live2dBGM_WindowClose == '0') {
+					$('#live2d_bgm')[0].play();
+					$('#musicButton').addClass('play');
+				}
+				sessionStorage.setItem("live2dBGM_WindowClose", '1');
+				$('#musicButton').on('click', function () {
+					if ($('#musicButton').hasClass('play')) {
+						$('#live2d_bgm')[0].pause();
+						$('#musicButton').removeClass('play');
+						sessionStorage.setItem("live2dBGM_IsPlay", '1');
+					} else {
+						$('#live2d_bgm')[0].play();
+						$('#musicButton').addClass('play');
+						sessionStorage.setItem("live2dBGM_IsPlay", '0');
+					}
+				});
+				window.onbeforeunload = function () {
+					sessionStorage.setItem("live2dBGM_WindowClose", '0');
+					if ($('#musicButton').hasClass('play')) {
+						sessionStorage.setItem("live2dBGM_IsPlay", '0');
+					}
+				}
+				document.getElementById('live2d_bgm').addEventListener("timeupdate", function () {
+					var live2dBgmPlayTimeNow = document.getElementById('live2d_bgm').currentTime;
+					sessionStorage.setItem("live2dBGM_PlayTime", live2dBgmPlayTimeNow);
+				});
+				document.getElementById('live2d_bgm').addEventListener("ended", function () {
+					var listNow = parseInt($('#live2d_bgm').attr('data-bgm'));
+					listNow++;
+					if (listNow > $('input[name=live2dBGM]').length - 1) {
+						listNow = 0;
+					}
+					var listNewSrc = $('input[name=live2dBGM]').eq(listNow).val();
+					sessionStorage.setItem("live2dBGM_Num", listNow);
+					$('#live2d_bgm').attr('src', listNewSrc);
+					$('#live2d_bgm')[0].play();
+					$('#live2d_bgm').attr('data-bgm', listNow);
+				});
+				document.getElementById('live2d_bgm').addEventListener("error", function () {
+					$('#live2d_bgm')[0].pause();
+					$('#musicButton').removeClass('play');
+					showMessage('音乐似乎加载不出来了呢！', 0);
+				});
+			}
+			//获取用户名
+			var live2dUser = sessionStorage.getItem("live2duser");
+			if (live2dUser !== null) {
+				$('#AIuserName').val(live2dUser);
+			}
+			//获取位置
+			var landL = sessionStorage.getItem("historywidth");
+			var landB = sessionStorage.getItem("historyheight");
+			if (landL == null || landB == null) {
+				landL = '5px'
+				landB = '0px'
+			}
+			$('#landlord').css('left', landL + 'px');
+			$('#landlord').css('bottom', landB + 'px');
+			//移动
+			function getEvent() {
+				return window.event || arguments.callee.caller.arguments[0];
+			}
+			var smcc = document.getElementById("landlord");
+			var moveX = 0;
+			var moveY = 0;
+			var moveBottom = 0;
+			var moveLeft = 0;
+			var moveable = false;
+			var docMouseMoveEvent = document.onmousemove;
+			var docMouseUpEvent = document.onmouseup;
+			smcc.onmousedown = function () {
+				var ent = getEvent();
+				moveable = true;
+				moveX = ent.clientX;
+				moveY = ent.clientY;
+				var obj = smcc;
+				moveBottom = parseInt(obj.style.bottom);
+				moveLeft = parseInt(obj.style.left);
+				if (isFirefox = navigator.userAgent.indexOf("Firefox") > 0) {
+					window.getSelection().removeAllRanges();
+				}
+				document.onmousemove = function () {
+					if (moveable) {
+						var ent = getEvent();
+						var x = moveLeft + ent.clientX - moveX;
+						var y = moveBottom + (moveY - ent.clientY);
+						obj.style.left = x + "px";
+						obj.style.bottom = y + "px";
+					}
+				};
+				document.onmouseup = function () {
+					if (moveable) {
+						var historywidth = obj.style.left;
+						var historyheight = obj.style.bottom;
+						historywidth = historywidth.replace('px', '');
+						historyheight = historyheight.replace('px', '');
+						sessionStorage.setItem("historywidth", historywidth);
+						sessionStorage.setItem("historyheight", historyheight);
+						document.onmousemove = docMouseMoveEvent;
+						document.onmouseup = docMouseUpEvent;
+						moveable = false;
+						moveX = 0;
+						moveY = 0;
+						moveBottom = 0;
+						moveLeft = 0;
+					}
+				};
+			};
+		}
+		$(document).ready(function () {
+			var AIimgSrc = [];
+			let chooseLive2d = 'tororo'
+			if (chooseLive2d === 'histoire') {
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_00.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_01.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_02.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_03.png");
+			} else if (chooseLive2d === 'rem') {
+				AIimgSrc.push(message_Path + "model/rem/remu2048/texture_00.png");
+			} else if (chooseLive2d === 'aoba') {
+				AIimgSrc.push(message_Path + "model/aoba/textures/texture_00.png");
+			} else if (chooseLive2d === 'hijiki') {
+				AIimgSrc.push(message_Path + "model/hijiki/moc/hijiki.2048/texture_00.png");
+			} else if (chooseLive2d === 'tororo') {
+				AIimgSrc.push(message_Path + "model/tororo/moc/tororo.2048/texture_00.png");
+			}
+			var images = [];
+			var imgLength = AIimgSrc.length;
+			var loadingNum = 0;
+			for (var i = 0; i < imgLength; i++) {
+				images[i] = new Image();
+				images[i].src = AIimgSrc[i];
+				images[i].onload = function () {
+					loadingNum++;
+					if (loadingNum === imgLength) {
+						var live2dhidden = localStorage.getItem("live2dhidden");
+						if (live2dhidden === "0") {
+							setTimeout(function () {
+								$('#open_live2d').fadeIn(200);
+							}, 1300);
+						} else {
+							setTimeout(function () {
+								$('#landlord').fadeIn(200);
+							}, 1300);
+						}
+						let model = '';
+						if (chooseLive2d === 'histoire') {
+							model = message_Path + "model/histoire/model.json";
+						} else if (chooseLive2d === 'rem') {
+							model = message_Path + "model/rem/model.json";
+						} else if (chooseLive2d === 'aoba') {
+							model = message_Path + "model/aoba/model.json";
+						} else if (chooseLive2d === 'hijiki') {
+							model = message_Path + "model/hijiki/hijiki.model.json";
+						} else if (chooseLive2d === 'tororo') {
+							model = message_Path + "model/tororo/tororo.model.json";
+						}
+						setTimeout(function () {
+							loadlive2d("live2d", model);
+						}, 1000);
+						initLive2d();
+						images = null;
+					}
+				}
+			}
+		});
+	}
+</script>
+                      
+                        
+</div>
+<script>
+  let sideBarOpen = "sidebar-open";
+  let body = document.body;
+  let back2Top = document.querySelector("#back_to_top"),
+    back2TopText = document.querySelector("#back_to_top_text"),
+    drawerBox = document.querySelector("#drawer_box"),
+    rightSideBar = document.querySelector(".sidebar"),
+    viewport = document.querySelector("body");
+
+  function scrollAnimation(currentY, targetY) {
+    let needScrollTop = targetY - currentY;
+    let _currentY = currentY;
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10);
+      _currentY += dist;
+      window.scrollTo(_currentY, currentY);
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY);
+      } else {
+        window.scrollTo(_currentY, targetY);
+      }
+    }, 1);
+  }
+
+  back2Top.addEventListener("click", function (e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+
+  window.addEventListener("scroll", function (e) {
+    let percent =
+      (document.scrollingElement.scrollTop /
+        (document.scrollingElement.scrollHeight -
+          document.scrollingElement.clientHeight)) *
+      100;
+    if (percent > 1 && !back2Top.classList.contains("back-top-active")) {
+      back2Top.classList.add("back-top-active");
+    }
+    if (percent == 0) {
+      back2Top.classList.remove("back-top-active");
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+  let hasCacu = false;
+  window.addEventListener("resize", function (e) {
+    calcuHeight();
+  });
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (
+      (!hasCacu && back2Top.classList.contains("pisces")) ||
+      back2Top.classList.contains("gemini")
+    ) {
+      let sideBar = document.querySelector(".sidebar");
+      let navUl = document.querySelector("#site_nav");
+      sideBar.style =
+        "margin-top:" + (navUl.offsetHeight + navUl.offsetTop + 15) + "px;";
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+
+  let open = false,
+    MOTION_TIME = 300,
+    RIGHT_MOVE_DIS = "320px";
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll(".right-motion");
+    let right = drawerBox.classList.contains("right");
+
+    let transitionDir = right
+      ? "transition.slideRightIn"
+      : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS,
+      };
+      closeProp = {
+        paddingRight: "0px",
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS,
+      };
+      closeProp = {
+        paddingLeft: "0px",
+      };
+    }
+
+    drawerBox.onclick = function () {
+      open = !open;
+      jQuery.Velocity(rightSideBar, "stop");
+      jQuery.Velocity(viewport, "stop");
+      jQuery.Velocity(rightMotions, "stop");
+      if (open) {
+        jQuery.Velocity(
+          rightSideBar,
+          {
+            width: RIGHT_MOVE_DIS,
+          },
+          {
+            duration: MOTION_TIME,
+            begin: function () {
+              jQuery.Velocity(rightMotions, transitionDir, {});
+            },
+          }
+        );
+        jQuery.Velocity(viewport, openProp, {
+          duration: MOTION_TIME,
+        });
+      } else {
+        jQuery.Velocity(
+          rightSideBar,
+          {
+            width: "0px",
+          },
+          {
+            duration: MOTION_TIME,
+            begin: function () {
+              jQuery.Velocity(rightMotions, {
+                opacity: 0,
+              });
+            },
+          }
+        );
+        jQuery.Velocity(viewport, closeProp, {
+          duration: MOTION_TIME,
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle("muse-line");
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    };
+  }
+
+  // 链接跳转
+  let newWindow = "false";
+  if (newWindow === "true") {
+    let links = document.querySelectorAll(".post-body a");
+    links.forEach((item) => {
+      if (!item.classList.contains("btn")) {
+        item.setAttribute("target", "_blank");
+      }
+    });
+  }
+
+  let faSearch = document.querySelector("#fa_search");
+  faSearch &&
+    faSearch.addEventListener("click", function () {
+      document.querySelector("#search_mask").style = "";
+    });
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+
+  // 离开当前页title变化
+  var leaveTitle = "";
+  var normal_title = document.title;
+  if (leaveTitle) {
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState == "hidden") {
+        normal_title = document.title;
+        document.title = leaveTitle;
+      } else {
+        document.title = normal_title;
+      }
+    });
+  }
+</script>
+
+<link rel="stylesheet" href="/media/css/jquery.fancybox.css" />
+<script src="/media/js/jquery.fancybox.js"></script>
+
+<script>
+  let images = document.querySelectorAll(".section img");
+  images.forEach((image) => {
+    var parent = image.parentElement;
+    var next = image.nextElementSibling;
+    parent.removeChild(image);
+    var aelem = document.createElement("a");
+    aelem.href = image.src;
+    aelem.dataset["fancybox"] = "images";
+    aelem.dataset["rel"] = "fancybox-button";
+    aelem.classList.add("fancybox");
+    aelem.appendChild(image);
+    parent.insertBefore(aelem, next);
+  });
+</script>
+  </div>
 </body>
 
-		   
-			    <div id="player"></div>
-			    
-		
-<footer id="footer" class="footer" style="height: 0px">
+  <div class="search-mask" id="search_mask" style="display: none;">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input id="search" type="text" class="language" data-lan="search" placeholder="搜索">
+      </div>
+      <i id="close" class="fa fa-times-circle"></i>
+    </div>
+    <div class="stat-box">
+      <span id="stat_count">0</span><span class="language" data-lan="stat">条相关条目，使用了</span><span id="stat_times">0</span><span class="language" data-lan="stat-time">毫秒</span>
+      <hr>
+    </div>
+    <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/yin-ma-er-ke-fu-mo-xing-hmm/"" data-c="
+          &lt;p&gt;由于生信分析工作中很多软件算法使用到了隐马尔科夫模型，比如基因预测（GENSCAN）、功能基因组注释（ChromHMM），和群体单体型分型（Shapeit）。为了更好的理解工具背后的算法，这里想尝试学习并理解隐马尔科夫模型的基本原理。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635417105575.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;一、前言&lt;/strong&gt;&lt;/p&gt;
+">隐马尔科夫模型（HMM）</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/hello-world/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://socrates1100.github.io/post-images/1635435563197.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">Socrates's Blog</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/about/"" data-c="
+          &lt;blockquote&gt;
+&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;关于本站&#34;&gt;🏠 关于本站&lt;/h2&gt;
+&lt;p&gt;Socrates&#39; Blog shares&lt;/p&gt;
+&lt;h2 id=&#34;博主是谁&#34;&gt;👨‍💻 博主是谁&lt;/h2&gt;
+&lt;p&gt;科研小菜狗&lt;/p&gt;
+&lt;h2 id=&#34;兴趣爱好&#34;&gt;⛹ 兴趣爱好&lt;/h2&gt;
+&lt;p&gt;羽毛球，溜达&lt;/p&gt;
+&lt;h2 id=&#34;联系我呀&#34;&gt;📬 联系我呀&lt;/h2&gt;
+&lt;p&gt;mv74530@126.com&lt;/p&gt;
+">关于</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/pcawg-wen-xian-yue-du-yi/"" data-c="
+          &lt;p&gt;**题目： The evolutionary history of 2,658 cancers&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;单位：PCAWG Consortium&lt;br&gt;
+发表日期：2020-02-05**&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;摘要&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Cancer develops through a process of somatic evolution1,2. Sequencing data from a single biopsy represent a snapshot of this process that can reveal the timing of specific genomic aberrations and the changing influence of mutational processes3. Here, by whole-genome sequencing analysis of 2,658 cancers as part of the Pan-Cancer Analysis of Whole Genomes (PCAWG) Consortium of the International Cancer Genome Consortium (ICGC) and The&lt;br&gt;
+Cancer Genome Atlas (TCGA)4, we reconstruct the life history and evolution of mutational processes and driver mutation sequences of 38 types of cancer. Early oncogenesis is characterized by mutations in a constrained set of driver genes, and specific copy number gains, such as trisomy 7 in glioblastoma and isochromosome 17q in medulloblastoma. The mutational spectrum changes significantly throughout tumour evolution in 40% of samples. A nearly fourfold diversification of driver genes and increased genomic instability are features of later stages. Copy number alterations often occur in mitotic crises, and lead to simultaneous gains of chromosomal segments. Timing analyses suggest that driver mutations often precede diagnosis by many years, if not decades. Together, these results determine the evolutionary trajectories of cancer, and highlight opportunities for early cancer detection.&lt;/em&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;研究背景：&lt;/strong&gt;&lt;br&gt;
+类似于物种进化，体细胞群体中也普遍存在突变和选择。大部分突变是中性的，受连锁效应影响作为“乘客”受到“选择”作用；剩下的突变大多也是有害的，在负选择过程中慢慢被清除；只有少量突变是对细胞生存是有利的。目前对于正常体细胞进化和癌细胞进化突变出现时序谱之间的差异了解非常少。因此，本文利用 PCAWG 数据集来表征来自 38 种癌症类型的 2,658 名独特捐赠者的 2,778 份癌症样本的进化历史。作者推断染色体进化的时间和模式，并学习每种癌症类型样本的典型突变序列。然后，作者定义了肿瘤进化的广泛时期，并研究了驱动因素和突变特征在这些时期之间如何变化。使用类似时钟的突变过程，作者将突变时间估计映射到近似实时。总的来说，这些分析勾勒出了癌症的典型进化轨迹，并相对于诊断点实时绘制它们。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;方法部分：&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;一、拷贝数增加时间估计&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;突变等位基因频率（VAF）的期望值    E[X] = nmfρ/[N (1 − ρ) + Cρ]&lt;br&gt;
+X：reads数目；n：位点的reads覆盖度；m：携带该突变的等位基因数目；&lt;br&gt;
+f：携带给定突变的clone数目 (f = 1 for clonal mutations)；&lt;br&gt;
+N：标准拷贝数 (2 on autosomes, 1 or 2 for chromosome X and 0 or 1 for chromosome Y)；&lt;br&gt;
+C：肿瘤的总拷贝数；ρ：样本纯度&lt;/li&gt;
+&lt;li&gt;在等位基因拷贝数m下突变数目为n&lt;sub&gt;m&lt;/sub&gt;下，可以推断拷贝扩增的时间：&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635492897328.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+2+1对应主等位基因和次等位基因拷贝数分别为2和1。没有考虑2+2这种情形是因为两个等位基因同时发生拷贝数变异的概率很低。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;二、突变时间追溯&lt;/strong&gt;&lt;br&gt;
+一些概念的区分：&lt;br&gt;
+根据点突变覆盖的reads数目可在拷贝事件发生情况下，将变异区分为早期克隆（early clonal），晚期克隆（late clonal），在拷贝事件没有发生的情况下，将变异区分为克隆（clonal）和亚克隆（subclonal）。见Fig1.a&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Early clonal：mutation on &amp;gt;=2 copies per cell   （f=1 and m&amp;gt;1）&lt;/li&gt;
+&lt;li&gt;Late clonal: mutation on 1 copy per cell, no retained allele   （f=1, m=1 and C&amp;gt;2）&lt;/li&gt;
+&lt;li&gt;Clonal: mutation on 1 copy per cell, either on amplified or retained allele    （f=1）&lt;/li&gt;
+&lt;li&gt;Subclonal: mutation on &amp;lt; 1 copy per cell    （f &amp;lt; 1）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;三、驱动突变时间追溯&lt;/strong&gt;&lt;br&gt;
+计算PCAWG提供的癌症驱动点突变，在四个时期中，early/late clonal的odds-ratios和clonal（包括early，late和unspecified clonal）/subclonal的odds-ratio。非驱动区域具有相同拷贝数组成的片段上的突变用于计算背景分布，1000 bootstraps。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;结果部分&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;一、重建肿瘤生命历程&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;初始时，每个点突变发生在单个细胞的单个染色体上，从而产生具有相同突变的细胞谱系。如果一条染色体基因座发生拷贝数变异，则该等位基因在拷贝前的任何点突变都会出现在两个等位基因拷贝（&lt;code&gt;一个母体，一个子体&lt;/code&gt;）上。这和不依赖于拷贝事件，仅继承于等位基因拷贝或者其它未发生拷贝事件的等位基因座上的突变不同。等位基因拷贝数可以从测序数据中获得，因此可以定义拷贝事件发生前后基因座上的突变，未拷贝的基因座突变。&lt;/li&gt;
+&lt;li&gt;拷贝事件内，克隆突变和非克隆突变的比率可用于估计在克隆进化过程中发生基因座拷贝变异事件的时间点，也可理解为测定相对于拷贝事件，发生在拷贝单元内的新突变的发生时间。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635217256865.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;二、拷贝数增加的时序模式&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;染色体突变获得时序谱发生在很宽的分子时间范围内，不同肿瘤类型间存在系统偏差，而同种肿瘤类型不同染色体间也会表现出相似的突变时序分布。在胶质母细胞瘤和髓母细胞瘤中，大部分增益发生在分子时间的早期。相比之下，在肺癌、黑色素瘤和乳头状肾癌中，增益出现在分子时间尺度的末尾。大多数肿瘤类型，包括乳腺癌、卵巢癌和结直肠癌，都显示出相对广泛的染色体不稳定时期，这表明样本中的增益时间非常可变。&lt;/li&gt;
+&lt;li&gt;某些肿瘤类型始终具有特定染色体区域的早期或晚期增益。最明显的是胶质母细胞瘤，其中 90% 的肿瘤包含 7、19 或 20 号染色体的单拷贝增益。&lt;/li&gt;
+&lt;li&gt;同一肿瘤中的拷贝后的突变通常似乎发生在相似的分子时间，指向涉及大多数增益片段的拷贝数增益的间断爆发。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;三、肿瘤驱动基因中点突变的发生时间&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;根据前面对体细胞突变的定性分期，癌细胞驱动基因上的突变同理可以进行分期。在 2,583 个样本的 4700 万个点突变中，22% 是早期克隆，7% 是晚期克隆，53% 是未指定克隆，17% 是亚克隆。而在一组 453 个癌症驱动基因中，鉴定出 5913 个致癌点突变，其中 29% 为早期克隆，5% 为晚期克隆，56% 为未指定克隆，8% 为亚克隆。结果表明癌症驱动基因突变在早期克隆和未指定克隆中富集。&lt;/li&gt;
+&lt;li&gt;按照时间推移，所有癌细胞驱动基因点突变多样性在肿瘤后期增加：所有早期克隆驱动突变的 50% 仅发生在 9 个基因中，而 50% 的晚期和亚克隆突变发生在每个大约有 35 个不同的基因，增加了近四倍。结果表明早期癌症进化事件限制在少数驱动上，而在晚期发展过程中呈现更多元的驱动进化。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635297585311.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;四、体细胞驱动进化事件的相对时间&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;跨样本的概率排序病变分析，检验每个突变在肿瘤进化早期和晚期中的偏好。结果发现APC-KRAS-TP53在肿瘤早期依次有最高的突变几率；拷贝数变异在后期发生。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635317754790.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;五、突变印记的形成时间&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;突变印记（Mutational Signatures）定义为由不同因素，如外源或内源DNA损伤，或DNA复制偏差诱发肿瘤基因组形成的不同突变组合。通过在不同时期体细胞突变的分布，发现外源因素诱发的突变（尼古丁印记SBS4和紫外暴露印记SBS7）更多发生在肿瘤进化早期，印记SBS9,SBS12随时间呈递减趋势，而APOEEC（SBS2和SBS13）和SBS38从早期克隆到晚期克隆中都在增长。由有缺陷的错配修复导致的突变印记（SBS6,14,15,20,21,26,44）从克隆到亚克隆时期呈增长趋势。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635408862729.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;六、时间顺序的肿瘤演化估计&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;分子钟（Molecular Clock）模型结合癌症诊断时间，估计肿瘤演化的时间发展。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635410119295.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;七、癌症发展的一般时间线&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635410827513.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;八、讨论&lt;/strong&gt;&lt;/p&gt;
+">PCAWG系列文献阅读（一）</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/epimap-wen-xian-jing-jie/"" data-c="
+          &lt;p&gt;1&lt;/p&gt;
+">Epimap文献精解</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/gong-neng-ji-yin-zu-zhu-shi/"" data-c="
+          &lt;p&gt;1）&lt;/p&gt;
+">功能基因组注释</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/biao-guan-zu-wen-xian-zheng-li/"" data-c="
+          &lt;p&gt;1）表观遗传可以认为是介于遗传和环境影响之间的一种“遗传”方式，其定义为关于表型遗传的不依赖于DNA序列改变的可逆遗传方式(https://en.wikipedia.org/wiki/Epigenetics)。然而近期研究通过美国白人，非裔，华裔三个人群的甲基化组和基因组发现，人群间甲基化差异部分可由基因组差异解释，有三分之一的甲基化差异不和任何DNA差异相关(Heyn et al., 2013)。另外，人群间的甲基化遗传明显强于mRNA表达水平遗传(Carja et al., 2017)。&lt;br&gt;
+2) DNA甲基化由DNA甲基化转移酶(DNMTs)来完成，DNMTs诱导5mC→T转换，并可在DNA中保留下来。因此，哺乳动物基因组CpG含量总低于期望水平。DNMTs与特定烷基化修复酶 (ALKBH2) 的系统共同进化可能使真核生物能够耐受 DNA 甲基化(Greenberg et al., 2019)。DNA甲基化经常扮演着抑制转座子和基因，同时也和活化基因表达有关(Greenberg et al., 2019)。这种DNA甲基化调控受到组蛋白修饰的影响。富含H3K4me3的活性启动子即使富含CpG，也不会被甲基化，因为H3K4me3阻碍了DNMTs的介入。而富含H3K36me3的活性基因本体区域因诱导DNMTs的介入，常处于高甲基化水平。富含H3K9me2或H3K9me3的异染色质区域也通过泛素化介导使得DNMTs维持DNA甲基化(Greenberg et al., 2019)。DNA甲基化抑制转录的机制可理解为5mC阻碍了转录因子的结合，同样，5mC的形成也可导致与其它转录因子（阻遏因子）的结合(Greenberg et al., 2019)。这里可以考虑，根据是否可和5mC结合，以及下游基因的表达水平，对转录因子进行分类。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1634093206398.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+3) 组蛋白修饰的作用。H3K4me3和活性启动子相关，维持启动子CpG低甲基化；H3K36me3和基因本体相关，维持基因本体高甲基化；H3K9me3和异染色质区域高甲基化维持相关；H3K27me3介导的基因沉默和DNA甲基化是竞争性抑制作用，相互替换通过会维持基因沉默，但有时DNA甲基化替换PRC介导的H3K27me3会激活基因表达。H3K27me3基因沉默比DNA甲基化可塑性更强(Greenberg et al., 2019)。H3K4me1和启动子和增强子有关(Bae et al., 2020)，可方便粘连蛋白Cohesin complex——一种主要的染色质环组织蛋白的募集，从而促进增强子和启动子长程相互作用(Yan et al., 2018)；H3K27ac和活性增强子相关(Creyghton et al., 2010)。&lt;br&gt;
+4) DNA去甲基化由TET双加氧酶介导完成(An at al., 2017)。&lt;br&gt;
+5) 关于三维基因组的介绍https://zhuanlan.zhihu.com/p/338839481   染色质疆域、Compartments A/B、拓扑结构域（TAD）、染色质环。&lt;br&gt;
+6) 染色质环锚点和癌基因组不稳定性(癌症群体变异分布和突变率分析)和生殖细胞重组热点（群体基因组重组热点）有关(Kaiser et al., 2018; Guo et al., 2018; Spence et al., 2019)。&lt;br&gt;
+7) 常见的 DNA 序列变异可以影响 3D 染色质构象，DNA 序列变异影响 3D 染色质构象的几个特征，包括loop strength, contact insulation, contact directionality, 和 density of local cis contacts。有观察到3D基因组的个体重复一致性，个体间差异和群体间差异，可能暗示3D基因组遗传和DNA序列遗传间的某种关联(Gorkin et al., 2019)。&lt;br&gt;
+8) 转录阻遏因子CTCF作为一类重要的转录因子，涉及许多细胞生物学过程，包括转录调控，绝缘子活动，V(D)J重排，和染色质环的调控(https://en.wikipedia.org/wiki/CTCF)。一般染色质环的形成，会认为是粘连蛋白Cohesin和CTCF参与的“环挤出”模型，这两类蛋白在环形成过程中扮演着不同角色，CTCF分离邻近折叠域，维持Cohesin结合位点，而Cohesin用于环的形成。cohesin 破坏后局部染色质相互作用普遍丧失，但拓扑结构域保持完整。然而， CTCF 的消耗不仅减少了域内相互作用，而且增加了域间相互作用(Zuin et al., 2014)。&lt;br&gt;
+9) 大多数TADs依赖于CTCF架构而成，任兵课题组发现了一类灵长类特异性内源性逆转录转座子——人类内源性逆转录病毒亚家族 H (HERV-H)——参与建立人类多能干细胞 (hPSC) 的 TAD 边界。删除这些 HERV-H 元素会消除相应的 TAD 边界，而从头插入 HERV-H 元素可以在 hPSC 中引入新的染色质域边界。此外，这些 TAD 边界高度依赖于 HERV-H 转录，因为在 hPSC 分化过程中 HERV-H 元件的转录沉默，或通过基因操作，削弱或消除了 TAD 边界的绝缘性(Zhang et al., 2019)。&lt;br&gt;
+10) BORIS，是CTCF类蛋白（CTCFL），和CTCF旁系同源，和CTCF具有相同的DNA结合域。CTCF普遍表达，而BORIS仅在生殖细胞和癌细胞中表达。在正常体细胞中聚集的CTCF结合域不利于CTCF同源二聚体的形成，但是表达BORIS的生殖细胞和癌细胞中这种结合域可促使BORIS-CTCF异源二聚体的形成。而且这些异源二聚体结合域在活性启动子和增强子中富集(Pugacheva et al., 2015)。&lt;br&gt;
+11) 神经母细胞瘤中BORIS的过度表达，诱导形成并锚定新的环状结构，同时开启了许多基因的表达，和预后不良有关(David et al., 2019)。&lt;br&gt;
+12) 和绝缘子效应相关的CTCF结合区域序列特征：a) 成串CTCF结合域数目。随着数目的增多，效应也会增强，但是增幅不断减弱；b) CTCF结合域上游侧翼序列；c) 在TAD边界相对于不在TAD边界的CTCF结合域更倾向于发展为绝缘子，与结合强度无关。 绝缘子通过TADs的形成，可以弱化增强子-启动子连接效应(Huang et al., 2021)。&lt;br&gt;
+13) Moon et al., 2019 分析了千人基因组亚非欧三个人群 Fantom 活性增强子区域的最近正选择。&lt;br&gt;
+14) Villar et al., 2015 分析来自6个目 20 个哺乳动物物种的肝脏中活性启动子和增强子的进化，提出：a）基因组的快速增强子和缓慢启动子进化；b）增强子在这些哺乳动物中很少保守；c）最近进化的增强子主导了哺乳动物的调节环境；d）快速进化的增强子与最近正选择 的适应性演化相关。&lt;br&gt;
+15) Wong et al., 2020 发现保守的 TF 结合基序在进化过程中稳定和保留增强子功能。一旦建立，这些增强子就可以作为进化过程中保守基因调控网络模块的一部分进行维护。虽然强大，但这些增强子可以通过新 TF 结合基序的扩展和整合以及其他基序的丢失而进化。&lt;br&gt;
+16) Snetkova et al., 2021对 23 种超保守增强子进行了不同程度的诱变，并检测转基因小鼠报告基因的活性，发现超保守元件的增强子功能对诱变具有鲁棒性。&lt;br&gt;
+17) 最近进化的增强子在个体间是高度不一致的，最近进化的增强子还未能很好融入转录机制，疾病相关的增强子通常是更保守的(Castelijns et al., 2020)。&lt;br&gt;
+18) 进化保守的增强子和个体发育相关，而相对脆弱的增强子和群体适应性演化相关(Li et al., 2019)。&lt;br&gt;
+19) 启动子和增强子具有相同的架构和功能特征，也揭示着它们之间的相互转换可能性。发现的更多转换是从祖先增强子朝启动子的转变，也揭示着下游新基因的起源(Carelli et al., 2018)。&lt;br&gt;
+20) 基因组中存在的大量增强子冗余（shadow enhancers）可缓冲单个或几个增强子的loss-of-function突变，有利于个体表型稳定(Osterwalder et al., 2018; Cannavò et al., 2016)。&lt;br&gt;
+21) Alu序列具有H3K4me1增强子/启动子标记的富集，一部分Alu序列通过体外基因报告试验检测出增强子活性，而且Hi-C数据也显示出Alu序列与基因启动子的长程互作。在基因上游近端的Alu具有更高的保守性。揭示了Alu序列可以作为增强子发挥作用，基因组更多是原增强子，作为新增强子诞生的来源(Su et al., 2014)。&lt;br&gt;
+22) 低甲基化的转座子TE获得增强子标记H3K4me1和p300，可在体外基因报告试验中检测出增强子活性(Xie et al., 2013)。&lt;br&gt;
+23) 冗余增强子的进化起源机制：a) 转座子序列拷贝；b) 不同转座子独立扩展和选择(Barth et al., 2020)。&lt;br&gt;
+24) 沉默子可以靶标启动子降低转录水平，是增强子的拮抗元件。增强子往往存在二价性，在不同细胞环境下可表现为抑制作用或增强子的促进作用。至今还没有明确的关于沉默子的染色质标记(Segert et al., 2021)。这里我猜想启动子、增强子、沉默子，甚至是绝缘子，都具有相似的进化起源和进化机制，比如依赖于转座子的进化机制。所以这几种调控元件序列上没有绝对的特异性，并且许多元件存在二价性，在不同细胞环境，也可以理解为在不同的组蛋白标记，不同的转录因子结合，以及序列甲基化状态等的不同，导致了调控元件不同的功能效应。&lt;br&gt;
+25) 许多反转录转座子充当胚胎植入子宫前特异性基因调控元件；MT2B2反转录转座子启动子对小鼠胚胎植入前发育至关重要；MT2B2驱动的Cdk2ap1可由不同启动子启动；反转录转座启动子可以产生具有特异调控的保守基因异构形式 (Modzelewski et al., 2021)。&lt;/p&gt;
+&lt;p&gt;References:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Heyn H, Moran S, Hernando-Herraez I, et al. DNA methylation contributes to natural human variation. Genome Res. 2013;23(9):1363-1372. doi:10.1101/gr.154187.112&lt;/li&gt;
+&lt;li&gt;Carja O, MacIsaac JL, Mah SM, et al. Worldwide patterns of human epigenetic variation. Nat Ecol Evol. 2017;1(10):1577-1583.&lt;/li&gt;
+&lt;li&gt;Greenberg, M.V.C., Bourc’his, D. The diverse roles of DNA methylation in mammalian development and disease. Nat Rev Mol Cell Biol 20, 590–607 (2019).&lt;/li&gt;
+&lt;li&gt;An, J., Rao, A. &amp;amp; Ko, M. TET family dioxygenases and DNA demethylation in stem cells and cancers. Exp Mol Med 49, e323 (2017).&lt;/li&gt;
+&lt;li&gt;Bae S, Lesch BJ. H3K4me1 Distribution Predicts Transcription State and Poising at Promoters. Front Cell Dev Biol. 2020;8:289. Published 2020 May 5. doi:10.3389/fcell.2020.00289&lt;/li&gt;
+&lt;li&gt;Yan J, Chen SA, Local A, et al. Histone H3 lysine 4 monomethylation modulates long-range chromatin interactions at enhancers. Cell Res. 2018;28(3):387. doi:10.1038/cr.2018.18&lt;/li&gt;
+&lt;li&gt;Creyghton MP, Cheng AW, Welstead GG, et al. Histone H3K27ac separates active from poised enhancers and predicts developmental state. Proc Natl Acad Sci U S A. 2010;107(50):21931-21936. doi:10.1073/pnas.1016071107&lt;/li&gt;
+&lt;li&gt;Kaiser VB, Semple CA. Chromatin loop anchors are associated with genome instability in cancer and recombination hotspots in the germline. Genome Biol. 2018;19(1):101. Published 2018 Jul 30. doi:10.1186/s13059-018-1483-4&lt;/li&gt;
+&lt;li&gt;Guo YA, Chang MM, Huang W, et al. Mutation hotspots at CTCF binding sites coupled to chromosomal instability in gastrointestinal cancers. Nat Commun. 2018;9(1):1520. Published 2018 Apr 18. doi:10.1038/s41467-018-03828-2&lt;/li&gt;
+&lt;li&gt;Spence JP, Song YS. Inference and analysis of population-specific fine-scale recombination maps across 26 diverse human populations. Sci Adv. 2019;5(10):eaaw9206. Published 2019 Oct 23. doi:10.1126/sciadv.aaw9206&lt;/li&gt;
+&lt;li&gt;Gorkin DU, Qiu Y, Hu M, et al. Common DNA sequence variation influences 3-dimensional conformation of the human genome. Genome Biol. 2019;20(1):255.&lt;/li&gt;
+&lt;li&gt;Zhang Y, Li T, Preissl S, et al. Transcriptionally active HERV-H retrotransposons demarcate topologically associating domains in human pluripotent stem cells. Nat Genet. 2019;51(9):1380-1388.&lt;/li&gt;
+&lt;li&gt;Pugacheva EM, Rivero-Hinojosa S, Espinoza CA, et al. Comparative analyses of CTCF and BORIS occupancies uncover two distinct classes of CTCF binding genomic regions. Genome Biol. 2015;16(1):161. Published 2015 Aug 14.&lt;/li&gt;
+&lt;li&gt;David N. Debruyne et al. BORIS promotes chromatin regulatory interactions in treatment-resistant cancer cells. Nature, 2019.&lt;/li&gt;
+&lt;li&gt;Huang H, Zhu Q, Jussila A, et al. CTCF mediates dosage- and sequence-context-dependent transcriptional insulation by forming local chromatin domains. Nat Genet. 2021;53(7):1064-1074.&lt;/li&gt;
+&lt;li&gt;Moon JM, Capra JA, Abbot P, Rokas A. Signatures of Recent Positive Selection in Enhancers Across 41 Human Tissues. G3 (Bethesda). 2019;9(8):2761-2774. Published 2019 Aug 8. doi:10.1534/g3.119.400186&lt;/li&gt;
+&lt;li&gt;Villar D, Berthelot C, Aldridge S, et al. Enhancer evolution across 20 mammalian species. Cell. 2015;160(3):554-566. doi:10.1016/j.cell.2015.01.006&lt;/li&gt;
+&lt;li&gt;Wong ES, Zheng D, Tan SZ, et al. Deep conservation of the enhancer regulatory code in animals. Science. 2020;370(6517):eaax8137.&lt;/li&gt;
+&lt;li&gt;Snetkova V, Ypsilanti AR, Akiyama JA, et al. Ultraconserved enhancer function does not require perfect sequence conservation. Nat Genet. 2021;53(4):521-528. doi:10.1038/s41588-021-00812-3&lt;/li&gt;
+&lt;li&gt;Zuin J, Dixon JR, van der Reijden MI, et al. Cohesin and CTCF differentially affect chromatin architecture and gene expression in human cells. Proc Natl Acad Sci U S A. 2014;111(3):996-1001.&lt;/li&gt;
+&lt;li&gt;Castelijns B, Baak ML, Geeven G, et al. Recently Evolved Enhancers Emerge with High Interindividual Variability and Less Frequently Associate with Disease. Cell Rep. 2020;31(12):107799. doi:10.1016/j.celrep.2020.107799&lt;/li&gt;
+&lt;li&gt;Li S, Kvon EZ, Visel A, Pennacchio LA, Ovcharenko I. Stable enhancers are active in development, and fragile enhancers are associated with evolutionary adaptation. Genome Biol. 2019;20(1):140.&lt;/li&gt;
+&lt;li&gt;Carelli FN, Liechti A, Halbert J, Warnefors M, Kaessmann H. Repurposing of promoters and enhancers during mammalian evolution. Nat Commun. 2018;9(1):4066. Published 2018 Oct 4. doi:10.1038/s41467-018-06544-z&lt;/li&gt;
+&lt;li&gt;Osterwalder M, Barozzi I, Tissières V, et al. Enhancer redundancy provides phenotypic robustness in mammalian development. Nature. 2018;554(7691):239-243. doi:10.1038/nature25461&lt;/li&gt;
+&lt;li&gt;Cannavò E, Khoueiry P, Garfield DA, et al. Shadow Enhancers Are Pervasive Features of Developmental Regulatory Networks. Curr Biol. 2016;26(1):38-51.&lt;/li&gt;
+&lt;li&gt;Su M, Han D, Boyd-Kirkup J, Yu X, Han JJ. Evolution of Alu elements toward enhancers. Cell Rep. 2014;7(2):376-385.&lt;/li&gt;
+&lt;li&gt;Xie M, Hong C, Zhang B, et al. DNA hypomethylation within specific transposable element families associates with tissue-specific enhancer landscape. Nat Genet. 2013;45(7):836-841. doi:10.1038/ng.2649&lt;/li&gt;
+&lt;li&gt;Barth NKH, Li L, Taher L. Independent Transposon Exaptation Is a Widespread Mechanism of Redundant Enhancer Evolution in the Mammalian Genome. Genome Biol Evol. 2020;12(3):1-17. doi:10.1093/gbe/evaa004&lt;/li&gt;
+&lt;li&gt;Segert JA, Gisselbrecht SS, Bulyk ML. Transcriptional Silencers: Driving Gene Expression with the Brakes On. Trends Genet. 2021;37(6):514-527.&lt;/li&gt;
+&lt;li&gt;Modzelewski AJ, Shao W, Chen J, et al. A mouse-specific retrotransposon drives a conserved Cdk2ap1 isoform essential for developmentCell. 2021;S0092-8674(21)01104-1. doi:10.1016/j.cell.2021.09.021&lt;/li&gt;
+&lt;/ol&gt;
+">表观组文献整理</a>
+      </div>
+      
+    </div>
+    <div class="page">
+      <div id="page_ul"></div>
+    </div>
+  </div>
+</div>
+<script>
+  !function () {
+    let searchMask = document.querySelector('#search_mask');
+    let result = document.querySelector('#result');
+    let items = document.querySelectorAll('.item');
+    let searchBox = document.querySelector('#search');
+    let statCount = document.querySelector('#stat_count');
+    let statTimes = document.querySelector('#stat_times');
+    let pageUl = document.querySelector('#page_ul');
+    let close = document.querySelector('#close');
+    
+    close.addEventListener('click', function() {
+      searchMask.style = 'display: none;'
+    })
 
-            <div class="copyright">
-                Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-                    <b id="hitokoto"></b><br>
-                    <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
-            <path
-                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
-                fill="#93b5cf"></path>
-        </svg>
+    let finds = [];
+    let contents = [];
+    let pageSize = 10;
+    items.forEach(item => {
+      let a = item.querySelector('a');
+      contents.push({
+        title: a.innerText,
+        details: a.dataset.c,
+        link: a.href
+      })
+      item.remove();
+    })
 
-                    Socrates&#39; Blogs &copy;Copyright
-                        <script>
-                            var date = new Date();
-                            document.write("" + date.getFullYear());
-                        </script> <img src="https://i.loli.net/2020/03/31/kG71rUoEW5YQq4h.gif"  alt="dandan" />
-                        | 本站已经运行了
-                <strong><script type="text/javascript">		
+    function insertStr(soure, start, count) {
+      let newStr = soure.substr(start, count);
+      return soure.slice(0, start) + '<em>' + newStr + '</em>' + soure.slice(start + count);
+    }
 
-                var urodz= new Date("2021/10/25");
-                var now = new Date();
-                var ile = now.getTime() - urodz.getTime();
-                var dni = Math.floor(ile / (1000 * 60 * 60 * 24));
-                document.write(+dni)
-                </script>
-                </strong>天 | 🗞
-		<a class="rss" href="https://socrates1100.github.io/atom.xml" target="_blank"><strong>RSS</strong></a>
-            </div>
+    pageUl.addEventListener('click', function(event) {
+      let target = event.target;
+      if (target.__proto__ === HTMLSpanElement.prototype) {
+        appendResults(parseInt(target.dataset.i));
+      }
+    })
 
-<!-- commentTyping -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xiangyi715/Gridea-Chic-Unique@1.0.2/assets/media/script/commentTyping.js"></script>
+    function appendResults(index) {
+      let htmlResult = '';
+      let start = index || 0;
+      let end = Math.min(start + pageSize, finds.length);
+      for (let i = start; i < end; i++) {
+        const current = finds[i];
+        let html = current.title;
+        let sum = 0;
+        let positions = current.positions;
+        positions.forEach(position => {
+          html = insertStr(html, position.start + sum, position.count);
+          sum += 9;
+        })
+        htmlResult += `<div class="item"><a class="result-title" href="${current.link}">${html}</a></div>`;
+      }
+      result.innerHTML = htmlResult;
+      pageUl.innerHTML = '';
+      let count = finds.length / pageSize;
+      let lis = '';
+      if (start !== 0) {
+        lis += `<span class="fa fa-angle-left" data-i='${start - 1}'></span>`;
+      }
+      for (let i = 0; i < count; i++) {
+        lis += `<span class='${i === start?'current':''}' data-i='${i}'>${i+1}</span>`;     
+      }
+      if (start+1 < count) {
+        lis += `<span class="fa fa-angle-right" data-i='${start+1}'></span>`;  
+      }
+      pageUl.innerHTML = lis;
+    }
 
-<!-- Click loveHeart -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xiangyi715/Gridea-Chic-Unique@1.0.3/assets/media/script/love.js"></script>
-        </footer>
-
-        
-
-                <script>
-			
-
-                    function LoadPlayer() {
-                        var music_array = [];
-                        
-                        music_array.push({
-                            name: '',
-                            url: '',
-                            artist: '',
-                            cover: '',
-//			    lrc: "https://socrates1100.github.io/media/music_lrc/rangjiu.lrc"
-                        });
-                        
-                        console.log(" MusicList: " + music_array);
-                        
-                        const ap = new APlayer({
-                            container: document.getElementById('player'),
-                            fixed: true,
-                            audio: music_array
-                        });
-                        
-                    }
-
-                    LoadPlayer();
-                    
-
-                    
-//                    hitokoto();
-                    hljs.initHighlighting();
-		    console.clear();
-                    console.log("\n %c \u26a1Theme:Chic-Unique Author's Blog:https://github.com/xiangyi715  Write By xiangyi  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+    function search(delay) {
+      let timer = null
+      return function () {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          let start = Date.now();
+          let segments = searchBox.value.split(' ').filter(c => c != '');
+          if (segments.length <= 0) {
+            return;
+          }
+          finds = [];
+          let htmlResult = '';
+          contents.forEach(content => {
+            let title = content.title;
+            let positions = [];
+            let find = false;
+            segments.forEach((segment) => {
+              if (content.title.includes(segment)) {
+                find = true;
+                positions.push({
+                  start: content.title.indexOf(segment),
+                  count: segment.length
+                })
+              } else if (content.details.includes(segment)) {
+                find = true;
+              }
+            });
+            if (find) {
+              finds.push({
+                title: content.title,
+                link: content.link,
+                positions
+              });
+            }
+          })
+          appendResults(0);
+          statCount.textContent = finds.length;
+          statTimes.textContent = Date.now() - start;
+        }, delay)
+      }
+    }
+    searchBox.addEventListener('input', search(200));
+  }()
 </script>
-                
+    
+      <input hidden id="copy" />
+      <script>
+        !function () {
+          let times = document.querySelectorAll('.publish-time');
+          for (let i = 0; i < times.length; i++) {
+            let date = times[i].dataset.t;
+            let time = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);
+            if (time < 60) {
+              str = time + '秒之前';
+            } else if (time < 3600) {
+              str = Math.floor(time / 60) + '分钟之前';
+            } else if (time >= 3600 && time < 86400) {
+              str = Math.floor(time / 3600) + '小时之前';
+            } else if (time >= 86400 && time < 259200) {
+              str = Math.floor(time / 86400) + '天之前';
+            } else {
+              str = times[i].textContent;
+            }
+            times[i].textContent = str;
+          }
+        }();
+      </script>
 
+      <script>
+        let language = '';
+        if (language !== '') {
+          let map = new Map();
+          if (language === 'en') {
+            map.set('search', 'Search');
+            map.set('category', 'Categories');
+            map.set('article', 'Articles');
+            map.set('tag', 'Tags');
+            map.set('top', 'Top');
+            map.set('publish', 'published');
+            map.set('minute', ' minutes');
+            map.set('read-more', 'Read More');
+            map.set('view', 'View');
+            map.set('words', ' words');
+            map.set('category-in', 'category in');
+            map.set('preview', 'Meta');
+            map.set('index', 'Toc');
+            map.set('no-archives', "You haven't created yet");
+            map.set('archives', " articles in total");
+            map.set('cloud-tags', " tags in total");
+            map.set('copyright', "Copyright: ");
+            map.set('author', "Author: ");
+            map.set('link', "Link: ");
+            map.set('leave-message', "Leave a message");
+            map.set('format', "Links Format");
+            map.set('site-name', "Name: ");
+            map.set('site-link', "Link: ");
+            map.set('site-desc', "Desc: ");
+            map.set('stat', " related results, taking ");
+            map.set('stat-time', " ms");
+            map.set('site-img', "Image: ");
+          }
+
+          if (map.size > 0) {
+            let lanElems = document.querySelectorAll('.language');
+            lanElems.forEach(elem => {
+              let lan = elem.dataset.lan, text = map.get(lan);
+              if (elem.__proto__ === HTMLInputElement.prototype) {
+                elem.placeholder = text
+              } else {
+                if (elem.dataset.count) {
+                  text = elem.dataset.count + text;
+                }
+                elem.textContent = text;
+              }
+            })
+          }
+        }
+
+        window.Clipboard = (function (window, document, navigator) {
+          var textArea,
+            copy;
+
+          // 判断是不是ios端
+          function isOS() {
+            return navigator.userAgent.match(/ipad|iphone/i);
+          }
+          //创建文本元素
+          function createTextArea(text) {
+            textArea = document.createElement('textArea');
+            textArea.value = text;
+            textArea.style.width = 0;
+            textArea.style.height = 0;
+            textArea.clientHeight = 0;
+            textArea.clientWidth = 0;
+            document.body.appendChild(textArea);
+          }
+          //选择内容
+          function selectText() {
+            var range,
+              selection;
+
+            if (isOS()) {
+              range = document.createRange();
+              range.selectNodeContents(textArea);
+              selection = window.getSelection();
+              selection.removeAllRanges();
+              selection.addRange(range);
+              textArea.setSelectionRange(0, 999999);
+            } else {
+              textArea.select();
+            }
+          }
+
+          //复制到剪贴板
+          function copyToClipboard() {
+            try {
+              document.execCommand("Copy")
+            } catch (err) {
+              alert("复制错误！请手动复制！")
+            }
+            document.body.removeChild(textArea);
+          }
+
+          copy = function (text) {
+            createTextArea(text);
+            selectText();
+            copyToClipboard();
+          };
+
+          return {
+            copy: copy
+          };
+        })(window, document, navigator);
+
+        function copyCode(e) {
+          if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+            let code = e.currentTarget.querySelector('code');
+            var text = code.innerText;
+            if (e.srcElement.textContent === '复制成功') {
+              return;
+            }
+            e.srcElement.textContent = '复制成功';
+            (function (elem) {
+              setTimeout(() => {
+                if (elem.textContent === '复制成功') {
+                  elem.textContent = '复制代码'
+                }
+              }, 1000);
+            })(e.srcElement)
+            Clipboard.copy(text);
+          }
+        }
+
+        let pres = document.querySelectorAll('pre');
+        pres.forEach(pre => {
+          let code = pre.querySelector('code');
+          let copyElem = document.createElement('span');
+          copyElem.classList.add('copy-code');
+          copyElem.textContent = '复制代码';
+          pre.appendChild(copyElem);
+          pre.onclick = copyCode
+        })
+
+      </script>
+      <script src="/media/js/motion.js"></script>
+
+      
+        <script
+          src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+        <script>
+          var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 200
+          });
+        </script>
+        
+          
+<script src="/media/js/mouse/peace.js"></script>
+
+            
+
+                
+                    <div class="snow-container"></div>
+                    <script src="/media/js/bg/snow.js"></script>
+                    
 
 </html>
