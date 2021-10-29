@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://localhost:4001</id>
     <title>Socrates&apos; Blogs</title>
-    <updated>2021-10-29T00:41:02.234Z</updated>
+    <updated>2021-10-29T00:49:44.988Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://localhost:4001"/>
     <link rel="self" href="http://localhost:4001/atom.xml"/>
@@ -21,8 +21,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[关于]]></title>
-        <id>http://localhost:4001/post/关于博主/</id>
-        <link href="http://localhost:4001/post/关于博主/">
+        <id>http://localhost:4001/post/about/</id>
+        <link href="http://localhost:4001/post/about/">
         </link>
         <updated>2021-10-26T11:09:48.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
