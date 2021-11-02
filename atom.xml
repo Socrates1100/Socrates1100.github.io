@@ -1,19 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://socrates1100.github.io</id>
+    <id>http://localhost:4001</id>
     <title>Socrates&apos; Blogs</title>
-    <updated>2021-11-01T14:38:32.155Z</updated>
+    <updated>2021-11-02T11:47:25.923Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://socrates1100.github.io"/>
-    <link rel="self" href="https://socrates1100.github.io/atom.xml"/>
+    <link rel="alternate" href="http://localhost:4001"/>
+    <link rel="self" href="http://localhost:4001/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://socrates1100.github.io/images/avatar.png</logo>
-    <icon>https://socrates1100.github.io/favicon.ico</icon>
+    <logo>http://localhost:4001/images/avatar.png</logo>
+    <icon>http://localhost:4001/favicon.ico</icon>
     <rights>All rights reserved 2021, Socrates&apos; Blogs</rights>
     <entry>
+        <title type="html"><![CDATA[Fantom5如何区分启动子和增强子？]]></title>
+        <id>http://localhost:4001/post/fantom5-ru-he-qu-fen-qi-dong-zi-he-zeng-qiang-zi/</id>
+        <link href="http://localhost:4001/post/fantom5-ru-he-qu-fen-qi-dong-zi-he-zeng-qiang-zi/">
+        </link>
+        <updated>2021-11-02T07:33:49.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="the-fantom5-project">The FANTOM5 project</h1>
+<p><strong>FANTOM（Functional Annotation of The Mammalian Genome）</strong><br>
+FANTOM 是一个国际研究联盟，由 Hayashizaki 博士及其同事于 2000 年成立，旨在为 RIKEN 小鼠百科全书项目期间收集的全长 cDNA 分配功能注释。FANTOM 已经随着时间的推移而发展和扩展，以涵盖转录组分析领域。该项目的目标是在生命系统的各个层次上稳步上升，从而从对“元素”——转录本——的理解发展到对“系统”——转录调控网络的理解，换句话说，“系统”的个体生命形式。</p>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="the-fantom5-project">The FANTOM5 project</h1>
+<p><strong>FANTOM（Functional Annotation of The Mammalian Genome）</strong><br>
+FANTOM 是一个国际研究联盟，由 Hayashizaki 博士及其同事于 2000 年成立，旨在为 RIKEN 小鼠百科全书项目期间收集的全长 cDNA 分配功能注释。FANTOM 已经随着时间的推移而发展和扩展，以涵盖转录组分析领域。该项目的目标是在生命系统的各个层次上稳步上升，从而从对“元素”——转录本——的理解发展到对“系统”——转录调控网络的理解，换句话说，“系统”的个体生命形式。</p>
+<!-- more -->
+<p>FANTOM 现在是该项目的第 6 版。每个版本的项目页面如下：</p>
+<!-- more -->
+<p>FANTOM6 - 非编码 RNA 的功能分析<br>
+FANTOM5 - 哺乳动物启动子、增强子、lncRNA 和 miRNA 的图谱<br>
+FANTOM4 - 了解转录调控网络<br>
+FANTOM3 - 哺乳动物基因组的转录景观<br>
+FANTOM2 - 约 60,000 只小鼠全长 cDNA 集合的功能注释<br>
+FANTOM1 - 约 20,000 只小鼠 cDNA 集合的初始功能注释</p>
+<!-- more -->
+<p><strong>所以，如何在转录组中确定增强子序列呢？</strong></p>
+<!-- more -->
+<p>根据增强子双向转录的特性，可以利用双向CAGE-seq技术将染色质开放区的增强子与启动子区分开。</p>
+<!-- more -->
+<p>参考：https://pressto.binf.ku.dk/about.php#h_enhancers_description_long</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[关于]]></title>
-        <id>https://socrates1100.github.io/post/about/</id>
-        <link href="https://socrates1100.github.io/post/about/">
+        <id>http://localhost:4001/post/about/</id>
+        <link href="http://localhost:4001/post/about/">
         </link>
         <updated>2021-10-26T11:09:48.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
@@ -31,8 +61,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[PCAWG系列文献阅读（一）]]></title>
-        <id>https://socrates1100.github.io/post/pcawg-wen-xian-yue-du-yi/</id>
-        <link href="https://socrates1100.github.io/post/pcawg-wen-xian-yue-du-yi/">
+        <id>http://localhost:4001/post/pcawg-wen-xian-yue-du-yi/</id>
+        <link href="http://localhost:4001/post/pcawg-wen-xian-yue-du-yi/">
         </link>
         <updated>2021-10-26T01:38:09.000Z</updated>
         <summary type="html"><![CDATA[<p><strong>题目： The evolutionary history of 2,658 cancers</strong></p>
@@ -59,7 +89,7 @@ f：携带给定突变的clone数目 (f = 1 for clonal mutations)；<br>
 N：标准拷贝数 (2 on autosomes, 1 or 2 for chromosome X and 0 or 1 for chromosome Y)；<br>
 C：肿瘤的总拷贝数；ρ：样本纯度</li>
 <li>在等位基因拷贝数m下突变数目为n<sub>m</sub>下，可以推断拷贝扩增的时间：<br>
-<img src="https://socrates1100.github.io/post-images/1635492897328.png" alt="" loading="lazy"><br>
+<img src="http://localhost:4001/post-images/1635492897328.png" alt="" loading="lazy"><br>
 2+1对应主等位基因和次等位基因拷贝数分别为2和1。没有考虑2+2这种情形是因为两个等位基因同时发生拷贝数变异的概率很低。</li>
 </ol>
 <!-- more -->
@@ -76,13 +106,29 @@ C：肿瘤的总拷贝数；ρ：样本纯度</li>
 <p><strong>三、驱动突变时间追溯</strong><br>
 计算PCAWG提供的癌症驱动点突变，在四个时期中，early/late clonal的odds-ratios和clonal（包括early，late和unspecified clonal）/subclonal的odds-ratio。非驱动区域具有相同拷贝数组成的片段上的突变用于计算背景分布，1000 bootstraps。</p>
 <!-- more -->
+<p><strong>四、整体时间推断</strong><br>
+对于每对驱动点突变和往复拷贝数变化，确定其早期、晚期和未指定状态。</p>
+<!-- more -->
+<p><strong>五、突变印记时间推断</strong><br>
+三核苷酸替换突变印记，在将点突变分配到四个不同时期后，拟合样本中观测印记活性。根据多项式分布用似然比检验检验突变图谱和时间点的差异。同时利用非负线性最小方差方法计算不同时间的暴露因素影响。</p>
+<!-- more -->
+<p><strong>六、WGD（全基因组复制）和MRCA（最近共同祖先）的实时估计</strong></p>
+<ol>
+<li>对基因组中NpCpG  CpG&gt;TpG突变进行计数。对于皮肤癌样本中CpCpG&gt;TpCpG突变不予考虑，因为和UV诱导的突变重叠。考虑基因组大小影响，将突变数目标准化到有效基因组大小中，定义为1/mean(m<sub>i</sub>/C<sub>i</sub>)。m<sub>i</sub>是个突变的等位基因拷贝的估计数量，C<sub>i</sub>是该位点的总拷贝数，从而标准化最终拷贝数和变化时间。</li>
+<li>分层贝叶斯线性回归适合将诊断年龄与按比例缩放的突变数量相关联，通过跨癌症类型的共享伽马分布确保正斜率和截距。对于具有多个时间点的肿瘤，计算了诊断和复发之间共享的一组突变 ( n<sub>D</sub> ) 以及那些特定于复发的突变( n<sub>R</sub> )。速率加速度计算为：a  =  n<sub>R</sub> / n<sub>D</sub>  ×  t<sub>D</sub> / t<sub>R</sub>。该分析是针对所有替换突变和 CpG&gt;TpG 突变分别进行的。</li>
+<li>根据这些分析，选择的大多数癌症类型最终拷贝数增加了 5 倍，脑癌较低为 2.5 倍，卵巢癌的值为 7.5 倍。将突变时间中拷贝数增益的估计转换为时间顺序的校正不仅取决于速率加速，还取决于该加速发生的时间。由于这通常是未知的，我们在诊断前对跨越 15 年时间间隔的速率加速进行了蒙特卡罗模拟，大约相当于 60 岁时诊断时间的 25%，注意到在此期间速率增加 5 倍会产生大约 33% 的突变偏移，与我们的数据兼容。假设亚克隆突变发生是全速进行的。亚克隆突变的比例除以鉴定的亚克隆数量，因此保守地假设分支进化。</li>
+</ol>
+<!-- more -->
+<p><strong>七、癌症时间表</strong><br>
+每种不同时间分析的结果都结合在每种肿瘤类型的癌症演变时间线中。每个时间线都从受精卵开始，一直延伸到每个队列中的中位诊断年龄。WGD 和 MRCA 的实时估计作为锚点，使我们能够粗略地将四个广泛定义的时间段（早期克隆、中期、晚期克隆和亚克隆）映射到患者生命周期中的时间顺序。可以根据联合模型分析中的顺序，将特定的驱动突变或拷贝数改变放置在每个时间范围内。如果它们通常随时间变化（平均变化的 95% 置信区间不与 0 重叠），并且它们非常活跃（对一个时间点贡献至少 10% 的突变），则会显示特征。印记显示在时间线上他们最活跃的时期。</p>
+<!-- more -->
 <p><strong>结果部分</strong></p>
 <!-- more -->
 <p><strong>一、重建肿瘤生命历程</strong></p>
 <ol>
 <li>初始时，每个点突变发生在单个细胞的单个染色体上，从而产生具有相同突变的细胞谱系。如果一条染色体基因座发生拷贝数变异，则该等位基因在拷贝前的任何点突变都会出现在两个等位基因拷贝（<code>一个母体，一个子体</code>）上。这和不依赖于拷贝事件，仅继承于等位基因拷贝或者其它未发生拷贝事件的等位基因座上的突变不同。等位基因拷贝数可以从测序数据中获得，因此可以定义拷贝事件发生前后基因座上的突变，未拷贝的基因座突变。</li>
 <li>拷贝事件内，克隆突变和非克隆突变的比率可用于估计在克隆进化过程中发生基因座拷贝变异事件的时间点，也可理解为测定相对于拷贝事件，发生在拷贝单元内的新突变的发生时间。<br>
-<img src="https://socrates1100.github.io/post-images/1635217256865.webp" alt="" loading="lazy"></li>
+<img src="http://localhost:4001/post-images/1635217256865.webp" alt="" loading="lazy"></li>
 </ol>
 <!-- more -->
 <p><strong>二、拷贝数增加的时序模式</strong></p>
@@ -96,31 +142,56 @@ C：肿瘤的总拷贝数；ρ：样本纯度</li>
 <ol>
 <li>根据前面对体细胞突变的定性分期，癌细胞驱动基因上的突变同理可以进行分期。在 2,583 个样本的 4700 万个点突变中，22% 是早期克隆，7% 是晚期克隆，53% 是未指定克隆，17% 是亚克隆。而在一组 453 个癌症驱动基因中，鉴定出 5913 个致癌点突变，其中 29% 为早期克隆，5% 为晚期克隆，56% 为未指定克隆，8% 为亚克隆。结果表明癌症驱动基因突变在早期克隆和未指定克隆中富集。</li>
 <li>按照时间推移，所有癌细胞驱动基因点突变多样性在肿瘤后期增加：所有早期克隆驱动突变的 50% 仅发生在 9 个基因中，而 50% 的晚期和亚克隆突变发生在每个大约有 35 个不同的基因，增加了近四倍。结果表明早期癌症进化事件限制在少数驱动上，而在晚期发展过程中呈现更多元的驱动进化。<br>
-<img src="https://socrates1100.github.io/post-images/1635297585311.webp" alt="" loading="lazy"></li>
+<img src="http://localhost:4001/post-images/1635297585311.webp" alt="" loading="lazy"></li>
 </ol>
 <!-- more -->
 <p><strong>四、体细胞驱动进化事件的相对时间</strong></p>
 <ol>
 <li>跨样本的概率排序病变分析，检验每个突变在肿瘤进化早期和晚期中的偏好。结果发现APC-KRAS-TP53在肿瘤早期依次有最高的突变几率；拷贝数变异在后期发生。<br>
-<img src="https://socrates1100.github.io/post-images/1635317754790.webp" alt="" loading="lazy"></li>
+<img src="http://localhost:4001/post-images/1635317754790.webp" alt="" loading="lazy"></li>
 </ol>
 <!-- more -->
 <p><strong>五、突变印记的形成时间</strong></p>
 <ol>
 <li>突变印记（Mutational Signatures）定义为由不同因素，如外源或内源DNA损伤，或DNA复制偏差诱发肿瘤基因组形成的不同突变组合。通过在不同时期体细胞突变的分布，发现外源因素诱发的突变（尼古丁印记SBS4和紫外暴露印记SBS7）更多发生在肿瘤进化早期，印记SBS9,SBS12随时间呈递减趋势，而APOEEC（SBS2和SBS13）和SBS38从早期克隆到晚期克隆中都在增长。由有缺陷的错配修复导致的突变印记（SBS6,14,15,20,21,26,44）从克隆到亚克隆时期呈增长趋势。<br>
-<img src="https://socrates1100.github.io/post-images/1635408862729.webp" alt="" loading="lazy"></li>
+<img src="http://localhost:4001/post-images/1635408862729.webp" alt="" loading="lazy"></li>
 </ol>
 <!-- more -->
 <p><strong>六、时间顺序的肿瘤演化估计</strong></p>
 <ol>
 <li>分子钟（Molecular Clock）模型结合癌症诊断时间，估计肿瘤演化的时间发展。<br>
-<img src="https://socrates1100.github.io/post-images/1635410119295.webp" alt="" loading="lazy"></li>
+<img src="http://localhost:4001/post-images/1635410119295.webp" alt="" loading="lazy"></li>
 </ol>
 <!-- more -->
 <p><strong>七、癌症发展的一般时间线</strong><br>
-<img src="https://socrates1100.github.io/post-images/1635410827513.webp" alt="" loading="lazy"></p>
+<img src="http://localhost:4001/post-images/1635410827513.webp" alt="" loading="lazy"></p>
 <!-- more -->
 <p><strong>八、讨论</strong></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChromHMM 功能基因组注释]]></title>
+        <id>http://localhost:4001/post/gong-neng-ji-yin-zu-zhu-shi/</id>
+        <link href="http://localhost:4001/post/gong-neng-ji-yin-zu-zhu-shi/">
+        </link>
+        <updated>2021-10-15T09:06:40.000Z</updated>
+        <summary type="html"><![CDATA[<p><img src="https://socrates1100.github.io/post-images/1635843650908.png" alt="" loading="lazy"><br>
+根据先验的表观遗传学研究结论，不同染色质印记标记下的DNA序列具有不同的功能特征。H3K4me3和活性启动子相关，维持启动子CpG低甲基化；H3K36me3和基因本体相关，维持基因本体高甲基化；H3K9me3和异染色质区域高甲基化维持相关；H3K27me3介导的基因沉默和DNA甲基化是竞争性抑制作用，相互替换通过会维持基因沉默，但有时DNA甲基化替换PRC介导的H3K27me3会激活基因表达。H3K27me3基因沉默比DNA甲基化可塑性更强(Greenberg et al., 2019)。H3K4me1和启动子和增强子有关(Bae et al.，2020)，可方便粘连蛋白的募集，从而促进增强子和启动子长程相互作用(Yan et al., 2018)；H3K27ac和活性增强子相关(Creyghton et al., 2010)。活性调控元件往往出现在开放染色质区域。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p><img src="http://localhost:4001/post-images/1635843650908.png" alt="" loading="lazy"><br>
+根据先验的表观遗传学研究结论，不同染色质印记标记下的DNA序列具有不同的功能特征。H3K4me3和活性启动子相关，维持启动子CpG低甲基化；H3K36me3和基因本体相关，维持基因本体高甲基化；H3K9me3和异染色质区域高甲基化维持相关；H3K27me3介导的基因沉默和DNA甲基化是竞争性抑制作用，相互替换通过会维持基因沉默，但有时DNA甲基化替换PRC介导的H3K27me3会激活基因表达。H3K27me3基因沉默比DNA甲基化可塑性更强(Greenberg et al., 2019)。H3K4me1和启动子和增强子有关(Bae et al.，2020)，可方便粘连蛋白的募集，从而促进增强子和启动子长程相互作用(Yan et al., 2018)；H3K27ac和活性增强子相关(Creyghton et al., 2010)。活性调控元件往往出现在开放染色质区域。</p>
+<!-- more -->
+<p>在这种背景下，Ernst和Kellis等人采用多变量隐马尔可夫生成模型，以200bp为单位，计算基因组范围内每个状态单元内可能性最高的状态，再结合先验背景知识对染色质状态进行注释，为启动子、增强子，转录本区域等等。可以设置状态数目，调节注释精度，如ENCODE计划利用9种染色质Marks对9个人类细胞系功能基因组进行注释，采用15-states模型，15个状态为9种Marks中的一种或几种的组合；又如Ernst and Kellis et al., 2015 整合Roadmap和ENCODE共127个细胞组织类型，分别利用5个染色质Marks（15-states model）、6个染色质Marks（18-states model），12个染色质Marks（25-states model）对染色质状态进行了注释，其中25-states模型注释的是ChromImpute推断的染色质状态数据。<br>
+<img src="http://localhost:4001/post-images/1635845542487.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>至于方法里为什么默认采用200bp为状态单元，一方面是因为200bp是差不多一个核小体单位，另一方面200bp接近ChIP-seq reads长度的中位数。这样的状态单元一定程度上能反映组蛋白修饰的作用范围和转录因子的作用范围。当然作者也提到用户也可以根据自己需求重新定义状态单元长度。</p>
+<!-- more -->
+<p><strong>参考文献：</strong></p>
+<!-- more -->
+<p>1）Greenberg, M.V.C., Bourc’his, D. The diverse roles of DNA methylation in mammalian development and disease. Nat Rev Mol Cell Biol 20, 590–607 (2019).<br>
+2) Bae S, Lesch BJ. H3K4me1 Distribution Predicts Transcription State and Poising at Promoters. Front Cell Dev Biol. 2020;8:289. Published 2020 May 5. doi:10.3389/fcell.2020.00289<br>
+3) Yan J, Chen SA, Local A, et al. Histone H3 lysine 4 monomethylation modulates long-range chromatin interactions at enhancers. Cell Res. 2018;28(3):387. doi:10.1038/cr.2018.18<br>
+4) Creyghton MP, Cheng AW, Welstead GG, et al. Histone H3K27ac separates active from poised enhancers and predicts developmental state. Proc Natl Acad Sci U S A. 2010;107(50):21931-21936. doi:10.1073/pnas.1016071107</p>
 ]]></content>
     </entry>
 </feed>
