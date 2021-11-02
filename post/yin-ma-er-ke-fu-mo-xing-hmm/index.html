@@ -9,7 +9,7 @@
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
 <title>隐马尔科夫模型（HMM） | Socrates&#39; Blogs</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1635777196977">
+<link rel="shortcut icon" href="/favicon.ico?v=1635855002776">
 <link rel="stylesheet" href="/media/css/pisces.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -213,13 +213,13 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">2</span>
+        <span class="site-item-stat-count">4</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="/tags/">
-        <span class="site-item-stat-count">1</span>
+        <span class="site-item-stat-count">2</span>
         <span class="site-item-stat-name language" data-lan="tag">标签</span>
       </a>
     </div>
@@ -375,16 +375,13 @@
 </section>
 
             <div class="post-body next-md-body" id="post_body">
-              <p>由于生信分析工作中很多软件算法使用到了隐马尔科夫模型，比如基因预测（GENSCAN）、功能基因组注释（ChromHMM），和群体单体型分型（Shapeit）。为了更好的理解工具背后的算法，这里想尝试学习并理解隐马尔科夫模型的基本原理。<br>
+              <!-- more -->
+<p>由于生信分析工作中很多软件算法使用到了隐马尔科夫模型，比如基因预测（GENSCAN）、功能基因组注释（ChromHMM），和群体单体型分型（Shapeit）。为了更好的理解工具背后的算法，这里想尝试学习并理解隐马尔科夫模型的基本原理。<br>
 <img src="https://socrates1100.github.io/post-images/1635417105575.png" alt="" loading="lazy"></p>
 <!-- more -->
 <p><strong>一、前言</strong></p>
 
             </div>
-            
-              <div class="reward-btn">
-                <div class="reward-btn-text">赞赏</div>
-              </div>
             
             
               <div class="post-footer">
@@ -1502,8 +1499,51 @@
     <div class="result" id="result">
       
       <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/chromimpute-ran-se-zhi-zhuang-tai-tui-duan/"" data-c="
+          &lt;!-- more --&gt;
+&lt;p&gt;ChromImpute和ChromHMM一样，同样是来自Ernst and Kellis 的作品。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635846279545.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;strong&gt;背景：&lt;/strong&gt;&lt;br&gt;
+由于样本可得性问题，导致目前公开的表观基因组数据集中大量样本或者大量染色质标记的数据存在缺失。这样的数据会导致不同样本比较时或者不同染色质标记比较时，存在数据不匹配问题。因此ChromImpute被开发出来用于对染色质标记-样本面板中缺失数据进行推断和填充。样本为111 Roadmap数据集和 16 ENCODE数据集，涉及染色质标记包括组蛋白修饰印记、DNA可及性数据、DNA甲基化数据、RNA-seq数据，以及其它信号坐标数据等。&lt;/p&gt;
+">ChromImpute 染色质状态推断</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/fantom5-ru-he-qu-fen-qi-dong-zi-he-zeng-qiang-zi/"" data-c="
+          &lt;p&gt;&lt;strong&gt;关于Fantom5项目中启动子和增强子RNA的区分&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h1 id=&#34;the-fantom5-project&#34;&gt;The FANTOM5 project&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;FANTOM（Functional Annotation of The Mammalian Genome）&lt;/strong&gt;&lt;br&gt;
+FANTOM 是一个国际研究联盟，由 Hayashizaki 博士及其同事于 2000 年成立，旨在为 RIKEN 小鼠百科全书项目期间收集的全长 cDNA 分配功能注释。FANTOM 已经随着时间的推移而发展和扩展，以涵盖转录组分析领域。该项目的目标是在生命系统的各个层次上稳步上升，从而从对“元素”——转录本——的理解发展到对“系统”——转录调控网络的理解，换句话说，“系统”的个体生命形式。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;FANTOM 现在是该项目的第 6 版。每个版本的项目页面如下：&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;FANTOM6 - 非编码 RNA 的功能分析&lt;br&gt;
+FANTOM5 - 哺乳动物启动子、增强子、lncRNA 和 miRNA 的图谱&lt;br&gt;
+FANTOM4 - 了解转录调控网络&lt;br&gt;
+FANTOM3 - 哺乳动物基因组的转录景观&lt;br&gt;
+FANTOM2 - 约 60,000 只小鼠全长 cDNA 集合的功能注释&lt;br&gt;
+FANTOM1 - 约 20,000 只小鼠 cDNA 集合的初始功能注释&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;所以，如何在转录组中确定增强子序列呢？&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;根据增强子双向转录的特性，可以利用双向CAGE-seq技术将染色质开放区的增强子与启动子区分开。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;参考：https://pressto.binf.ku.dk/about.php#h_enhancers_description_long&lt;/p&gt;
+">Fantom5如何区分启动子和增强子？</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/qun-ti-yi-chuan-xue-xi-lie-yi/"" data-c="
+          &lt;!-- more --&gt;
+&lt;p&gt;基础知识&lt;/p&gt;
+">群体遗传学系列（一）</a>
+      </div>
+      
+      <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/yin-ma-er-ke-fu-mo-xing-hmm/"" data-c="
-          &lt;p&gt;由于生信分析工作中很多软件算法使用到了隐马尔科夫模型，比如基因预测（GENSCAN）、功能基因组注释（ChromHMM），和群体单体型分型（Shapeit）。为了更好的理解工具背后的算法，这里想尝试学习并理解隐马尔科夫模型的基本原理。&lt;br&gt;
+          &lt;!-- more --&gt;
+&lt;p&gt;由于生信分析工作中很多软件算法使用到了隐马尔科夫模型，比如基因预测（GENSCAN）、功能基因组注释（ChromHMM），和群体单体型分型（Shapeit）。为了更好的理解工具背后的算法，这里想尝试学习并理解隐马尔科夫模型的基本原理。&lt;br&gt;
 &lt;img src=&#34;https://socrates1100.github.io/post-images/1635417105575.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;&lt;strong&gt;一、前言&lt;/strong&gt;&lt;/p&gt;
@@ -1513,7 +1553,7 @@
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/about/"" data-c="
           &lt;blockquote&gt;
-&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;
+&lt;p&gt;欢迎来到Socrates的小站呀，很高兴遇见你！🤝&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;关于本站&#34;&gt;🏠 关于本站&lt;/h2&gt;
 &lt;p&gt;Socrates&#39; Blog shares&lt;/p&gt;
@@ -1566,6 +1606,22 @@ C：肿瘤的总拷贝数；ρ：样本纯度&lt;/li&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;&lt;strong&gt;三、驱动突变时间追溯&lt;/strong&gt;&lt;br&gt;
 计算PCAWG提供的癌症驱动点突变，在四个时期中，early/late clonal的odds-ratios和clonal（包括early，late和unspecified clonal）/subclonal的odds-ratio。非驱动区域具有相同拷贝数组成的片段上的突变用于计算背景分布，1000 bootstraps。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;四、整体时间推断&lt;/strong&gt;&lt;br&gt;
+对于每对驱动点突变和往复拷贝数变化，确定其早期、晚期和未指定状态。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;五、突变印记时间推断&lt;/strong&gt;&lt;br&gt;
+三核苷酸替换突变印记，在将点突变分配到四个不同时期后，拟合样本中观测印记活性。根据多项式分布用似然比检验检验突变图谱和时间点的差异。同时利用非负线性最小方差方法计算不同时间的暴露因素影响。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;六、WGD（全基因组复制）和MRCA（最近共同祖先）的实时估计&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;对基因组中NpCpG  CpG&amp;gt;TpG突变进行计数。对于皮肤癌样本中CpCpG&amp;gt;TpCpG突变不予考虑，因为和UV诱导的突变重叠。考虑基因组大小影响，将突变数目标准化到有效基因组大小中，定义为1/mean(m&lt;sub&gt;i&lt;/sub&gt;/C&lt;sub&gt;i&lt;/sub&gt;)。m&lt;sub&gt;i&lt;/sub&gt;是个突变的等位基因拷贝的估计数量，C&lt;sub&gt;i&lt;/sub&gt;是该位点的总拷贝数，从而标准化最终拷贝数和变化时间。&lt;/li&gt;
+&lt;li&gt;分层贝叶斯线性回归适合将诊断年龄与按比例缩放的突变数量相关联，通过跨癌症类型的共享伽马分布确保正斜率和截距。对于具有多个时间点的肿瘤，计算了诊断和复发之间共享的一组突变 ( n&lt;sub&gt;D&lt;/sub&gt; ) 以及那些特定于复发的突变( n&lt;sub&gt;R&lt;/sub&gt; )。速率加速度计算为：a  =  n&lt;sub&gt;R&lt;/sub&gt; / n&lt;sub&gt;D&lt;/sub&gt;  ×  t&lt;sub&gt;D&lt;/sub&gt; / t&lt;sub&gt;R&lt;/sub&gt;。该分析是针对所有替换突变和 CpG&amp;gt;TpG 突变分别进行的。&lt;/li&gt;
+&lt;li&gt;根据这些分析，选择的大多数癌症类型最终拷贝数增加了 5 倍，脑癌较低为 2.5 倍，卵巢癌的值为 7.5 倍。将突变时间中拷贝数增益的估计转换为时间顺序的校正不仅取决于速率加速，还取决于该加速发生的时间。由于这通常是未知的，我们在诊断前对跨越 15 年时间间隔的速率加速进行了蒙特卡罗模拟，大约相当于 60 岁时诊断时间的 25%，注意到在此期间速率增加 5 倍会产生大约 33% 的突变偏移，与我们的数据兼容。假设亚克隆突变发生是全速进行的。亚克隆突变的比例除以鉴定的亚克隆数量，因此保守地假设分支进化。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;七、癌症时间表&lt;/strong&gt;&lt;br&gt;
+每种不同时间分析的结果都结合在每种肿瘤类型的癌症演变时间线中。每个时间线都从受精卵开始，一直延伸到每个队列中的中位诊断年龄。WGD 和 MRCA 的实时估计作为锚点，使我们能够粗略地将四个广泛定义的时间段（早期克隆、中期、晚期克隆和亚克隆）映射到患者生命周期中的时间顺序。可以根据联合模型分析中的顺序，将特定的驱动突变或拷贝数改变放置在每个时间范围内。如果它们通常随时间变化（平均变化的 95% 置信区间不与 0 重叠），并且它们非常活跃（对一个时间点贡献至少 10% 的突变），则会显示特征。印记显示在时间线上他们最活跃的时期。&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;&lt;strong&gt;结果部分&lt;/strong&gt;&lt;/p&gt;
 &lt;!-- more --&gt;
@@ -1623,13 +1679,29 @@ C：肿瘤的总拷贝数；ρ：样本纯度&lt;/li&gt;
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/gong-neng-ji-yin-zu-zhu-shi/"" data-c="
-          &lt;p&gt;1）&lt;/p&gt;
-">功能基因组注释</a>
+          &lt;p&gt;&lt;strong&gt;ChromHMM 功能基因组注释基本原理&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;img src=&#34;https://socrates1100.github.io/post-images/1635843650908.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+根据先验的表观遗传学研究结论，不同染色质印记标记下的DNA序列具有不同的功能特征。H3K4me3和活性启动子相关，维持启动子CpG低甲基化；H3K36me3和基因本体相关，维持基因本体高甲基化；H3K9me3和异染色质区域高甲基化维持相关；H3K27me3介导的基因沉默和DNA甲基化是竞争性抑制作用，相互替换通过会维持基因沉默，但有时DNA甲基化替换PRC介导的H3K27me3会激活基因表达。H3K27me3基因沉默比DNA甲基化可塑性更强(Greenberg et al., 2019)。H3K4me1和启动子和增强子有关(Bae et al.，2020)，可方便粘连蛋白的募集，从而促进增强子和启动子长程相互作用(Yan et al., 2018)；H3K27ac和活性增强子相关(Creyghton et al., 2010)。活性调控元件往往出现在开放染色质区域。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;在这种背景下，Ernst和Kellis等人采用多变量隐马尔可夫生成模型，以200bp为单位，计算基因组范围内每个状态单元内可能性最高的状态，再结合先验背景知识对染色质状态进行注释，为启动子、增强子，转录本区域等等。可以设置状态数目，调节注释精度，如ENCODE计划利用9种染色质Marks对9个人类细胞系功能基因组进行注释，采用15-states模型，15个状态为9种Marks中的一种或几种的组合；又如Ernst and Kellis et al., 2015 整合Roadmap和ENCODE共127个细胞组织类型，分别利用5个染色质Marks（15-states model）、6个染色质Marks（18-states model），12个染色质Marks（25-states model）对染色质状态进行了注释，其中25-states模型注释的是ChromImpute推断的染色质状态数据。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635845542487.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;至于方法里为什么默认采用200bp为状态单元，一方面是因为200bp是差不多一个核小体单位，另一方面200bp接近ChIP-seq reads长度的中位数。这样的状态单元一定程度上能反映组蛋白修饰的作用范围和转录因子的作用范围。当然作者也提到用户也可以根据自己需求重新定义状态单元长度。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;参考文献：&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;1）Greenberg, M.V.C., Bourc’his, D. The diverse roles of DNA methylation in mammalian development and disease. Nat Rev Mol Cell Biol 20, 590–607 (2019).&lt;br&gt;
+2) Bae S, Lesch BJ. H3K4me1 Distribution Predicts Transcription State and Poising at Promoters. Front Cell Dev Biol. 2020;8:289. Published 2020 May 5. doi:10.3389/fcell.2020.00289&lt;br&gt;
+3) Yan J, Chen SA, Local A, et al. Histone H3 lysine 4 monomethylation modulates long-range chromatin interactions at enhancers. Cell Res. 2018;28(3):387. doi:10.1038/cr.2018.18&lt;br&gt;
+4) Creyghton MP, Cheng AW, Welstead GG, et al. Histone H3K27ac separates active from poised enhancers and predicts developmental state. Proc Natl Acad Sci U S A. 2010;107(50):21931-21936. doi:10.1073/pnas.1016071107&lt;/p&gt;
+">ChromHMM 功能基因组注释</a>
       </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/biao-guan-zu-wen-xian-zheng-li/"" data-c="
-          &lt;p&gt;1）表观遗传可以认为是介于遗传和环境影响之间的一种“遗传”方式，其定义为关于表型遗传的不依赖于DNA序列改变的可逆遗传方式(https://en.wikipedia.org/wiki/Epigenetics)。然而近期研究通过美国白人，非裔，华裔三个人群的甲基化组和基因组发现，人群间甲基化差异部分可由基因组差异解释，有三分之一的甲基化差异不和任何DNA差异相关(Heyn et al., 2013)。另外，人群间的甲基化遗传明显强于mRNA表达水平遗传(Carja et al., 2017)。&lt;br&gt;
+          &lt;!-- more --&gt;
+&lt;p&gt;1）表观遗传可以认为是介于遗传和环境影响之间的一种“遗传”方式，其定义为关于表型遗传的不依赖于DNA序列改变的可逆遗传方式(https://en.wikipedia.org/wiki/Epigenetics)。然而近期研究通过美国白人，非裔，华裔三个人群的甲基化组和基因组发现，人群间甲基化差异部分可由基因组差异解释，有三分之一的甲基化差异不和任何DNA差异相关(Heyn et al., 2013)。另外，人群间的甲基化遗传明显强于mRNA表达水平遗传(Carja et al., 2017)。&lt;br&gt;
 2) DNA甲基化由DNA甲基化转移酶(DNMTs)来完成，DNMTs诱导5mC→T转换，并可在DNA中保留下来。因此，哺乳动物基因组CpG含量总低于期望水平。DNMTs与特定烷基化修复酶 (ALKBH2) 的系统共同进化可能使真核生物能够耐受 DNA 甲基化(Greenberg et al., 2019)。DNA甲基化经常扮演着抑制转座子和基因，同时也和活化基因表达有关(Greenberg et al., 2019)。这种DNA甲基化调控受到组蛋白修饰的影响。富含H3K4me3的活性启动子即使富含CpG，也不会被甲基化，因为H3K4me3阻碍了DNMTs的介入。而富含H3K36me3的活性基因本体区域因诱导DNMTs的介入，常处于高甲基化水平。富含H3K9me2或H3K9me3的异染色质区域也通过泛素化介导使得DNMTs维持DNA甲基化(Greenberg et al., 2019)。DNA甲基化抑制转录的机制可理解为5mC阻碍了转录因子的结合，同样，5mC的形成也可导致与其它转录因子（阻遏因子）的结合(Greenberg et al., 2019)。这里可以考虑，根据是否可和5mC结合，以及下游基因的表达水平，对转录因子进行分类。&lt;br&gt;
 &lt;img src=&#34;https://socrates1100.github.io/post-images/1634093206398.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 3) 组蛋白修饰的作用。H3K4me3和活性启动子相关，维持启动子CpG低甲基化；H3K36me3和基因本体相关，维持基因本体高甲基化；H3K9me3和异染色质区域高甲基化维持相关；H3K27me3介导的基因沉默和DNA甲基化是竞争性抑制作用，相互替换通过会维持基因沉默，但有时DNA甲基化替换PRC介导的H3K27me3会激活基因表达。H3K27me3基因沉默比DNA甲基化可塑性更强(Greenberg et al., 2019)。H3K4me1和启动子和增强子有关(Bae et al., 2020)，可方便粘连蛋白Cohesin complex——一种主要的染色质环组织蛋白的募集，从而促进增强子和启动子长程相互作用(Yan et al., 2018)；H3K27ac和活性增强子相关(Creyghton et al., 2010)。&lt;br&gt;
