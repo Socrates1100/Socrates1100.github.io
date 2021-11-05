@@ -8,7 +8,7 @@
 <meta name="keywords" content="Socrates个人博客">
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
-<title>隐马尔科夫模型（HMM） | Socrates&#39; Blogs</title>
+<title>基因组演化的自然通信系统模型 | Socrates&#39; Blogs</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1636123213206">
 <link rel="stylesheet" href="/media/css/pisces.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -41,8 +41,8 @@
 
 
 
-  <meta name="description" content="隐马尔科夫模型（HMM）" />
-  <meta name="keywords" content="学习笔记" />
+  <meta name="description" content="基因组演化的自然通信系统模型" />
+  <meta name="keywords" content="文献讲解" />
 </head>
 
 <body>
@@ -193,7 +193,8 @@
       <div class="sidebar-body pisces" id="sidebar_body">
         
           
-            
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -244,6 +245,191 @@
   </div>
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper  auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="#%E9%A2%98%E7%9B%AE-a-natural-communication-system-on-genome-evolution">题目： A natural communication system on genome evolution</a></li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
           
         
       </div>
@@ -331,14 +517,14 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://socrates1100.github.io/post/yin-ma-er-ke-fu-mo-xing-hmm/"> 隐马尔科夫模型（HMM） </a>
+    <a class="post-title-link" href="https://socrates1100.github.io/post/ji-yin-zu-yan-hua-de-zi-ran-tong-xin-xi-tong-mo-xing/"> 基因组演化的自然通信系统模型 </a>
   </h1>
   <div class="post-meta">
     
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-10-28 18:31:15">2021-10-26</span>
+      <span class="publish-time" data-t="2021-11-05 11:30:36">2021-10-26</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -346,8 +532,8 @@
       <i class="fa fa-folder-o"></i>
       <span class="pc-show language" data-lan="category-in">标签:</span>
        
-      <a href="https://socrates1100.github.io/tag/7CTnmmU4q/">
-        <span>学习笔记</span>
+      <a href="https://socrates1100.github.io/tag/R-kNOpuJC/">
+        <span>文献讲解</span>
       </a>
        
     </span>
@@ -356,7 +542,7 @@
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
       <span
-        >1<span class="language" data-lan="minute"
+        >3<span class="language" data-lan="minute"
           >分钟</span
         ></span
       >
@@ -365,15 +551,15 @@
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
       <span
-        >89<span class="pc-show language" data-lan="words"
+        >691<span class="pc-show language" data-lan="words"
           >字数</span
         ></span
       >
     </span>
       
     <span
-      id="/post/yin-ma-er-ke-fu-mo-xing-hmm/"
-      data-flag-title="隐马尔科夫模型（HMM）"
+      id="/post/ji-yin-zu-yan-hua-de-zi-ran-tong-xin-xi-tong-mo-xing/"
+      data-flag-title="基因组演化的自然通信系统模型"
       class="meta-item pc-show leancloud_visitors"
     >
       <span class="post-meta-divider">|</span>
@@ -389,11 +575,31 @@
 </section>
 
             <div class="post-body next-md-body" id="post_body">
-              <!-- more -->
-<p>由于生信分析工作中很多软件算法使用到了隐马尔科夫模型，比如基因预测（GENSCAN）、功能基因组注释（ChromHMM），和群体单体型分型（Shapeit）。为了更好的理解工具背后的算法，这里想尝试学习并理解隐马尔科夫模型的基本原理。<br>
-<img src="https://socrates1100.github.io/post-images/1635417105575.png" alt="" loading="lazy"></p>
+              <h1 id="题目-a-natural-communication-system-on-genome-evolution">题目： A natural communication system on genome evolution</h1>
 <!-- more -->
-<p><strong>一、前言</strong></p>
+<p>单位：动物研究所<br>
+期刊：Science China Life Sciences<br>
+发表日期：2017-04</p>
+<!-- more -->
+<p><strong>文章特点</strong>：以时间和信息为基础建立基因组演化框架<br>
+<img src="https://socrates1100.github.io/post-images/1636086503654.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p><strong>一、经典基因组演化框架</strong><br>
+如作者对传统基因组演化研究的理解，在演化生物学研究中，研究者们通常会关注于分子序列（DNA、RNA或氨基酸序列）在时间维度上的演化，比如说演化尺度上核苷酸替换模型和氨基酸替换模型，这是一种类似牛顿经典力学的方式，即很少考虑变异本身与时间之间的联系。因此，作者尝试以时间和信息为基础建立基因组演化框架，并探讨了演化所产生的信息改变与演化所经历的时间之间的关联。</p>
+<!-- more -->
+<p><strong>二、基因组演化的自然通信系统模型的提出</strong><br>
+将基因组演化视为时间维度上，信息的传递过程，祖先基因组为信源——信息发送者，子代基因组为信宿——信息的接收者，而时间则为信道。在这样一个信息传递系统内，环境因素作为一个信息干扰源会对基因组信息的传递产生固有偏差和随机噪声误差。</p>
+<!-- more -->
+<p><strong>三、自然通信系统的高效性假定</strong><br>
+类似于人工通信系统中信源编码存在一个最高编码效率，即信息的高保真度，自然通信系统存在自然选择机制，来维持遗传信息代际传递过程中最小的差异。文中提到“生命的演化过程是在选择压力下进行的，因而不同种类信息传输系统的演化也同样应该是一个受自然选择影响的过程。如果一个信息传输系统有较大的选择优势，它就更有可能在漫长的生命历史中被保留下来。可以想象，一个信息传输系统如果有更高的信源编码效率和符号发送速度，那么在与其它信息传输系统的竞争中会有较大的选择优势。所以，经历漫长的进化历史存留下来的现存生命过程中的信息通信系统一定会保持其信源编码效率非常接近其系统允许的最高效率，称这一假定为自然通信系统的高效性假定。”</p>
+<!-- more -->
+<p><font color=red><strong>如理解有误，敬请指正！！！</strong></font></p>
+<!-- more -->
+<p><strong>论文作者简介：</strong><br>
+姓名：吴琦<br>
+职位：研究员、博士生导师<br>
+单位：中国科学院大学、微生物研究所<br>
+<a href="http://www.mycolab.org.cn/templates/T_second/index.aspx?nodeid=659" title="http://www.mycolab.org.cn/templates/T_second/index.aspx?nodeid=659">更多信息</a></p>
 
             </div>
             
@@ -410,7 +616,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://socrates1100.github.io/post/yin-ma-er-ke-fu-mo-xing-hmm/" title="隐马尔科夫模型（HMM）">https://socrates1100.github.io/post/yin-ma-er-ke-fu-mo-xing-hmm/</a>
+      <a href="https://socrates1100.github.io/post/ji-yin-zu-yan-hua-de-zi-ran-tong-xin-xi-tong-mo-xing/" title="基因组演化的自然通信系统模型">https://socrates1100.github.io/post/ji-yin-zu-yan-hua-de-zi-ran-tong-xin-xi-tong-mo-xing/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -419,7 +625,7 @@
   </ul>
   <div class="tags">
     
-      <a href="https://socrates1100.github.io/tag/7CTnmmU4q/"># 学习笔记</a>
+      <a href="https://socrates1100.github.io/tag/R-kNOpuJC/"># 文献讲解</a>
     
   </div>
   <div class="nav">
