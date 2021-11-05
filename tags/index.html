@@ -9,7 +9,7 @@
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
 <title>Socrates&#39; Blogs</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1636040216215">
+<link rel="shortcut icon" href="/favicon.ico?v=1636076209603">
 <link rel="stylesheet" href="/media/css/pisces.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -1607,7 +1607,38 @@ gridea博客使用的是markdown语法，有提供一些简化的快捷操作菜
         <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/sheng-xin-fen-xi-xi-lie-si/"" data-c="
           &lt;h1 id=&#34;gwas原理&#34;&gt;GWAS原理&lt;/h1&gt;
 &lt;!-- more --&gt;
-&lt;p&gt;GWAS（Genome-Wide Association Study）在遗传学上经常被用来确定与特定疾病相关的全基因组范围内特定遗传变异。&lt;/p&gt;
+&lt;p&gt;GWAS（Genome-Wide Association Study）在遗传学上经常被用来确定与特定疾病或表型相关的全基因组范围内特定遗传变异。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;1. GWAS拟解决的问题&lt;/strong&gt;&lt;br&gt;
+GWAS旨在从全基因组范围内定位到和common disease（或者一些常见表型）关联的变异位点。common disease同时受遗传因素和环境因素影响，整体发病率较高，患者群体数目大，而且其遗传因子往往呈现微效，多因子的特点。因此，这种类型疾病的遗传定位往往需要庞大的人群队列进行研究。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636041368299.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;2. GWAS的基本流程和原理&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;2.1 GWAS的样本选择问题&lt;/strong&gt;&lt;br&gt;
+GWAS常采用case-control的方式研究common disease ，而对于一些常见表型的遗传关联研究则会采用人群队列的方式来进行。当开始一个GWAS分析时，遇到的第一个问题是，试验如何设计？样本如何选择？Cases和Controls的样本该如何设定？&lt;br&gt;
+a. Cases和Controls尽量来自于同一个抽样总体，比如说来自亚洲的Cases和来自欧洲的Controls做对照分析就会存在总体分布间的偏差；&lt;br&gt;
+b. 无亲缘关系群体，减小群体结构的影响。同上类似，减少除表型因素外其它因素差异引起的干扰；&lt;br&gt;
+c. 样本大小需要足够大;&lt;br&gt;
+d. 如果是case-control分析，两组样本大量尽量平衡或者controls多于cases，降低假阳性率。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;2.2 变异数据质控&lt;/strong&gt;&lt;br&gt;
+当通过SNP芯片检测的方法或者全基因组测序的方法检测所有样本的基因型并进行基因型质量质控后，在进行关联分析前仍需要对数据进行质控预处理，减少干扰因素（比如稀有变异，群体结构等）对后续关联分析的影响。质控条目包括以下几点：&lt;br&gt;
+a. 缺失率：包含样本-变异矩阵中，每个样本中变异位点缺失率和每个位点中样本缺失率；&lt;br&gt;
+b. 次等位基因频率：过滤掉稀有或低频突变；&lt;br&gt;
+c. 杂合度过滤；&lt;br&gt;
+d. Hardy-Weinberg平衡过滤。&lt;br&gt;
+借助于plink、vcftools, bcftools等工具都可以完成vcf变异数据质控。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;2.3 基因型填充&lt;/strong&gt;&lt;br&gt;
+样本-变异矩阵中缺失基因型可以用人群单倍型参考面板推断。可用imputation工具如Impute，minimac。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636042019645.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;2.4 群体结构校正&lt;/strong&gt;&lt;br&gt;
+可以通过主成分分析的方式确定群体主要结构成分，可在回归分析时，与其它群体结构变量如年龄，性别等作为协变量处理，去除这些因素的影响。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636042078109.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;2.5 关联分析&lt;/strong&gt;&lt;/p&gt;
 ">生信分析系列（四）</a>
       </div>
       
@@ -1676,7 +1707,8 @@ FANTOM1 - 约 20,000 只小鼠 cDNA 集合的初始功能注释&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;一、中性理论和分子演化&lt;/strong&gt;&lt;br&gt;
 &lt;strong&gt;&lt;font color=red&gt;中性理论&lt;/font&gt;&lt;/strong&gt;&lt;br&gt;
 **开创人：**Motoo Kimura&lt;br&gt;
-&lt;strong&gt;理论要点：&lt;/strong&gt;&lt;/p&gt;
+**理论要点：**分子层面，大多数多态性变异是选择中性的，它们的群体频率动态主要由随即遗传漂变过程决定。&lt;br&gt;
+**用途：**当对分子数据进行中性检验时，若变异拒绝中性假设，那么可以联系到对应的因素，比如&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;&lt;strong&gt;参考书籍：Principles of Population Genetics 4th edition&lt;/strong&gt;&lt;/p&gt;
 ">群体遗传学系列（一）</a>
