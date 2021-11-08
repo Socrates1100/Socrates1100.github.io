@@ -9,7 +9,7 @@
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
 <title>隐马尔科夫模型（HMM） | Socrates&#39; Blogs</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1636333285004">
+<link rel="shortcut icon" href="/favicon.ico?v=1636377927203">
 <link rel="stylesheet" href="/media/css/pisces.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -213,7 +213,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">5</span>
+        <span class="site-item-stat-count">6</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -396,10 +396,6 @@
 <p><strong>一、前言</strong></p>
 
             </div>
-            
-              <div class="reward-btn">
-                <div class="reward-btn-text">赞赏</div>
-              </div>
             
             
               <div class="post-footer">
@@ -1519,6 +1515,52 @@
       <hr>
     </div>
     <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/guan-yu-cong-bam-wen-jian-zhong-ti-qu-fastq-reads/"" data-c="
+          &lt;h1 id=&#34;从bam文件中提取fastq-reads&#34;&gt;从bam文件中提取fastq reads&lt;/h1&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;方式1：Bedtools&lt;/strong&gt;&lt;br&gt;
+if single-end reads:&lt;br&gt;
+&lt;code&gt;bedtools bamtofastq -i input.bam -fq output.fastq&lt;/code&gt;&lt;br&gt;
+if pair-end reads:&lt;br&gt;
+&lt;code&gt;samtools sort -n input.bam -o input_sorted.bam&lt;/code&gt;   (sort reads by identifier-name (-n) )&lt;br&gt;
+&lt;code&gt;bedtools bamtofastq -i input_sorted.bam -fq output_r1.fastq -fq2 output_r2.fastq&lt;/code&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;存在的问题：&lt;/strong&gt;&lt;br&gt;
+如下图，从上至下依次是read1，read2，read3，read4。有两种序列。其中read1和read2同一条read mapping到基因组不同区域后保留下来的重复reads，read3和read4同理。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636372349600.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+以下是利用bedtools工具提取出来的fastq文件。对bam文件reads name集合取unique后，发现unique reads的数目和bedtools提取的reads数目一致，而且从bedtools fastq结果文件可以看到，bedtools并没有在有重复reads的bam文件中正确区分fastq1和fastq2中的对应paired reads。而且可以推断出它的做法是：优先去主染色体上的重复reads或随机选取一条重复reads保留，如果保留下来的是负链上的reads，则反向互补转换后保存下来，然后拷贝至两个fastq文件中。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636374595565.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+再看一组reads，这组虽然重名，但是有三种序列，如下：&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636372757979.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+read1和read2可以看出来是同一条read mapping到基因组不同区域后保留下来的重复reads，而read3和read4序列末端是一致的，说明其中短的可能由于区域选择问题被截断，而实际上这两条也是重复reads。bedtools bam2fastq后，&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636374391737.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+可以看到，bedtools的做法和之前一样，从read1和read2中选择一条拷贝至两个fastq文件，从read3和read4中选择一条拷贝至两个fastq文件。&lt;br&gt;
+bedtools在带有重复reads的bam文件中的这种bam2fastq方式明显是存在问题的，解决方式一是去除重复后再进行bam2fastq，二是用Picard或者samtools来进行bam2fastq。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;方式2：Picard&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;java -Xmx2g -jar SamToFastq.jar I=SAMPLE.bam F=SAMPLE_r1.fastq F2=SAMPLE_r2.fastq FU=SAMPLE_unpaired.fastq&lt;/code&gt;&lt;br&gt;
+F2 —— to get two files for paired-end reads if reads are paired (R1 and R2)&lt;br&gt;
+FU—— to keep unpaired reads&lt;br&gt;
+-Xmx2g——allows a maximum use of 2GB memory for the JVM&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;存在的问题：&lt;/strong&gt;&lt;br&gt;
+对于没有标记去除重复reads的bam文件提取fastq reads，Picard会报错终止。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636372018834.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+解决方式：去除重复后再进行bam2fastq，或者用samtools来进行bam2fastq。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;方式3：Samtools&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;samtools sort -n SAMPLE.bam -o SAMPLE_sorted.bam&lt;/code&gt;     (sort paired read alignment .bam file (sort by name -n))&lt;br&gt;
+samtools fastq -@ 6 SAMPLE_sorted.bam -1 SAMPLE_R1.fastq.gz -2 SAMPLE_R2.fastq.gz -0 /dev/null -s /dev/null -n&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;Reference:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;https://www.metagenomics.wiki/tools/samtools/converting-bam-to-fastq&lt;/li&gt;
+&lt;li&gt;https://www.jianshu.com/p/901c1cdf8a45&lt;/li&gt;
+&lt;/ol&gt;
+">关于从bam文件中提取fastq reads</a>
+      </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/ji-yin-zu-yan-hua-de-zi-ran-tong-xin-xi-tong-mo-xing/"" data-c="
