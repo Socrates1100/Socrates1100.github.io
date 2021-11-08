@@ -9,7 +9,7 @@
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
 <title>Socrates&#39; Blogs</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1636378090397">
+<link rel="shortcut icon" href="/favicon.ico?v=1636380588157">
 <link rel="stylesheet" href="/media/css/pisces.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -1225,7 +1225,7 @@ if pair-end reads:&lt;br&gt;
 read1和read2可以看出来是同一条read mapping到基因组不同区域后保留下来的重复reads，而read3和read4序列末端是一致的，说明其中短的可能由于区域选择问题被截断，而实际上这两条也是重复reads。bedtools bam2fastq后，&lt;br&gt;
 &lt;img src=&#34;https://socrates1100.github.io/post-images/1636374391737.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 可以看到，bedtools的做法和之前一样，从read1和read2中选择一条拷贝至两个fastq文件，从read3和read4中选择一条拷贝至两个fastq文件。&lt;br&gt;
-bedtools在带有重复reads的bam文件中的这种bam2fastq方式明显是存在问题的，解决方式一是去除重复后再进行bam2fastq，二是用Picard或者samtools来进行bam2fastq。&lt;/p&gt;
+bedtools在带有重复reads的bam文件中的这种bam2fastq方式明显是存在问题的，实际上bam文件中FLAG值中保留着reads的paired信息，可是bedtools却没有识别到。解决方式一是去除重复后再进行bam2fastq(也不晓得可不可行)，二是用Picard或者samtools来进行bam2fastq。&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;&lt;strong&gt;方式2：Picard&lt;/strong&gt;&lt;br&gt;
 &lt;code&gt;java -Xmx2g -jar SamToFastq.jar I=SAMPLE.bam F=SAMPLE_r1.fastq F2=SAMPLE_r2.fastq FU=SAMPLE_unpaired.fastq&lt;/code&gt;&lt;br&gt;
@@ -1234,13 +1234,14 @@ FU—— to keep unpaired reads&lt;br&gt;
 -Xmx2g——allows a maximum use of 2GB memory for the JVM&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;&lt;strong&gt;存在的问题：&lt;/strong&gt;&lt;br&gt;
-对于没有标记去除重复reads的bam文件提取fastq reads，Picard会报错终止。&lt;br&gt;
+截取基因组局部区域的bam文件提取fastq reads，由于大量之前被FLAG标记为paired-end的reads被截断后，失去了其中一条，结果bam2fastq时找不到另一条了，Picard会报错终止。&lt;br&gt;
 &lt;img src=&#34;https://socrates1100.github.io/post-images/1636372018834.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-解决方式：去除重复后再进行bam2fastq，或者用samtools来进行bam2fastq。&lt;/p&gt;
+解决方式：用samtools来进行bam2fastq。&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;&lt;strong&gt;方式3：Samtools&lt;/strong&gt;&lt;br&gt;
 &lt;code&gt;samtools sort -n SAMPLE.bam -o SAMPLE_sorted.bam&lt;/code&gt;     (sort paired read alignment .bam file (sort by name -n))&lt;br&gt;
-samtools fastq -@ 6 SAMPLE_sorted.bam -1 SAMPLE_R1.fastq -2 SAMPLE_R2.fastq&lt;/p&gt;
+samtools fastq -@ 6 SAMPLE_sorted.bam -1 SAMPLE_R1.fastq -2 SAMPLE_R2.fastq&lt;br&gt;
+samtools bam2fastq 目前看起来没什么毛病。&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;&lt;strong&gt;Reference:&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
