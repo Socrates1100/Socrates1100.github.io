@@ -1,0 +1,2630 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="Socrates个人博客">
+<meta name="description" content="温故而知新">
+<meta name="theme-color" content="#000">
+<title>生信分析系列（五） | Socrates&#39; Blogs</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1636427327916">
+<link rel="stylesheet" href="/media/css/pisces.css">
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link
+  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
+
+<link href="/media/hljs/styles/default.css"
+  rel="stylesheet">
+
+<link rel="stylesheet" href="/styles/main.css">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script src="/media/js/jquery.js"></script>
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+
+
+
+
+
+  <meta name="description" content="生信分析系列（五）" />
+  <meta name="keywords" content="技术分享,学习笔记" />
+</head>
+
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    
+<div class="pisces">
+  <header class="header  ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>Socrates&#39; Blogs</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">自由而无用的灵魂</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/" target="_self">
+                  <i class="fa fa-home"></i> 首页
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/archives/" target="_self">
+                  <i class="fa fa-archive"></i> 归档
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/tags/" target="_self">
+                  <i class="fa fa-tags"></i> 标签
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/about/" target="_self">
+                  <i class="fa fa-user"></i> 关于
+                </a>
+              
+            </li>
+          
+          
+            
+              <li class="nav-item ">
+                <a href="/friends/" target="_self">
+                  
+                    <i class="fa fa-address-book"></i> 友情链接
+                  
+                </a>
+              </li>
+            
+          
+          
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+    <div
+      class="section-layout pisces ">
+      <div class="section-layout-wrapper">
+        
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active language" data-lan="index">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item language" data-lan="preview">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body pisces" id="sidebar_body">
+        
+          
+            <div class="post-side-meta" id="post_side_meta">
+              
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">Socrates</p>
+    
+    <div class="site-description right-motion">
+      
+      
+      
+        <p>科研菜狗</p>
+      
+      
+    </div>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">5</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">2</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="https://socrates1100.github.io/atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
+    
+  
+  
+
+
+
+  <div style="width: 100%; position: relative;">
+    <canvas id="canvasDiyBlock" style="width:100%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+    <script src="/media/js/magic/clock.js"></script>
+  </div>
+
+</div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper  auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="#chip-seq%E5%8E%9F%E7%90%86%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90">ChIP-seq原理及数据分析</a></li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
+          
+        
+      </div>
+    </div>
+  
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    jQuery.Velocity(hideElement, 'stop');
+    jQuery.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        jQuery.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://socrates1100.github.io/post/sheng-xin-fen-xi-xi-lie-wu/"> 生信分析系列（五） </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2021-11-02 21:03:13">2021-10-26</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">标签:</span>
+       
+      <a href="https://socrates1100.github.io/tag/H7Lz4OvP2/"> <span>技术分享</span> </a>、   
+      <a href="https://socrates1100.github.io/tag/7CTnmmU4q/">
+        <span>学习笔记</span>
+      </a>
+       
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span
+        >1<span class="language" data-lan="minute"
+          >分钟</span
+        ></span
+      >
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span
+        >19<span class="pc-show language" data-lan="words"
+          >字数</span
+        ></span
+      >
+    </span>
+      
+    <span
+      id="/post/sheng-xin-fen-xi-xi-lie-wu/"
+      data-flag-title="生信分析系列（五）"
+      class="meta-item pc-show leancloud_visitors"
+    >
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-eye"></i>
+      <span
+        ><span class="language" data-lan="view">浏览量:</span>:<span
+          class="leancloud-visitors-count"
+        ></span
+      ></span>
+    </span>
+    
+  </div>
+</section>
+
+            <div class="post-body next-md-body" id="post_body">
+              <h1 id="chip-seq原理及数据分析">ChIP-seq原理及数据分析</h1>
+<!-- more -->
+<p>Reference: http://www.universebiologygirl.com/2019/04/01/chip-seq1/</p>
+
+            </div>
+            
+              <div class="reward-btn">
+                <div class="reward-btn-text">赞赏</div>
+              </div>
+            
+            
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      Socrates
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://socrates1100.github.io/post/sheng-xin-fen-xi-xi-lie-wu/" title="生信分析系列（五）">https://socrates1100.github.io/post/sheng-xin-fen-xi-xi-lie-wu/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://socrates1100.github.io/tag/H7Lz4OvP2/"># 技术分享</a>
+    
+      <a href="https://socrates1100.github.io/tag/7CTnmmU4q/"># 学习笔记</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+    </div>
+    <div class="nav-next">
+      
+    </div>
+  </div>
+</div>
+            
+            
+  
+    
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '0d86584f299e8b2de15e',
+    clientSecret: 'b152ace99965ddd80f563c3bd6cac47082c943b5',
+    repo: 'socrates1100.github.io',
+    owner: 'Socrates',
+    admin: ['Socrates'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+  gitalk.render('gitalk-container')
+</script>
+    
+    
+  
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+  <footer class="footer">
+    <center>
+      已运行:<span id="run_time"></span>
+      <span class="post-meta-divider">|</span>
+      已咕咕:<span id="gugu_time"></span>
+    </center>
+
+    总字数:<span id="word_count"></span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_pv">浏览数:<span id="busuanzi_value_site_pv"></span> 次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">访客数:<span id="busuanzi_value_site_uv"></span> 人</span>
+
+    <script>
+      function runTime() {
+        str = "";
+        BirthDay = new Date("January 30,2019");
+        today = new Date();
+        timeold = today.getTime() - BirthDay.getTime();
+        msPerDay = 24 * 60 * 60 * 1000;
+        e_daysold = timeold / msPerDay;
+        daysold = Math.floor(e_daysold);
+        str += daysold + "天";
+        return str;
+      }
+      setInterval(function () {
+        $("#run_time").html(runTime());
+      }, 1000);
+    </script>
+
+    <script>
+      function guguTime() {
+        str = "";
+        guguDay = new Date(document.lastModified);
+        today = new Date();
+        timeold = today.getTime() - guguDay.getTime();
+        msPerDay = 24 * 60 * 60 * 1000;
+        e_daysold = timeold / msPerDay;
+        daysold = Math.floor(e_daysold);
+        str += daysold + "天";
+        return str;
+      }
+      setInterval(function () {
+        $("#gugu_time").html(guguTime());
+      }, 1000);
+    </script>
+
+    <script>
+      function site() {
+
+        return 275.6 + "k";
+      };
+
+      setInterval(function () {
+        $("#word_count").html(site());
+      }, 1000);
+    </script>
+
+    <div class="copyright">
+      Created by
+      <a href="https://github.com/YuZhangWang" target="_blank">YuZhangWang</a>
+      ©2019-Present
+      <span class="post-meta-divider">|</span>
+      Powered By
+      <a href="https://github.com/YuZhangWang/YuZhangWang.github.io" target="_blank">Github</a>
+      <span class="post-meta-divider">|</span>
+      Theme By
+      <a href="https://github.com/theme-next/hexo-theme-next" target="_blank">Next</a>
+    </div>
+    <div class="poweredby">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+  </footer>
+  
+    
+        <div class="pisces back-to-top" id="back_to_top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span class="scrollpercent"> <span id="back_to_top_text">0</span>% </span>
+            
+        </div>
+        
+                  
+                    
+<link rel="stylesheet" href="/media/live2d/css/live2d.css" />
+<div class="box-scale">
+  <div id="landlord" style="left: 5px;bottom: px;"
+    data-key="">
+    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+    
+
+      <div class="message" style="opacity:0"></div>
+      <div class="live_talk_input_body">
+        <div class="live_talk_input_name_body">
+          <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off"
+            placeholder="你的名字" />
+        </div>
+        <div class="live_talk_input_text_body">
+          <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off"
+            placeholder="要和我聊什么呀？" />
+          <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
+        </div>
+      </div>
+      <input name="live_talk" id="live_talk" value="1" type="hidden" />
+      <div class="live_ico_box">
+        <div class="live_ico_item type_info" id="showInfoBtn"></div>
+        <div class="live_ico_item type_talk" id="showTalkBtn"></div>
+        
+        <div class="live_ico_item type_youdu" id="youduButton"></div>
+        <div class="live_ico_item type_quit" id="hideButton"></div>
+        <input name="live_statu_val" id="live_statu_val" value="0" type="hidden" />
+        <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+        <input id="duType" value="douqilai" type="hidden">
+        
+      </div>
+    
+  </div>
+</div>
+<div id="open_live2d">召唤看板娘</div>
+<script>
+  var message_Path = 'https://cdn.jsdelivr.net/gh/hsxyhao/live2d.github.io@master/';
+  let landlord = document.querySelector('#landlord');
+  var apiKey = landlord.dataset.key;
+</script>
+<script type="text/javascript" src="/media/live2d/js/live2d.js"></script>
+<script>
+	var home_Path = document.location.protocol + '//' + window.document.location.hostname + ":" + window.document.location.port + '/';
+	var userAgent = window.navigator.userAgent.toLowerCase();
+	var norunAI = ["android", "iphone", "ipod", "ipad", "windows phone", "mqqbrowser", "msie", "trident/7.0"];
+	var norunFlag = false;
+
+	for (var i = 0; i < norunAI.length; i++) {
+		if (userAgent.indexOf(norunAI[i]) > -1) {
+			norunFlag = true;
+			break;
+		}
+	}
+
+	if (!window.WebGLRenderingContext) {
+		norunFlag = true;
+	}
+
+	if (!norunFlag) {
+		var hitFlag = false;
+		var AIFadeFlag = false;
+		var liveTlakTimer = null;
+		var sleepTimer_ = null;
+		var AITalkFlag = false;
+		var talkNum = 0;
+		(function () {
+			function renderTip(template, context) {
+				var tokenReg = /(\\)?\{([^\{\}\\]+)(\\)?\}/g;
+				return template.replace(tokenReg, function (word, slash1, token, slash2) {
+					if (slash1 || slash2) {
+						return word.replace('\\', '');
+					}
+					var variables = token.replace(/\s/g, '').split('.');
+					var currentObject = context;
+					var i, length, variable;
+					for (i = 0, length = variables.length; i < length; ++i) {
+						variable = variables[i];
+						currentObject = currentObject[variable];
+						if (currentObject === undefined || currentObject === null) return '';
+					}
+					return currentObject;
+				});
+			}
+
+			String.prototype.renderTip = function (context) {
+				return renderTip(this, context);
+			};
+
+			var re = /x/;
+			re.toString = function () {
+				showMessage('哈哈，你打开了控制台，是想要看看我的秘密吗？', 5000);
+				return '';
+			};
+
+			$(document).on('copy', function () {
+				showMessage('你都复制了些什么呀，转载要记得加上出处哦~~', 5000);
+			});
+
+			function initTips() {
+				$.ajax({
+					cache: true,
+					url: message_Path + 'message.json',
+					dataType: "json",
+					success: function (result) {
+						$.each(result.mouseover, function (index, tips) {
+							$(tips.selector).mouseover(function () {
+								var text = tips.text;
+								if (Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
+								text = text.renderTip({ text: $(this).text() });
+								showMessage(text, 3000);
+								talkValTimer();
+								clearInterval(liveTlakTimer);
+								liveTlakTimer = null;
+							});
+							$(tips.selector).mouseout(function () {
+								showHitokoto();
+								if (liveTlakTimer == null) {
+									liveTlakTimer = window.setInterval(function () {
+										showHitokoto();
+									}, 15000);
+								};
+							});
+						});
+						$.each(result.click, function (index, tips) {
+							$(tips.selector).click(function () {
+								if (hitFlag) {
+									return false
+								}
+								hitFlag = true;
+								setTimeout(function () {
+									hitFlag = false;
+								}, 8000);
+								var text = tips.text;
+								if (Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
+								text = text.renderTip({ text: $(this).text() });
+								showMessage(text, 3000);
+							});
+							clearInterval(liveTlakTimer);
+							liveTlakTimer = null;
+							if (liveTlakTimer == null) {
+								liveTlakTimer = window.setInterval(function () {
+									showHitokoto();
+								}, 15000);
+							};
+						});
+					}
+				});
+			}
+			initTips();
+
+			var text;
+			if (document.referrer !== '') {
+				var referrer = document.createElement('a');
+				referrer.href = document.referrer;
+				text = '嗨！来自 <span style="color:#0099cc;">' + referrer.hostname + '</span> 的朋友！';
+				var domain = referrer.hostname.split('.')[1];
+				if (domain == 'baidu') {
+					text = '嗨！ 来自 百度搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				} else if (domain == 'so') {
+					text = '嗨！ 来自 360搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				} else if (domain == 'google') {
+					text = '嗨！ 来自 谷歌搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				}
+			} else {
+				if (window.location.href == home_Path) { //主页URL判断，需要斜杠结尾
+					var now = (new Date()).getHours();
+					if (now > 23 || now <= 5) {
+						text = '你是夜猫子呀？这么晚还不睡觉，明天起的来嘛？';
+					} else if (now > 5 && now <= 7) {
+						text = '早上好！一日之计在于晨，美好的一天就要开始了！';
+					} else if (now > 7 && now <= 11) {
+						text = '上午好！工作顺利嘛，不要久坐，多起来走动走动哦！';
+					} else if (now > 11 && now <= 14) {
+						text = '中午了，工作了一个上午，现在是午餐时间！';
+					} else if (now > 14 && now <= 17) {
+						text = '午后很容易犯困呢，今天的运动目标完成了吗？';
+					} else if (now > 17 && now <= 19) {
+						text = '傍晚了！窗外夕阳的景色很美丽呢，最美不过夕阳红~~';
+					} else if (now > 19 && now <= 21) {
+						text = '晚上好，今天过得怎么样？';
+					} else if (now > 21 && now <= 23) {
+						text = '已经这么晚了呀，早点休息吧，晚安~~';
+					} else {
+						text = '嗨~ 快来逗我玩吧！';
+					}
+				} else {
+					text = '欢迎阅读<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				}
+			}
+			showMessage(text, 12000);
+		})();
+
+		liveTlakTimer = setInterval(function () {
+			showHitokoto();
+		}, 15000);
+
+		function showHitokoto() {
+			if (sessionStorage.getItem("Sleepy") !== "1") {
+				if (!AITalkFlag) {
+					$.getJSON('https://v1.hitokoto.cn/', function (result) {
+						talkValTimer();
+						showMessage(result.hitokoto, 0);
+					});
+				}
+			} else {
+				hideMessage(0);
+				if (sleepTimer_ == null) {
+					sleepTimer_ = setInterval(function () {
+						checkSleep();
+					}, 200);
+				}
+			}
+		}
+
+		function checkSleep() {
+			var sleepStatu = sessionStorage.getItem("Sleepy");
+			if (sleepStatu !== '1') {
+				talkValTimer();
+				showMessage('你回来啦~', 0);
+				clearInterval(sleepTimer_);
+				sleepTimer_ = null;
+			}
+		}
+
+		function showMessage(text, timeout) {
+			if (Array.isArray(text)) text = text[Math.floor(Math.random() * text.length + 1) - 1];
+			$('.message').stop();
+			$('.message').html(text);
+			$('.message').fadeTo(200, 1);
+			//if (timeout === null) timeout = 5000;
+			//hideMessage(timeout);
+		}
+		function talkValTimer() {
+			$('#live_talk').val('1');
+		}
+
+		function hideMessage(timeout) {
+			//$('.message').stop().css('opacity',1);
+			if (timeout === null) timeout = 5000;
+			$('.message').delay(timeout).fadeTo(200, 0);
+		}
+
+		function initLive2d() {
+			$('#hideButton').on('click', function () {
+				if (AIFadeFlag) {
+					return false;
+				} else {
+					AIFadeFlag = true;
+					localStorage.setItem("live2dhidden", "0");
+					$('#landlord').fadeOut(200);
+					$('#open_live2d').delay(200).fadeIn(200);
+					setTimeout(function () {
+						AIFadeFlag = false;
+					}, 300);
+				}
+			});
+			$('#open_live2d').on('click', function () {
+				if (AIFadeFlag) {
+					return false;
+				} else {
+					AIFadeFlag = true;
+					localStorage.setItem("live2dhidden", "1");
+					$('#open_live2d').fadeOut(200);
+					$('#landlord').delay(200).fadeIn(200);
+					setTimeout(function () {
+						AIFadeFlag = false;
+					}, 300);
+				}
+			});
+			$('#youduButton').on('click', function () {
+				if ($('#youduButton').hasClass('doudong')) {
+					var typeIs = $('#youduButton').attr('data-type');
+					$('#youduButton').removeClass('doudong');
+					$('body').removeClass(typeIs);
+					$('#youduButton').attr('data-type', '');
+				} else {
+					var duType = $('#duType').val();
+					var duArr = duType.split(",");
+					var dataType = duArr[Math.floor(Math.random() * duArr.length)];
+
+					$('#youduButton').addClass('doudong');
+					$('#youduButton').attr('data-type', dataType);
+					$('body').addClass(dataType);
+				}
+			});
+			if (apiKey) {
+				$('#showInfoBtn').on('click', function () {
+					var live_statu = $('#live_statu_val').val();
+					if (live_statu == "0") {
+						return
+					} else {
+						$('#live_statu_val').val("0");
+						$('.live_talk_input_body').fadeOut(500);
+						AITalkFlag = false;
+						showHitokoto();
+						$('#showTalkBtn').show();
+						$('#showInfoBtn').hide();
+					}
+				});
+				$('#showTalkBtn').on('click', function () {
+					var live_statu = $('#live_statu_val').val();
+					if (live_statu == "1") {
+						return
+					} else {
+						$('#live_statu_val').val("1");
+						$('.live_talk_input_body').fadeIn(500);
+						AITalkFlag = true;
+						$('#showTalkBtn').hide();
+						$('#showInfoBtn').show();
+
+					}
+				});
+				$('#talk_send').on('click', function () {
+					var info_ = $('#AIuserText').val();
+					var userid_ = $('#AIuserName').val();
+					if (info_ == "") {
+						showMessage('写点什么吧！', 0);
+						return;
+					}
+					if (userid_ == "") {
+						showMessage('聊之前请告诉我你的名字吧！', 0);
+						return;
+					}
+					showMessage('思考中~', 0);
+					let protocol = window.location.protocol.indexOf("s") > 0 ? "https" : "http";
+					$.ajax({
+						type: "get",
+						url: `${protocol}://www.tuling123.com/openapi/api?key=${apiKey}&info=${info_}`,
+						dataType: "json",
+						success: function (res) {
+							talkValTimer();
+							showMessage(res.text, 0);
+							$('#AIuserText').val("");
+							sessionStorage.setItem("live2duser", userid_);
+						},
+						error: function (e) {
+							talkValTimer();
+							showMessage('似乎有什么错误，请和站长联系！', 0);
+						}
+					});
+				});
+			} else {
+				$('#showInfoBtn').hide();
+				$('#showTalkBtn').hide();
+			}
+			//获取音乐信息初始化
+			var bgmListInfo = $('input[name=live2dBGM]');
+			if (bgmListInfo.length == 0) {
+				$('#musicButton').hide();
+			} else {
+				var bgmPlayNow = parseInt($('#live2d_bgm').attr('data-bgm'));
+				var bgmPlayTime = 0;
+				var live2dBGM_Num = sessionStorage.getItem("live2dBGM_Num");
+				var live2dBGM_PlayTime = sessionStorage.getItem("live2dBGM_PlayTime");
+				if (live2dBGM_Num) {
+					if (live2dBGM_Num <= $('input[name=live2dBGM]').length - 1) {
+						bgmPlayNow = parseInt(live2dBGM_Num);
+					}
+				}
+				if (live2dBGM_PlayTime) {
+					bgmPlayTime = parseInt(live2dBGM_PlayTime);
+				}
+				var live2dBGMSrc = bgmListInfo.eq(bgmPlayNow).val();
+				$('#live2d_bgm').attr('data-bgm', bgmPlayNow);
+				$('#live2d_bgm').attr('src', live2dBGMSrc);
+				$('#live2d_bgm')[0].currentTime = bgmPlayTime;
+				$('#live2d_bgm')[0].volume = 0.5;
+				var live2dBGM_IsPlay = sessionStorage.getItem("live2dBGM_IsPlay");
+				var live2dBGM_WindowClose = sessionStorage.getItem("live2dBGM_WindowClose");
+				if (live2dBGM_IsPlay == '0' && live2dBGM_WindowClose == '0') {
+					$('#live2d_bgm')[0].play();
+					$('#musicButton').addClass('play');
+				}
+				sessionStorage.setItem("live2dBGM_WindowClose", '1');
+				$('#musicButton').on('click', function () {
+					if ($('#musicButton').hasClass('play')) {
+						$('#live2d_bgm')[0].pause();
+						$('#musicButton').removeClass('play');
+						sessionStorage.setItem("live2dBGM_IsPlay", '1');
+					} else {
+						$('#live2d_bgm')[0].play();
+						$('#musicButton').addClass('play');
+						sessionStorage.setItem("live2dBGM_IsPlay", '0');
+					}
+				});
+				window.onbeforeunload = function () {
+					sessionStorage.setItem("live2dBGM_WindowClose", '0');
+					if ($('#musicButton').hasClass('play')) {
+						sessionStorage.setItem("live2dBGM_IsPlay", '0');
+					}
+				}
+				document.getElementById('live2d_bgm').addEventListener("timeupdate", function () {
+					var live2dBgmPlayTimeNow = document.getElementById('live2d_bgm').currentTime;
+					sessionStorage.setItem("live2dBGM_PlayTime", live2dBgmPlayTimeNow);
+				});
+				document.getElementById('live2d_bgm').addEventListener("ended", function () {
+					var listNow = parseInt($('#live2d_bgm').attr('data-bgm'));
+					listNow++;
+					if (listNow > $('input[name=live2dBGM]').length - 1) {
+						listNow = 0;
+					}
+					var listNewSrc = $('input[name=live2dBGM]').eq(listNow).val();
+					sessionStorage.setItem("live2dBGM_Num", listNow);
+					$('#live2d_bgm').attr('src', listNewSrc);
+					$('#live2d_bgm')[0].play();
+					$('#live2d_bgm').attr('data-bgm', listNow);
+				});
+				document.getElementById('live2d_bgm').addEventListener("error", function () {
+					$('#live2d_bgm')[0].pause();
+					$('#musicButton').removeClass('play');
+					showMessage('音乐似乎加载不出来了呢！', 0);
+				});
+			}
+			//获取用户名
+			var live2dUser = sessionStorage.getItem("live2duser");
+			if (live2dUser !== null) {
+				$('#AIuserName').val(live2dUser);
+			}
+			//获取位置
+			var landL = sessionStorage.getItem("historywidth");
+			var landB = sessionStorage.getItem("historyheight");
+			if (landL == null || landB == null) {
+				landL = '5px'
+				landB = '0px'
+			}
+			$('#landlord').css('left', landL + 'px');
+			$('#landlord').css('bottom', landB + 'px');
+			//移动
+			function getEvent() {
+				return window.event || arguments.callee.caller.arguments[0];
+			}
+			var smcc = document.getElementById("landlord");
+			var moveX = 0;
+			var moveY = 0;
+			var moveBottom = 0;
+			var moveLeft = 0;
+			var moveable = false;
+			var docMouseMoveEvent = document.onmousemove;
+			var docMouseUpEvent = document.onmouseup;
+			smcc.onmousedown = function () {
+				var ent = getEvent();
+				moveable = true;
+				moveX = ent.clientX;
+				moveY = ent.clientY;
+				var obj = smcc;
+				moveBottom = parseInt(obj.style.bottom);
+				moveLeft = parseInt(obj.style.left);
+				if (isFirefox = navigator.userAgent.indexOf("Firefox") > 0) {
+					window.getSelection().removeAllRanges();
+				}
+				document.onmousemove = function () {
+					if (moveable) {
+						var ent = getEvent();
+						var x = moveLeft + ent.clientX - moveX;
+						var y = moveBottom + (moveY - ent.clientY);
+						obj.style.left = x + "px";
+						obj.style.bottom = y + "px";
+					}
+				};
+				document.onmouseup = function () {
+					if (moveable) {
+						var historywidth = obj.style.left;
+						var historyheight = obj.style.bottom;
+						historywidth = historywidth.replace('px', '');
+						historyheight = historyheight.replace('px', '');
+						sessionStorage.setItem("historywidth", historywidth);
+						sessionStorage.setItem("historyheight", historyheight);
+						document.onmousemove = docMouseMoveEvent;
+						document.onmouseup = docMouseUpEvent;
+						moveable = false;
+						moveX = 0;
+						moveY = 0;
+						moveBottom = 0;
+						moveLeft = 0;
+					}
+				};
+			};
+		}
+		$(document).ready(function () {
+			var AIimgSrc = [];
+			let chooseLive2d = 'rem'
+			if (chooseLive2d === 'histoire') {
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_00.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_01.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_02.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_03.png");
+			} else if (chooseLive2d === 'rem') {
+				AIimgSrc.push(message_Path + "model/rem/remu2048/texture_00.png");
+			} else if (chooseLive2d === 'aoba') {
+				AIimgSrc.push(message_Path + "model/aoba/textures/texture_00.png");
+			} else if (chooseLive2d === 'hijiki') {
+				AIimgSrc.push(message_Path + "model/hijiki/moc/hijiki.2048/texture_00.png");
+			} else if (chooseLive2d === 'tororo') {
+				AIimgSrc.push(message_Path + "model/tororo/moc/tororo.2048/texture_00.png");
+			}
+			var images = [];
+			var imgLength = AIimgSrc.length;
+			var loadingNum = 0;
+			for (var i = 0; i < imgLength; i++) {
+				images[i] = new Image();
+				images[i].src = AIimgSrc[i];
+				images[i].onload = function () {
+					loadingNum++;
+					if (loadingNum === imgLength) {
+						var live2dhidden = localStorage.getItem("live2dhidden");
+						if (live2dhidden === "0") {
+							setTimeout(function () {
+								$('#open_live2d').fadeIn(200);
+							}, 1300);
+						} else {
+							setTimeout(function () {
+								$('#landlord').fadeIn(200);
+							}, 1300);
+						}
+						let model = '';
+						if (chooseLive2d === 'histoire') {
+							model = message_Path + "model/histoire/model.json";
+						} else if (chooseLive2d === 'rem') {
+							model = message_Path + "model/rem/model.json";
+						} else if (chooseLive2d === 'aoba') {
+							model = message_Path + "model/aoba/model.json";
+						} else if (chooseLive2d === 'hijiki') {
+							model = message_Path + "model/hijiki/hijiki.model.json";
+						} else if (chooseLive2d === 'tororo') {
+							model = message_Path + "model/tororo/tororo.model.json";
+						}
+						setTimeout(function () {
+							loadlive2d("live2d", model);
+						}, 1000);
+						initLive2d();
+						images = null;
+					}
+				}
+			}
+		});
+	}
+</script>
+                      
+                        
+</div>
+<script>
+  let sideBarOpen = "sidebar-open";
+  let body = document.body;
+  let back2Top = document.querySelector("#back_to_top"),
+    back2TopText = document.querySelector("#back_to_top_text"),
+    drawerBox = document.querySelector("#drawer_box"),
+    rightSideBar = document.querySelector(".sidebar"),
+    viewport = document.querySelector("body");
+
+  function scrollAnimation(currentY, targetY) {
+    let needScrollTop = targetY - currentY;
+    let _currentY = currentY;
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10);
+      _currentY += dist;
+      window.scrollTo(_currentY, currentY);
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY);
+      } else {
+        window.scrollTo(_currentY, targetY);
+      }
+    }, 1);
+  }
+
+  back2Top.addEventListener("click", function (e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+
+  window.addEventListener("scroll", function (e) {
+    let percent =
+      (document.scrollingElement.scrollTop /
+        (document.scrollingElement.scrollHeight -
+          document.scrollingElement.clientHeight)) *
+      100;
+    if (percent > 1 && !back2Top.classList.contains("back-top-active")) {
+      back2Top.classList.add("back-top-active");
+    }
+    if (percent == 0) {
+      back2Top.classList.remove("back-top-active");
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+  let hasCacu = false;
+  window.addEventListener("resize", function (e) {
+    calcuHeight();
+  });
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (
+      (!hasCacu && back2Top.classList.contains("pisces")) ||
+      back2Top.classList.contains("gemini")
+    ) {
+      let sideBar = document.querySelector(".sidebar");
+      let navUl = document.querySelector("#site_nav");
+      sideBar.style =
+        "margin-top:" + (navUl.offsetHeight + navUl.offsetTop + 15) + "px;";
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+
+  let open = false,
+    MOTION_TIME = 300,
+    RIGHT_MOVE_DIS = "320px";
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll(".right-motion");
+    let right = drawerBox.classList.contains("right");
+
+    let transitionDir = right
+      ? "transition.slideRightIn"
+      : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS,
+      };
+      closeProp = {
+        paddingRight: "0px",
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS,
+      };
+      closeProp = {
+        paddingLeft: "0px",
+      };
+    }
+
+    drawerBox.onclick = function () {
+      open = !open;
+      jQuery.Velocity(rightSideBar, "stop");
+      jQuery.Velocity(viewport, "stop");
+      jQuery.Velocity(rightMotions, "stop");
+      if (open) {
+        jQuery.Velocity(
+          rightSideBar,
+          {
+            width: RIGHT_MOVE_DIS,
+          },
+          {
+            duration: MOTION_TIME,
+            begin: function () {
+              jQuery.Velocity(rightMotions, transitionDir, {});
+            },
+          }
+        );
+        jQuery.Velocity(viewport, openProp, {
+          duration: MOTION_TIME,
+        });
+      } else {
+        jQuery.Velocity(
+          rightSideBar,
+          {
+            width: "0px",
+          },
+          {
+            duration: MOTION_TIME,
+            begin: function () {
+              jQuery.Velocity(rightMotions, {
+                opacity: 0,
+              });
+            },
+          }
+        );
+        jQuery.Velocity(viewport, closeProp, {
+          duration: MOTION_TIME,
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle("muse-line");
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    };
+  }
+
+  // 链接跳转
+  let newWindow = "false";
+  if (newWindow === "true") {
+    let links = document.querySelectorAll(".post-body a");
+    links.forEach((item) => {
+      if (!item.classList.contains("btn")) {
+        item.setAttribute("target", "_blank");
+      }
+    });
+  }
+
+  let faSearch = document.querySelector("#fa_search");
+  faSearch &&
+    faSearch.addEventListener("click", function () {
+      document.querySelector("#search_mask").style = "";
+    });
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+
+  // 离开当前页title变化
+  var leaveTitle = "";
+  var normal_title = document.title;
+  if (leaveTitle) {
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState == "hidden") {
+        normal_title = document.title;
+        document.title = leaveTitle;
+      } else {
+        document.title = normal_title;
+      }
+    });
+  }
+</script>
+
+<link rel="stylesheet" href="/media/css/jquery.fancybox.css" />
+<script src="/media/js/jquery.fancybox.js"></script>
+
+<script>
+  let images = document.querySelectorAll(".section img");
+  images.forEach((image) => {
+    var parent = image.parentElement;
+    var next = image.nextElementSibling;
+    parent.removeChild(image);
+    var aelem = document.createElement("a");
+    aelem.href = image.src;
+    aelem.dataset["fancybox"] = "images";
+    aelem.dataset["rel"] = "fancybox-button";
+    aelem.classList.add("fancybox");
+    aelem.appendChild(image);
+    parent.insertBefore(aelem, next);
+  });
+</script>
+    <div class="reward-mask" style="display: none;">
+  <div class="reward-relative">
+    <span class="close" aria-hidden="true">x</span>
+    <div class="reward-body">
+      <h2>感谢您的支持，我会继续努力的!</h2>
+      <div class="reward-img-box">
+        <div style="position: relative; width: 140px; height: 140px;">
+          
+          
+          
+        </div>
+      </div>
+      <p class="reward-word">扫码打赏，你说多少就多少</p>
+      <p class="reward-tip"> </p>
+    </div>
+    <div class="bottom">
+      
+      
+    </div>
+  </div>
+</div>
+<style>
+  .reward-mask {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000054;
+  }
+
+  .reward-relative {
+    position: relative;
+    width: 480px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #fff;
+    top: 50%;
+    margin-top: -205px;
+  }
+
+  .reward-relative .close {
+    position: absolute;
+    right: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #929292;
+  }
+
+  .reward-body {
+    padding: 40px 20px 20px;
+  }
+
+  .bottom {
+    display: flex;
+  }
+
+  .reward-btn {
+    text-align: center;
+  }
+
+  .reward-btn-text {
+    display: inline-block;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #ff9734;
+    color: #FFF;
+    margin-top: 20px;
+  }
+
+  .pay-text {
+    margin-top: 10px;
+    padding: 10px;
+    flex: 1;
+    transition: all .2s linear;
+  }
+
+  .pay-text:hover {
+    background-color: #a5a5a536;
+  }
+
+  .reward-body h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+
+  .reward-body h2:after,
+  .reward-body h2:before {
+    font-family: Arial, Helvetica, sans-serif;
+    background: 0 0;
+    width: 0;
+    height: 0;
+    font-style: normal;
+    color: #eee;
+    font-size: 80px;
+    position: absolute;
+    top: 20px;
+  }
+
+  .reward-body h2:before {
+    content: '\201c';
+    left: 50px;
+  }
+
+  .reward-body h2:after {
+    content: '\201d';
+    right: 80px;
+  }
+
+  .reward-img-box {
+    display: inline-block;
+    padding: 10px;
+    border: 6px solid #ea5f00;
+    margin: 0 auto;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .reward-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .reward-relative {
+      height: 100%;
+      top: 0px;
+      margin-top: 0;
+      width: auto;
+    }
+
+    .reward-relative .bottom {
+      flex-direction: column;
+    }
+
+    .reward-relative .pay-text {
+      width: 80%;
+      margin: 5px auto;
+      border: 1px solid silver;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .reward-body h2:after {
+      right: 40px;
+    }
+
+    .reward-body h2:after,
+    .reward-body h2:before {
+      font-size: 60px;
+    }
+
+    .reward-body h2:before {
+      left: 20px;
+    }
+  }
+</style>
+<script>
+  !function () {
+    var mask = document.querySelector('.reward-mask');
+    let close = document.querySelector('.reward-relative .close');
+    let rewardBtn = document.querySelector('.reward-btn');
+
+    let zfb = document.querySelector('#zfb'),
+      wx = document.querySelector('#wx'),
+      zfbBtn = document.querySelector('#zfbBtn'),
+      wxBtn = document.querySelector('#wxBtn');
+
+    if (zfbBtn && wxBtn) {
+      zfbBtn.addEventListener('click', () => {
+        jQuery.Velocity(zfb, 'transition.slideLeftIn', {
+          duration: 400
+        });
+        jQuery.Velocity(wx, 'transition.slideRightOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+
+      wxBtn.addEventListener('click', () => {
+        jQuery.Velocity(wx, 'transition.slideRightIn', {
+          duration: 400
+        });
+        jQuery.Velocity(zfb, 'transition.slideLeftOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+    }
+
+    rewardBtn.addEventListener('click', (e) => {
+      jQuery.Velocity(mask, 'transition.slideDownIn', {
+        duration: 400
+      })
+    });
+
+    close.addEventListener('click', (e) => {
+      e.preventDefault();
+      jQuery.Velocity(mask, 'transition.slideUpOut', {
+        duration: 400
+      })
+    })
+  }()
+</script>
+
+  </div>
+</body>
+
+  <div class="search-mask" id="search_mask" style="display: none;">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input id="search" type="text" class="language" data-lan="search" placeholder="搜索">
+      </div>
+      <i id="close" class="fa fa-times-circle"></i>
+    </div>
+    <div class="stat-box">
+      <span id="stat_count">0</span><span class="language" data-lan="stat">条相关条目，使用了</span><span id="stat_times">0</span><span class="language" data-lan="stat-time">毫秒</span>
+      <hr>
+    </div>
+    <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/guan-yu-cong-bam-wen-jian-zhong-ti-qu-fastq-reads/"" data-c="
+          &lt;h1 id=&#34;从bam文件中提取fastq-reads&#34;&gt;从bam文件中提取fastq reads&lt;/h1&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;方式1：Bedtools&lt;/strong&gt;&lt;br&gt;
+if single-end reads:&lt;br&gt;
+&lt;code&gt;bedtools bamtofastq -i input.bam -fq output.fastq&lt;/code&gt;&lt;br&gt;
+if pair-end reads:&lt;br&gt;
+&lt;code&gt;samtools sort -n input.bam -o input_sorted.bam&lt;/code&gt;   (sort reads by identifier-name (-n) )&lt;br&gt;
+&lt;code&gt;bedtools bamtofastq -i input_sorted.bam -fq output_r1.fastq -fq2 output_r2.fastq&lt;/code&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;存在的问题：&lt;/strong&gt;&lt;br&gt;
+如下图，从上至下依次是read1，read2，read3，read4。有两种序列。其中read1和read2同一条read mapping到基因组不同区域后保留下来的重复reads，read3和read4同理。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636372349600.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+以下是利用bedtools工具提取出来的fastq文件。对bam文件reads name集合取unique后，发现unique reads的数目和bedtools提取的reads数目一致，而且从bedtools fastq结果文件可以看到，bedtools并没有在有重复reads的bam文件中正确区分fastq1和fastq2中的对应paired reads。而且可以推断出它的做法是：优先去主染色体上的重复reads或随机选取一条重复reads保留，如果保留下来的是负链上的reads，则反向互补转换后保存下来，然后拷贝至两个fastq文件中。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636374595565.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+再看一组reads，这组虽然重名，但是有三种序列，如下：&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636372757979.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+read1和read2可以看出来是同一条read mapping到基因组不同区域后保留下来的重复reads，而read3和read4序列末端是一致的，说明其中短的可能由于区域选择问题被截断，而实际上这两条也是重复reads。bedtools bam2fastq后，&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636374391737.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+可以看到，bedtools的做法和之前一样，从read1和read2中选择一条拷贝至两个fastq文件，从read3和read4中选择一条拷贝至两个fastq文件。&lt;br&gt;
+bedtools在带有重复reads的bam文件中的这种bam2fastq方式明显是存在问题的，实际上bam文件中FLAG值中保留着reads的paired信息，可是bedtools却没有识别到。解决方式一是去除重复后再进行bam2fastq(也不晓得可不可行)，二是用Picard或者samtools来进行bam2fastq。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;方式2：Picard&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;java -Xmx2g -jar SamToFastq.jar I=SAMPLE.bam F=SAMPLE_r1.fastq F2=SAMPLE_r2.fastq FU=SAMPLE_unpaired.fastq&lt;/code&gt;&lt;br&gt;
+F2 —— to get two files for paired-end reads if reads are paired (R1 and R2)&lt;br&gt;
+FU—— to keep unpaired reads&lt;br&gt;
+-Xmx2g——allows a maximum use of 2GB memory for the JVM&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;存在的问题：&lt;/strong&gt;&lt;br&gt;
+截取基因组局部区域的bam文件提取fastq reads，由于大量之前被FLAG标记为paired-end的reads被截断后，失去了其中一条，结果bam2fastq时找不到另一条了，Picard会报错终止。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636372018834.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+解决方式：用samtools来进行bam2fastq。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;方式3：Samtools&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;samtools sort -n SAMPLE.bam -o SAMPLE_sorted.bam&lt;/code&gt;     (sort paired read alignment .bam file (sort by name -n))&lt;br&gt;
+samtools fastq -@ 6 SAMPLE_sorted.bam -1 SAMPLE_R1.fastq -2 SAMPLE_R2.fastq&lt;br&gt;
+samtools bam2fastq 目前看起来没什么毛病。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;Reference:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;https://www.metagenomics.wiki/tools/samtools/converting-bam-to-fastq&lt;/li&gt;
+&lt;li&gt;https://www.jianshu.com/p/901c1cdf8a45&lt;/li&gt;
+&lt;/ol&gt;
+">关于从bam文件中提取fastq reads</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/ji-yin-zu-yan-hua-de-zi-ran-tong-xin-xi-tong-mo-xing/"" data-c="
+          &lt;h1 id=&#34;题目-a-natural-communication-system-on-genome-evolution&#34;&gt;题目： A natural communication system on genome evolution&lt;/h1&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;单位：动物研究所&lt;br&gt;
+期刊：Science China Life Sciences&lt;br&gt;
+发表日期：2017-04&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;文章特点&lt;/strong&gt;：以时间和信息为基础建立基因组演化框架&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636086503654.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;一、经典基因组演化框架&lt;/strong&gt;&lt;br&gt;
+如作者对传统基因组演化研究的理解，在演化生物学研究中，研究者们通常会关注于分子序列（DNA、RNA或氨基酸序列）在时间维度上的演化，比如说演化尺度上核苷酸替换模型和氨基酸替换模型，这是一种类似牛顿经典力学的方式，即很少考虑变异本身与时间之间的联系。因此，作者尝试以时间和信息为基础建立基因组演化框架，并探讨了演化所产生的信息改变与演化所经历的时间之间的关联。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;二、基因组演化的自然通信系统模型的提出&lt;/strong&gt;&lt;br&gt;
+将基因组演化视为时间维度上，信息的传递过程，祖先基因组为信源——信息发送者，子代基因组为信宿——信息的接收者，而时间则为信道。在这样一个信息传递系统内，环境因素作为一个信息干扰源会对基因组信息的传递产生固有偏差和随机噪声误差。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;三、自然通信系统的高效性假定&lt;/strong&gt;&lt;br&gt;
+类似于人工通信系统中信源编码存在一个最高编码效率，即信息的高保真度，自然通信系统存在自然选择机制，来维持遗传信息代际传递过程中最小的差异。文中提到“生命的演化过程是在选择压力下进行的，因而不同种类信息传输系统的演化也同样应该是一个受自然选择影响的过程。如果一个信息传输系统有较大的选择优势，它就更有可能在漫长的生命历史中被保留下来。可以想象，一个信息传输系统如果有更高的信源编码效率和符号发送速度，那么在与其它信息传输系统的竞争中会有较大的选择优势。所以，经历漫长的进化历史存留下来的现存生命过程中的信息通信系统一定会保持其信源编码效率非常接近其系统允许的最高效率，称这一假定为自然通信系统的高效性假定。”我这里有一点认识和作者不同，&lt;font color=blue&gt;信源编码效率总是小于1的，当序列无限长时，编码效率可以逼近1，即完全保真。但是自然通讯系统中，为了适应环境是需要适当的信息变化的，则信源编码效率会降低。&lt;/font&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;font color=red&gt;&lt;strong&gt;如理解有误，敬请指正！！！&lt;/strong&gt;&lt;/font&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;论文作者简介：&lt;/strong&gt;&lt;br&gt;
+姓名：吴琦&lt;br&gt;
+职位：研究员、博士生导师&lt;br&gt;
+单位：中国科学院大学、微生物研究所&lt;br&gt;
+&lt;a href=&#34;http://www.mycolab.org.cn/templates/T_second/index.aspx?nodeid=659&#34; title=&#34;http://www.mycolab.org.cn/templates/T_second/index.aspx?nodeid=659&#34;&gt;更多信息&lt;/a&gt;&lt;/p&gt;
+">基因组演化的自然通信系统模型</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/grideagithub-pages-da-jian-ge-ren-bo-ke/"" data-c="
+          &lt;h1 id=&#34;借助grideagithub-pages进行个人博客搭建&#34;&gt;借助Gridea+github pages进行个人博客搭建&lt;/h1&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;一、github pages仓库的开启&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;依赖&lt;/strong&gt;：一个github账号&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;第一步：新建一个github repository&lt;/strong&gt;&lt;br&gt;
+进入个人github然后点击&amp;quot;New&amp;quot;新建一个repository。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635862949358.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://socrates1100.github.io/post-images/1635863474918.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;仓库名构建方式须按照   &lt;code&gt;用户名.github.io&lt;/code&gt;  格式。这里由于我的仓库是之前已经构建好的，所以这里会显示一个警告。对于该github账号第一次构建github repository时，是不会显示警告的，而会显示一个绿色对勾表示通过。除此之外，该仓库必须公开访问，因为只有开放访问权限，存放在该仓库的博客网页才能被其它人访问。最后，初始化生成该仓库就OK了。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;第二步：进入设置开启github pages&lt;/strong&gt;&lt;br&gt;
+选择刚才新建好的repository进入，然后进入&amp;quot;Settings&amp;quot;，选择&amp;quot;Pages&amp;quot;子菜单，最后选择开启 github pages。这里默认选择&amp;quot;master&amp;quot;分支，也可以选择或构建其它分支，只要保证gridea远程同步的分支和仓库中个人打算存在博客网页数据的分支名一致就行。除此之外，这里还可以选择不同的github pages &amp;quot;Theme&amp;quot;，但是我感觉没必要，因为gridea主题中有其他好看的主题可以选择。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635864133455.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+至此，在浏览器输入 &lt;code&gt;用户名.github.io&lt;/code&gt; 就可以访问刚才构建好的github pages了。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;二、gridea客户端的设置&lt;/strong&gt;&lt;br&gt;
+个人认为，gridea相比于Hexo而言，是一款简单易用，对一般用户而言更友好的博客写作软件。它不想要用户有任何command形式的操作，仅通过图形界面，依次通过写作，预览，同步的操作即可完成一篇在线博客。&lt;br&gt;
+具体操作步骤如下：&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;第一步：远程设置&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635913072531.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+对于令牌，需要在个人github账户内生成，其方式如下：&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635913726164.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+进入个人github账户&amp;quot;Settings&amp;quot;，然后选择&amp;quot;Developer settings&amp;quot;子菜单，再进入&amp;quot;Personal access tokens&amp;quot;项，点击&amp;quot;Generate new token&amp;quot;生成新令牌。复制刚生成的令牌粘贴到gridea客户端远程设置&amp;quot;令牌&amp;quot;处。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635914061060.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+对于gridea客户端远程设置的CNAME设置，这里就不考虑了。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;第二步：评论配置&lt;/strong&gt;&lt;br&gt;
+这里选择依赖于github issue的Gitalk评论插件。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635914792331.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+Client ID 和 Client Secret 需要在个人github账户中设置。设置方法如下：&lt;br&gt;
+进入个人github账户&amp;quot;Settings&amp;quot;，然后选择&amp;quot;Developer settings&amp;quot;子菜单，再进入&amp;quot;OAuth Apps&amp;quot;项，点击&amp;quot;New OAuth App&amp;quot;生成添加评论插件。然后依次填入&amp;quot;Application name&amp;quot;，&amp;quot;Homepage URL&amp;quot; 和 &amp;quot;Authorization callback URL&amp;quot;（后两项为之前构建好的github pages的主页地址），注册App。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635915426138.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635915574188.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+选择刚新建好的名为&amp;quot;Gitalk&amp;quot;的&amp;quot;OAuth Apps&amp;quot;进入，如图点击&amp;quot;Generate a new client secret&amp;quot;生成对应的密钥。至此，可以将这里对应的Client ID 和 Client Secret 信息填入到gridea客户端评论设置中对应的输入栏中。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635915296879.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;第三步：gridea菜单设置&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635914641871.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;第四步：生成博客和同步&lt;/strong&gt;&lt;br&gt;
+gridea博客使用的是markdown语法，有提供一些简化的快捷操作菜单，但有更多的文本要求或格式设置可采用markdown语法进行修饰。&lt;br&gt;
+在完成博客书写后，选择保存并发布博客，预览并同步。这样，博客就同步到github仓库了。在浏览器地址栏输入 &lt;code&gt;用户名.github.io&lt;/code&gt; 就可以看到自己的博客网站，以及自己刚才发布的博客内容了。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636035318917.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;除此之外，用户还可以根据自己喜好选择博客的主题&lt;/strong&gt;&lt;br&gt;
+用户可以从gridea客户端已配备的主题中选择，也可以选择来自github的更多主题。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636038828694.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+点击更多主题就可以进行更广泛的主题选择，选择自己喜欢的一款下载下来解压到gridea配置路径中theme文件内。重新进入主题就可以选择新添的主题元素了。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636039025056.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;很多时候，由于网络问题会出现gridea同步失败的情况，这个时候可以采用github desktop或者git命令 进行clone和pull对数据同步。&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;进入github desktop 点击&amp;quot;File&amp;quot; 选择&amp;quot;Clone a repository&amp;quot;选择一个仓库或者输入仓库并clone到本地。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636426603791.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;将gridea output 路径下(C:\Users\用户名\Documents\Gridea\output)除了&lt;code&gt;.git&lt;/code&gt;的所有文件拷贝至github desktop 刚拷贝的远程仓库的本地路径中。然后在github desktop中Commit所有更改，最后选择&amp;quot;Pull origin&amp;quot;同步到远程仓库中即可。这一步可能也是国内github网站受限的因素吧，难以连接和同步，科学上网的话会比较舒畅吧。&lt;/li&gt;
+&lt;/ol&gt;
+">Gridea+github pages搭建个人博客</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/cong-zao-chen-kan-dao-de-yi-shu-guang-shuo-qi/"" data-c="
+          &lt;h1 id=&#34;从早晨看到的一束光说起&#34;&gt;《从早晨看到的一束光说起》&lt;/h1&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;眼睛是心灵窗户，透过窗户可以看到外表上难以看到的一些东西。透过窗户，你可以感受到什么呢？是暖色调，feel pleasure and comfortable；还是冷色调，keep your distance or let me alone。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://socrates1100.github.io/post-images/1635860949742.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;从自己眼睛里，也可以感受与色彩的融入与冲突。那段挫败的日子里，白天里似在黑夜前行，黑夜里却和白天一样清醒。现在更多的状态也是中规中矩，白天吭呲吭呲忙碌着，夜晚呼噜呼噜大睡着。一天醒来，在这掩着窗帘昏暗的房间里，光线折射出来的斑斓色彩猛地一下击入内心。虽然生活一切依旧，但感觉哪儿好像又有点不一样了。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://socrates1100.github.io/post-images/1635860965518.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;王家卫曾在他的电影里描述过一种无脚鸟，从诞生后到死亡前一直都在飞行。在日复一日的白天黑夜交织的行程里，它目睹过枪声随着烟花一起绽放，也见过各种形形色色的鸟——有的不断奔波在食物收集，有的看着这一场场游戏的开始与结束，有的鸟是有脚的，也有的和它一样是没有脚的。它受过嘲讽，也受过赞誉。所有这些时刻终将流逝在时光中。有几个人问过我生命的意义是什么，我说不出来。那你相信光吗？少年&lt;/p&gt;
+&lt;p&gt;（Fig1. 阳光透过窗户在宿舍房顶展现更真实的自己. Left. 摄于2021年10月23日； Right. 摄于2021年10月31日）&lt;/p&gt;
+">从早晨看到的一束光说起</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/sheng-xin-fen-xi-xi-lie-ba/"" data-c="
+          &lt;h1 id=&#34;dna甲基化数据分析&#34;&gt;DNA甲基化数据分析&lt;/h1&gt;
+&lt;!-- more --&gt;
+">生信分析系列（八）</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/sheng-xin-fen-xi-xi-lie-qi/"" data-c="
+          &lt;h1 id=&#34;三维基因组及hi-c数据分析&#34;&gt;三维基因组及Hi-C数据分析&lt;/h1&gt;
+&lt;!-- more --&gt;
+">生信分析系列（七）</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/sheng-xin-fen-xi-xi-lie-liu/"" data-c="
+          &lt;h1 id=&#34;atac-seq原理及数据分析&#34;&gt;ATAC-seq原理及数据分析&lt;/h1&gt;
+&lt;!-- more --&gt;
+">生信分析系列（六）</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/sheng-xin-fen-xi-xi-lie-wu/"" data-c="
+          &lt;h1 id=&#34;chip-seq原理及数据分析&#34;&gt;ChIP-seq原理及数据分析&lt;/h1&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;Reference: http://www.universebiologygirl.com/2019/04/01/chip-seq1/&lt;/p&gt;
+">生信分析系列（五）</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/sheng-xin-fen-xi-xi-lie-si/"" data-c="
+          &lt;h1 id=&#34;gwas原理&#34;&gt;GWAS原理&lt;/h1&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;GWAS（Genome-Wide Association Study）在遗传学上经常被用来确定与特定疾病或表型相关的全基因组范围内特定遗传变异。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;1. GWAS拟解决的问题&lt;/strong&gt;&lt;br&gt;
+GWAS旨在从全基因组范围内定位到和common disease（或者一些常见表型）关联的变异位点。common disease同时受遗传因素和环境因素影响，整体发病率较高，患者群体数目大，而且其遗传因子往往呈现微效，多因子的特点。因此，这种类型疾病的遗传定位往往需要庞大的人群队列进行研究。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636041368299.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;2. GWAS的基本流程和原理&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;2.1 GWAS的样本选择问题&lt;/strong&gt;&lt;br&gt;
+GWAS常采用case-control的方式研究common disease ，而对于一些常见表型的遗传关联研究则会采用人群队列的方式来进行。当开始一个GWAS分析时，遇到的第一个问题是，试验如何设计？样本如何选择？Cases和Controls的样本该如何设定？&lt;br&gt;
+a. Cases和Controls尽量来自于同一个抽样总体，比如说来自亚洲的Cases和来自欧洲的Controls做对照分析就会存在总体分布间的偏差；&lt;br&gt;
+b. 无亲缘关系群体，减小群体结构的影响。同上类似，减少除表型因素外其它因素差异引起的干扰；&lt;br&gt;
+c. 样本大小需要足够大;&lt;br&gt;
+d. 如果是case-control分析，两组样本大量尽量平衡或者controls多于cases，降低假阳性率。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;2.2 变异数据质控&lt;/strong&gt;&lt;br&gt;
+当通过SNP芯片检测的方法或者全基因组测序的方法检测所有样本的基因型并进行基因型质量质控后，在进行关联分析前仍需要对数据进行质控预处理，减少干扰因素（比如稀有变异，群体结构等）对后续关联分析的影响。质控条目包括以下几点：&lt;br&gt;
+a. 缺失率：包含样本-变异矩阵中，每个样本中变异位点缺失率和每个位点中样本缺失率；&lt;br&gt;
+b. 次等位基因频率：过滤掉稀有或低频突变；&lt;br&gt;
+c. 杂合度过滤；&lt;br&gt;
+d. Hardy-Weinberg平衡过滤。&lt;br&gt;
+借助于plink、vcftools, bcftools等工具都可以完成vcf变异数据质控。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;2.3 基因型填充&lt;/strong&gt;&lt;br&gt;
+样本-变异矩阵中缺失基因型可以用人群单倍型参考面板推断。可用imputation工具如Impute，minimac。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636042019645.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;2.4 群体结构校正&lt;/strong&gt;&lt;br&gt;
+可以通过主成分分析的方式确定群体主要结构成分，可在回归分析时，与其它群体结构变量如年龄，性别等作为协变量处理，去除这些因素的影响。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636042078109.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;2.5 关联分析&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;2.5.1 预备知识——假设检验&lt;/strong&gt;&lt;br&gt;
+检验两组数据之间是否存在显著差异。&lt;br&gt;
+a. 提出零假设：两组数据间不存在显著差异；&lt;br&gt;
+b. 备择假设：两组数据间存在显著差异。&lt;br&gt;
+c. 然后可以结合数据和已知参数情况，选择对应的有参检验或非参检验；&lt;br&gt;
+d. 若数据差异的P-value小于显著性水平，则说明两组数据间存在显著差异，备择假设成立。&lt;br&gt;
+&lt;strong&gt;2.5.2  预备知识——卡方检验&lt;/strong&gt;&lt;br&gt;
+卡方检验是有参检验的一种，我们这里采用卡方独立性检验，检验两个变量之间的相关性。&lt;br&gt;
+a. 零假设：两个变量独立，不相关；&lt;br&gt;
+b. 备择假设：两个变量相关。&lt;br&gt;
+c. 在列联表中计算期望水平和观测值之间的差异，构建卡方统计量；&lt;br&gt;
+d. 若数据差异的P-value小于显著性水平，则说明两组数据间存在显著差异，备择假设成立。&lt;br&gt;
+&lt;strong&gt;2.5.3 使用卡方检验进行关联分析&lt;/strong&gt;&lt;br&gt;
+使某一变异位点观测数据如下：考虑一对等位基因A和a，A是主等位基因，a是次等位基因，对应基因型有3种AA, Aa, aa。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636285393313.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+假设患病情况和基因型状态无关，则可对样本进行自由度为2的卡方检验。&lt;br&gt;
+也可在allele-level进行检验：&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636285454232.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+假设患病情况和等位基因状态无关，则可对样本进行自由度为1的卡方检验。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636285501359.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+根据卡方检验的P-value大小可在一定显著性水平对假设肯定或否定，从而确定该变异是否与疾病显著相关。&lt;br&gt;
+&lt;strong&gt;2.6 遗传效应大小的衡量&lt;/strong&gt;&lt;br&gt;
+疾病odds ratio为不同基因型状态或不同等位基因下患病风险的比值。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636285566557.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636285596832.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+疾病odds ratio反映不同等位基因和疾病的关联程度。&lt;br&gt;
+&lt;strong&gt;2.7 复杂遗传模型中的关联分析&lt;/strong&gt;&lt;br&gt;
+考虑一对等位基因A和a，A是主等位基因，a是次等位基因，对应基因型有3种AA, Aa, aa。考虑三种情况：&lt;br&gt;
+AA和Aa的遗传效应一致（A为显性）；&lt;br&gt;
+AA和aa的遗传效应一致，和Aa不一致；&lt;br&gt;
+Aa和aa的遗传效应一致（a为隐性）。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636285687624.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636285747487.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+已知疾病或表征是显性遗传，选择显性遗传模型；&lt;br&gt;
+已知疾病或表征是隐性遗传，选择隐性遗传模型；&lt;br&gt;
+已知疾病或表征具有杂合优势或者杂合劣势的特征，可选择杂合遗传模型；&lt;br&gt;
+在无先验的情况下，一般会默认采用共显性模型（也叫加性效应模型）；&lt;br&gt;
+在无先验的情况下，也可以采用Cochran–Armitage trend test来检测共显性、显性，隐性或杂合遗传效应。&lt;br&gt;
+&lt;strong&gt;2.8 检验变异-疾病关联的回归方法&lt;/strong&gt;&lt;br&gt;
+2.8.1 &lt;font color=Red&gt;对于连续型性状，可用线性回归方法&lt;/font&gt;：&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636285881741.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+𝑥为观测的基因型，y为对应的表型值，a为截距，b为基因型的效应大小，e为残差项。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636285900959.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+最小化残差项，可得到该等位基因座上基因型和表型的回归方程，从而估计该等位基因座的效应大小b。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636285918798.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+2.8.2 &lt;font color=Red&gt;对于二元离散型性状，可用逻辑回归方法&lt;/font&gt;：&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636286028508.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+𝑥为观测的基因型，y为对应的表型值，b为截距， 𝑤&lt;sup&gt;𝑇&lt;/sup&gt;  为遗传效应大小。&lt;br&gt;
+用极大似然法求解。&lt;br&gt;
+&lt;strong&gt;2.9 多重检验校正&lt;/strong&gt;&lt;br&gt;
+原因：每一个等位基因座都会进行一次假设检验，全基因组范围内大量假设检验会引起I类错误扩大和假阳性关联。比如说一次假设检验的假阳性率为0.01，进行100000次假设检验则会出现1000个假阳性结果，总体上假阳性会偏高。&lt;br&gt;
+措施：&lt;br&gt;
+1）Bonferroni 校正；&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636286132654.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+n是检验次数。&lt;br&gt;
+若初始显著性阈值设为0.05，校正次数为1000000，则校正后阈值为5×10^(−8)，那么假阳性检出率也会降低1000000 倍，在1000000次检验中出现的次数为0.05。&lt;br&gt;
+存在的问题：&lt;br&gt;
+阈值设得过于严格，被拒绝的不只是假阳性结果，很多真阳性结果也会被拒绝。目前普遍采用的经验阈值为5×10^(−8)，也可根据需求设定更宽松或更苛刻。&lt;br&gt;
+2）FDR（False Discovery Rate） 校正。&lt;br&gt;
+原理：将检验中假阳性和真阳性的比例控制在一定范围内。&lt;br&gt;
+将n次检验的结果按从小到大排列，令k为每个结果的排名次序；&lt;br&gt;
+找到符合原始阈值α的最大k值，满足P(k)&amp;lt;=α×k/m，认为排名从1到k的所有检验存在显著差异；&lt;br&gt;
+也可计算对应的校正p值q-value=p×(m/k)检验显著差异结果。&lt;br&gt;
+&lt;strong&gt;2.10 常用的GWAS工具&lt;/strong&gt;&lt;br&gt;
+Plink   https://www.cog-genomics.org/plink/2.0/&lt;br&gt;
+GCTA  https://cnsgenomics.com/software/gcta/&lt;br&gt;
+&lt;strong&gt;2.11 后续分析和验证&lt;/strong&gt;&lt;br&gt;
+至此，通过GWAS已经获得了一些高度显著的位点。在关联位点非常多的情况下直接去做实验验证还是不太可行的：&lt;br&gt;
+a. 实验/临床验证成本大；&lt;br&gt;
+b. 大量common SNP与causal SNP连锁，导致其出现和causal SNP高度相关，因此出现虚高的显著度。&lt;br&gt;
+因此，还需要从连锁角度和功能基因组层面分析相关位点的因果性。然后再开展实验验证或临床验证。&lt;/p&gt;
+">生信分析系列（四）</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/sheng-xin-fen-xi-xi-lie-san/"" data-c="
+          &lt;h1 id=&#34;sv鉴定与分析&#34;&gt;SV鉴定与分析&lt;/h1&gt;
+&lt;!-- more --&gt;
+">生信分析系列（三）</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/sheng-xin-fen-xi-xi-lie-er/"" data-c="
+          &lt;h1 id=&#34;snp鉴定与分析&#34;&gt;SNP鉴定与分析&lt;/h1&gt;
+&lt;!-- more --&gt;
+">生信分析系列（二）</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/sheng-xin-fen-xi-xi-lie-yi/"" data-c="
+          &lt;h1 id=&#34;从测序数据中鉴定遗传变异&#34;&gt;从测序数据中鉴定遗传变异&lt;/h1&gt;
+&lt;!-- more --&gt;
+">生信分析系列（一）</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/chromimpute-ran-se-zhi-zhuang-tai-tui-duan/"" data-c="
+          &lt;!-- more --&gt;
+&lt;p&gt;ChromImpute和ChromHMM一样，同样是来自Ernst and Kellis 的作品。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635846279545.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;strong&gt;背景：&lt;/strong&gt;&lt;br&gt;
+由于样本可得性问题，导致目前公开的表观基因组数据集中大量样本或者大量染色质标记的数据存在缺失。这样的数据会导致不同样本比较时或者不同染色质标记比较时，存在数据不匹配问题。因此ChromImpute被开发出来用于对染色质标记-样本面板中缺失数据进行推断和填充。收集的样本为111 Roadmap数据集和 16 ENCODE数据集，涉及染色质标记包括组蛋白修饰印记、DNA可及性数据、DNA甲基化数据、RNA-seq数据，以及其它信号坐标数据等。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;一、数据预处理&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;来自于Roadmap的组蛋白修饰和DNase信号数据：拟定序列富集的信号背景为泊松分布，对应的信号强度表示为  -log&lt;sub&gt;10&lt;/sub&gt;P&lt;sub&gt;enrichment&lt;/sub&gt;；&lt;/li&gt;
+&lt;li&gt;对于RNA-seq数据，将均一化处理的表达量信号标准化为RPKM值（reads per kilobases of exon model per millions reads），用于去除长度和样本大小的影响，标准化的 RPKM 值是基于将未标准化的信号值乘以 10 &lt;sub&gt;9&lt;/sub&gt;，然后除以读取长度和外显子读取数的乘积来计算的，不包括线粒体、核糖体和信号值的前 0.5%。最终信号值表示为 log&lt;sub&gt;2&lt;/sub&gt;(RPKM+1) 。&lt;/li&gt;
+&lt;li&gt;然后用overlapping的25bp-bin内的平均信号值处理方式，将组蛋白修饰信号、DNase信号和RNA-seq信号数据转换为25-bp精度的信号值。&lt;/li&gt;
+&lt;li&gt;对于DNA甲基化数据，我们使用均一化处理的全基因组亚硫酸氢盐测序(Bisulfite-seq)数据，它提供了所有 CpG （至少有3条reads覆盖）中每个碱基的甲基化比例。对于CpG甲基化缺失值，用全基因组DNA甲基化水平的平均值进行填充。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;二、ChromImpute算法原理&lt;/strong&gt;&lt;br&gt;
+预测指定样本的指定mark的信号值，依赖于两类特征：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;同一样本中其它mark的信号值；&lt;/li&gt;
+&lt;li&gt;同一mark其它样本的信号值。&lt;br&gt;
+除了目标样本，其它有可利用的mark信号数据的样本，整合它们这两类特征，训练预测器。然后用训练好的预测器集合对目标样本的信号值进行预测，最后取所有预测器的预测平均值作为集成预测器的输出。集成预测可以平均化所有预测器的偏差。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;具体内容：&lt;/strong&gt;&lt;br&gt;
+令O&lt;sub&gt;c,m,p&lt;/sub&gt;为样本c在位置p处，mark m的观测信号值；令M&lt;sub&gt;c,m&lt;/sub&gt;为用于预测mark m 作为训练集的样本c中的mark集合；令C&lt;sub&gt;m&lt;/sub&gt;为在mark m 处存在信号值的样本集合；令m&lt;sup&gt;t&lt;/sup&gt;为目标mark，c&lt;sup&gt;t&lt;/sup&gt;为目标样本。对于样本 c&lt;sup&gt;t&#39;&lt;/sup&gt; ∈ C&lt;sub&gt;m&lt;sup&gt;t&lt;/sup&gt;&lt;/sub&gt;{c&lt;sup&gt;t&lt;/sup&gt;}，分别定义特征，来预测样本 c&lt;sup&gt;t&lt;/sup&gt; 中 mark m&lt;sup&gt;t&lt;/sup&gt; 的信号值。对于一个训练样本 c&lt;sup&gt;t&#39;&lt;/sup&gt;，令M&lt;sub&gt;I&lt;/sub&gt; 为 M&lt;/sub&gt;c&lt;sup&gt;t&lt;/sup&gt;,m&lt;sup&gt;t&lt;/sup&gt;&lt;/sub&gt; ∩ M&lt;sub&gt;c&lt;sup&gt;t&#39;&lt;/sup&gt;,m&lt;sup&gt;t&lt;/sup&gt;&lt;/sub&gt; \ {m&lt;sup&gt;t&lt;/sup&gt;}，表示靶标样本c&lt;sup&gt;t&lt;/sup&gt;和训练样本c&lt;sup&gt;t&#39;&lt;/sup&gt;中可以用来预测mark m&lt;sup&gt;t&#39;&lt;/sup&gt; 的信号值的共有mark数据集，然后定义两类特征来预测样本 c&lt;sup&gt;t&#39;&lt;/sup&gt;在基因组目标位置p处 mark m&lt;sup&gt;t&lt;/sup&gt;的信号值。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;基于映射在同一样本中的其他标记集的特征。定义每个标记m ∈ M&lt;sub&gt;I&lt;/sub&gt;的特征集 S&lt;sub&gt;m,n&lt;/sub&gt;，其中 n = 500 i或n = 25 i (int i = -20,...,20 )。特征S&lt;sub&gt;m,n&lt;/sub&gt;赋值为 O&lt;sub&gt;c&lt;sup&gt;t&#39;&lt;/sup&gt;, mml , p + n&lt;/sub&gt;。&lt;code&gt;p +n&lt;/code&gt; 是指在相同的染色体上的位置p，上下游范围 n 的区域。研究中对应于在目标位置 500 bp 内每 25 bp 的特征值以及目标位置上游和下游 10,000 bp 内每 500 bp 的特征值。&lt;/li&gt;
+&lt;li&gt;基于其他样本中目标标记的特征。定义每个标记m ∈ M&lt;sub&gt;I&lt;/sub&gt;的特征集 &lt;em&gt;f&lt;/em&gt;&lt;sub&gt;m,g,k&lt;/sub&gt; , 其中g ∈ { local,global }, k = 1,...,min(10,| C&lt;sub&gt;I&lt;/sub&gt; |)，而C&lt;sub&gt;I&lt;/sub&gt; 定义为C&lt;sub&gt;m&lt;sup&gt;t&lt;/sup&gt;&lt;/sub&gt; ∩ C&lt;sub&gt;m&lt;/sub&gt; \ { c&lt;sup&gt;t′&lt;/sup&gt; ,c&lt;sup&gt;t&lt;/sup&gt; }。C&lt;sub&gt;I&lt;/sub&gt;对应于具有目标标记的所有样本，并且这些标记将被用于评估样本间的相似性，不包括总体目标样本和用于训练预测器的样本。&lt;em&gt;f&lt;/em&gt;&lt;sub&gt;m,g,k&lt;/sub&gt; 值为  &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/mfrac&gt;&lt;msubsup&gt;&lt;mo&gt;∑&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/msubsup&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\frac{1}{k}\sum_{j=1}^k&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.424826em;vertical-align:-0.43581800000000004em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mopen nulldelimiter&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mfrac&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.845108em;&#34;&gt;&lt;span style=&#34;top:-2.6550000000000002em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.03148em;&#34;&gt;k&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.23em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;frac-line&#34; style=&#34;border-bottom-width:0.04em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.394em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.345em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mclose nulldelimiter&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mop&#34;&gt;&lt;span class=&#34;mop op-symbol small-op&#34; style=&#34;position:relative;top:-0.0000050000000000050004em;&#34;&gt;∑&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.9890079999999999em;&#34;&gt;&lt;span style=&#34;top:-2.40029em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.05724em;&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;mrel mtight&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.2029em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.03148em;&#34;&gt;k&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.43581800000000004em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;O&lt;sub&gt;c,m,p&lt;/sub&gt;，其中c&lt;sub&gt;j&lt;/sub&gt;是C&lt;sub&gt;I&lt;/sub&gt;中,按d&lt;sub&gt;m,g&lt;/sub&gt;(c&lt;sup&gt;t′&lt;/sup&gt;, c)  (c ∈ C&lt;sub&gt;I&lt;/sub&gt;)的递增值排序时，处于排序位置j 的样本。如果g = global，则 d&lt;sub&gt;m,g&lt;/sub&gt;(c&lt;sup&gt;t′&lt;/sup&gt;, c) = 1-ρ(O&lt;sub&gt;c&lt;sup&gt;t&#39;&lt;/sup&gt;, m&lt;/sub&gt; O&lt;sub&gt;c,m&lt;/sub&gt;) ，其中ρ是在样本c&lt;sup&gt;t&#39;&lt;/sup&gt;和c中全基因组范围内mark m信号值的 Pearson 相关系数 。如果g = local，则在位置p处，采用目标mark附近500bp的信号值，d&lt;sub&gt;m,g&lt;/sub&gt;(c&lt;sup&gt;t′&lt;/sup&gt;, c) = &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msubsup&gt;&lt;mo&gt;∑&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;20&lt;/mn&gt;&lt;/mrow&gt;&lt;mn&gt;20&lt;/mn&gt;&lt;/msubsup&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\sum_{i=-20}^{20}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.312049em;vertical-align:-0.35804100000000005em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mop&#34;&gt;&lt;span class=&#34;mop op-symbol small-op&#34; style=&#34;position:relative;top:-0.0000050000000000050004em;&#34;&gt;∑&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.954008em;&#34;&gt;&lt;span style=&#34;top:-2.40029em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mrel mtight&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.2029em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.35804100000000005em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;(O&lt;sub&gt;c&lt;sup&gt;t&#39;&lt;/sup&gt;, m,p+25i&lt;/sub&gt; O&lt;sub&gt;c,m,p+25i&lt;/sub&gt;)&lt;sup&gt;2&lt;/sup&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;上面定义的特征集 S&lt;sub&gt;m,n&lt;/sub&gt;和&lt;em&gt;f&lt;/em&gt;&lt;sub&gt;m,g,k&lt;/sub&gt; 用来构建特征向量。特征向量用于基于样本c&lt;sup&gt;t&#39;&lt;/sup&gt;预测样本c&lt;sup&gt;t&lt;/sup&gt;的信号值。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;参考文献：&lt;/strong&gt;&lt;br&gt;
+Ernst, J., Kellis, M. Large-scale imputation of epigenomic datasets for systematic annotation of diverse human tissues. Nat Biotechnol 33, 364–376 (2015).&lt;/p&gt;
+">ChromImpute 染色质状态推断</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/fantom5-ru-he-qu-fen-qi-dong-zi-he-zeng-qiang-zi/"" data-c="
+          &lt;h1 id=&#34;关于fantom5项目中启动子和增强子rna的区分&#34;&gt;关于Fantom5项目中启动子和增强子RNA的区分&lt;/h1&gt;
+&lt;!-- more --&gt;
+&lt;h1 id=&#34;the-fantom5-project&#34;&gt;The FANTOM5 project&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;FANTOM（Functional Annotation of The Mammalian Genome）&lt;/strong&gt;&lt;br&gt;
+FANTOM 是一个国际研究联盟，由 Hayashizaki 博士及其同事于 2000 年成立，旨在为 RIKEN 小鼠百科全书项目期间收集的全长 cDNA 分配功能注释。FANTOM 已经随着时间的推移而发展和扩展，以涵盖转录组分析领域。该项目的目标是在生命系统的各个层次上稳步上升，从而从对“元素”——转录本——的理解发展到对“系统”——转录调控网络的理解，换句话说，“系统”的个体生命形式。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;FANTOM 现在是该项目的第 6 版。每个版本的项目页面如下：&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;FANTOM6 - 非编码 RNA 的功能分析&lt;br&gt;
+FANTOM5 - 哺乳动物启动子、增强子、lncRNA 和 miRNA 的图谱&lt;br&gt;
+FANTOM4 - 了解转录调控网络&lt;br&gt;
+FANTOM3 - 哺乳动物基因组的转录景观&lt;br&gt;
+FANTOM2 - 约 60,000 只小鼠全长 cDNA 集合的功能注释&lt;br&gt;
+FANTOM1 - 约 20,000 只小鼠 cDNA 集合的初始功能注释&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;所以，如何在转录组中确定增强子序列呢？&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;根据增强子双向转录的特性，可以利用双向CAGE-seq技术将染色质开放区的增强子与启动子区分开。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;参考：https://pressto.binf.ku.dk/about.php#h_enhancers_description_long&lt;/p&gt;
+">Fantom5如何区分启动子和增强子？</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/qun-ti-yi-chuan-xue-xi-lie-yi/"" data-c="
+          &lt;h1 id=&#34;分子群体遗传学&#34;&gt;分子群体遗传学&lt;/h1&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;群体遗传学中，演化驱动力比如&lt;code&gt;突变、迁移、选择和随机遗传漂变&lt;/code&gt;都会对DNA分子序列上的变异图谱产生可见的影响。分子群体遗传学的一个重点是推断每种演化驱动力对序列变异图谱的贡献大小，涉及数学建模、统计参数推断和试验观测。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;一、中性理论和分子演化&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;&lt;font color=red&gt;中性理论&lt;/font&gt;&lt;/strong&gt;&lt;br&gt;
+**开创人：**Motoo Kimura&lt;br&gt;
+**理论要点：**分子层面，大多数多态性变异是选择中性的，它们的群体频率动态主要由随即遗传漂变过程决定。&lt;br&gt;
+**用途：**当对分子数据进行中性检验时，若变异拒绝中性假设，那么可以联系到对应的因素，比如突变异质性，抽样过程误分类，潜在群体结构，迁移和自然选择。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;1. 中性理论的理论背景&lt;/strong&gt;&lt;br&gt;
+大多数突变是选择中性的，主要由随即遗传漂变过程决定，也会有非常少的突变是有害的，会在选择过程中被清除掉，还会有极少的突变是适应环境的，会在选择作用中快速固定下来。&lt;br&gt;
+中性突变模型有&lt;code&gt;无限等位基因模型&lt;/code&gt;、&lt;code&gt;无限位点模型&lt;/code&gt;和&lt;code&gt;有限位点模型&lt;/code&gt;。所有模型中，代际间的随机遗传漂变过程都可以理解为从N个个体提供的无限大小的配子池中，随机抽取2N个等位基因组成下一代N个合子的过程。&lt;br&gt;
+&lt;strong&gt;中性理论的具体内容：&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;参考书籍：Principles of Population Genetics 4th edition&lt;/strong&gt;&lt;/p&gt;
+">群体遗传学系列（一）</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/yin-ma-er-ke-fu-mo-xing-hmm/"" data-c="
+          &lt;!-- more --&gt;
+&lt;p&gt;由于生信分析工作中很多软件算法使用到了隐马尔科夫模型，比如基因预测（GENSCAN）、功能基因组注释（ChromHMM），和群体单体型分型（Shapeit）。为了更好的理解工具背后的算法，这里想尝试学习并理解隐马尔科夫模型的基本原理。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635417105575.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;一、前言&lt;/strong&gt;&lt;/p&gt;
+">隐马尔科夫模型（HMM）</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/about/"" data-c="
+          &lt;h2 id=&#34;关于本站&#34;&gt;🏠 关于本站&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Socrates&#39; Blog shares&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;欢迎来到socrates的小站呀很高兴遇见你&#34;&gt;&amp;gt; 欢迎来到Socrates的小站呀，很高兴遇见你！🤝&lt;/h1&gt;
+&lt;h2 id=&#34;博主是谁&#34;&gt;👨‍💻 博主是谁&lt;/h2&gt;
+&lt;p&gt;科研小菜狗&lt;/p&gt;
+&lt;h2 id=&#34;兴趣爱好&#34;&gt;⛹ 兴趣爱好&lt;/h2&gt;
+&lt;p&gt;羽毛球，溜达&lt;/p&gt;
+&lt;h2 id=&#34;联系我呀&#34;&gt;📬 联系我呀&lt;/h2&gt;
+&lt;p&gt;mv74530@126.com&lt;/p&gt;
+">关于</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/pcawg-wen-xian-yue-du-yi/"" data-c="
+          &lt;h1 id=&#34;题目-the-evolutionary-history-of-2658-cancers&#34;&gt;题目： The evolutionary history of 2,658 cancers&lt;/h1&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;单位：PCAWG Consortium&lt;br&gt;
+期刊：Nature&lt;br&gt;
+发表日期：2020-02-05&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;摘要&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Cancer develops through a process of somatic evolution1,2. Sequencing data from a single biopsy represent a snapshot of this process that can reveal the timing of specific genomic aberrations and the changing influence of mutational processes3. Here, by whole-genome sequencing analysis of 2,658 cancers as part of the Pan-Cancer Analysis of Whole Genomes (PCAWG) Consortium of the International Cancer Genome Consortium (ICGC) and The&lt;br&gt;
+Cancer Genome Atlas (TCGA)4, we reconstruct the life history and evolution of mutational processes and driver mutation sequences of 38 types of cancer. Early oncogenesis is characterized by mutations in a constrained set of driver genes, and specific copy number gains, such as trisomy 7 in glioblastoma and isochromosome 17q in medulloblastoma. The mutational spectrum changes significantly throughout tumour evolution in 40% of samples. A nearly fourfold diversification of driver genes and increased genomic instability are features of later stages. Copy number alterations often occur in mitotic crises, and lead to simultaneous gains of chromosomal segments. Timing analyses suggest that driver mutations often precede diagnosis by many years, if not decades. Together, these results determine the evolutionary trajectories of cancer, and highlight opportunities for early cancer detection.&lt;/em&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;研究背景：&lt;/strong&gt;&lt;br&gt;
+类似于物种进化，体细胞群体中也普遍存在突变和选择。大部分突变是中性的，受连锁效应影响作为“乘客”受到“选择”作用；剩下的突变大多也是有害的，在负选择过程中慢慢被清除；只有少量突变是对细胞生存是有利的。目前对于正常体细胞进化和癌细胞进化突变出现时序谱之间的差异了解非常少。因此，本文利用 PCAWG 数据集来表征来自 38 种癌症类型的 2,658 名独特捐赠者的 2,778 份癌症样本的进化历史。作者推断染色体进化的时间和模式，并学习每种癌症类型样本的典型突变序列。然后，作者定义了肿瘤进化的广泛时期，并研究了驱动因素和突变特征在这些时期之间如何变化。使用类似时钟的突变过程，作者将突变时间估计映射到近似实时。总的来说，这些分析勾勒出了癌症的典型进化轨迹，并相对于诊断点实时绘制它们。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;方法部分：&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;一、拷贝数增加时间估计&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;突变等位基因频率（VAF）的期望值    E[X] = nmfρ/[N (1 − ρ) + Cρ]&lt;br&gt;
+X：reads数目；n：位点的reads覆盖度；m：携带该突变的等位基因数目；&lt;br&gt;
+f：携带给定突变的clone数目 (f = 1 for clonal mutations)；&lt;br&gt;
+N：标准拷贝数 (2 on autosomes, 1 or 2 for chromosome X and 0 or 1 for chromosome Y)；&lt;br&gt;
+C：肿瘤的总拷贝数；ρ：样本纯度&lt;/li&gt;
+&lt;li&gt;在等位基因拷贝数m下突变数目为n&lt;sub&gt;m&lt;/sub&gt;下，可以推断拷贝扩增的时间：&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635492897328.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+2+1对应主等位基因和次等位基因拷贝数分别为2和1。没有考虑2+2这种情形是因为两个等位基因同时发生拷贝数变异的概率很低。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;二、突变时间追溯&lt;/strong&gt;&lt;br&gt;
+一些概念的区分：&lt;br&gt;
+根据点突变覆盖的reads数目可在拷贝事件发生情况下，将变异区分为早期克隆（early clonal），晚期克隆（late clonal），在拷贝事件没有发生的情况下，将变异区分为克隆（clonal）和亚克隆（subclonal）。见Fig1.a&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Early clonal：mutation on &amp;gt;=2 copies per cell   （f=1 and m&amp;gt;1）&lt;/li&gt;
+&lt;li&gt;Late clonal: mutation on 1 copy per cell, no retained allele   （f=1, m=1 and C&amp;gt;2）&lt;/li&gt;
+&lt;li&gt;Clonal: mutation on 1 copy per cell, either on amplified or retained allele    （f=1）&lt;/li&gt;
+&lt;li&gt;Subclonal: mutation on &amp;lt; 1 copy per cell    （f &amp;lt; 1）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;三、驱动突变时间追溯&lt;/strong&gt;&lt;br&gt;
+计算PCAWG提供的癌症驱动点突变，在四个时期中，early/late clonal的odds-ratios和clonal（包括early，late和unspecified clonal）/subclonal的odds-ratio。非驱动区域具有相同拷贝数组成的片段上的突变用于计算背景分布，1000 bootstraps。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;四、整体时间推断&lt;/strong&gt;&lt;br&gt;
+对于每对驱动点突变和往复拷贝数变化，确定其早期、晚期和未指定状态。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;五、突变印记时间推断&lt;/strong&gt;&lt;br&gt;
+三核苷酸替换突变印记，在将点突变分配到四个不同时期后，拟合样本中观测印记活性。根据多项式分布用似然比检验检验突变图谱和时间点的差异。同时利用非负线性最小方差方法计算不同时间的暴露因素影响。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;六、WGD（全基因组复制）和MRCA（最近共同祖先）的实时估计&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;对基因组中NpCpG  CpG&amp;gt;TpG突变进行计数。对于皮肤癌样本中CpCpG&amp;gt;TpCpG突变不予考虑，因为和UV诱导的突变重叠。考虑基因组大小影响，将突变数目标准化到有效基因组大小中，定义为1/mean(m&lt;sub&gt;i&lt;/sub&gt;/C&lt;sub&gt;i&lt;/sub&gt;)。m&lt;sub&gt;i&lt;/sub&gt;是个突变的等位基因拷贝的估计数量，C&lt;sub&gt;i&lt;/sub&gt;是该位点的总拷贝数，从而标准化最终拷贝数和变化时间。&lt;/li&gt;
+&lt;li&gt;分层贝叶斯线性回归适合将诊断年龄与按比例缩放的突变数量相关联，通过跨癌症类型的共享伽马分布确保正斜率和截距。对于具有多个时间点的肿瘤，计算了诊断和复发之间共享的一组突变 ( n&lt;sub&gt;D&lt;/sub&gt; ) 以及那些特定于复发的突变( n&lt;sub&gt;R&lt;/sub&gt; )。速率加速度计算为：a  =  n&lt;sub&gt;R&lt;/sub&gt; / n&lt;sub&gt;D&lt;/sub&gt;  ×  t&lt;sub&gt;D&lt;/sub&gt; / t&lt;sub&gt;R&lt;/sub&gt;。该分析是针对所有替换突变和 CpG&amp;gt;TpG 突变分别进行的。&lt;/li&gt;
+&lt;li&gt;根据这些分析，选择的大多数癌症类型最终拷贝数增加了 5 倍，脑癌较低为 2.5 倍，卵巢癌的值为 7.5 倍。将突变时间中拷贝数增益的估计转换为时间顺序的校正不仅取决于速率加速，还取决于该加速发生的时间。由于这通常是未知的，我们在诊断前对跨越 15 年时间间隔的速率加速进行了蒙特卡罗模拟，大约相当于 60 岁时诊断时间的 25%，注意到在此期间速率增加 5 倍会产生大约 33% 的突变偏移，与我们的数据兼容。假设亚克隆突变发生是全速进行的。亚克隆突变的比例除以鉴定的亚克隆数量，因此保守地假设分支进化。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;七、癌症时间表&lt;/strong&gt;&lt;br&gt;
+每种不同时间分析的结果都结合在每种肿瘤类型的癌症演变时间线中。每个时间线都从受精卵开始，一直延伸到每个队列中的中位诊断年龄。WGD 和 MRCA 的实时估计作为锚点，使我们能够粗略地将四个广泛定义的时间段（早期克隆、中期、晚期克隆和亚克隆）映射到患者生命周期中的时间顺序。可以根据联合模型分析中的顺序，将特定的驱动突变或拷贝数改变放置在每个时间范围内。如果它们通常随时间变化（平均变化的 95% 置信区间不与 0 重叠），并且它们非常活跃（对一个时间点贡献至少 10% 的突变），则会显示特征。印记显示在时间线上他们最活跃的时期。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;结果部分&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;一、重建肿瘤生命历程&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;初始时，每个点突变发生在单个细胞的单个染色体上，从而产生具有相同突变的细胞谱系。如果一条染色体基因座发生拷贝数变异，则该等位基因在拷贝前的任何点突变都会出现在两个等位基因拷贝（&lt;code&gt;一个母体，一个子体&lt;/code&gt;）上。这和不依赖于拷贝事件，仅继承于等位基因拷贝或者其它未发生拷贝事件的等位基因座上的突变不同。等位基因拷贝数可以从测序数据中获得，因此可以定义拷贝事件发生前后基因座上的突变，未拷贝的基因座突变。&lt;/li&gt;
+&lt;li&gt;拷贝事件内，克隆突变和非克隆突变的比率可用于估计在克隆进化过程中发生基因座拷贝变异事件的时间点，也可理解为测定相对于拷贝事件，发生在拷贝单元内的新突变的发生时间。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635217256865.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;二、拷贝数增加的时序模式&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;染色体突变获得时序谱发生在很宽的分子时间范围内，不同肿瘤类型间存在系统偏差，而同种肿瘤类型不同染色体间也会表现出相似的突变时序分布。在胶质母细胞瘤和髓母细胞瘤中，大部分增益发生在分子时间的早期。相比之下，在肺癌、黑色素瘤和乳头状肾癌中，增益出现在分子时间尺度的末尾。大多数肿瘤类型，包括乳腺癌、卵巢癌和结直肠癌，都显示出相对广泛的染色体不稳定时期，这表明样本中的增益时间非常可变。&lt;/li&gt;
+&lt;li&gt;某些肿瘤类型始终具有特定染色体区域的早期或晚期增益。最明显的是胶质母细胞瘤，其中 90% 的肿瘤包含 7、19 或 20 号染色体的单拷贝增益。&lt;/li&gt;
+&lt;li&gt;同一肿瘤中的拷贝后的突变通常似乎发生在相似的分子时间，指向涉及大多数增益片段的拷贝数增益的间断爆发。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;三、肿瘤驱动基因中点突变的发生时间&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;根据前面对体细胞突变的定性分期，癌细胞驱动基因上的突变同理可以进行分期。在 2,583 个样本的 4700 万个点突变中，22% 是早期克隆，7% 是晚期克隆，53% 是未指定克隆，17% 是亚克隆。而在一组 453 个癌症驱动基因中，鉴定出 5913 个致癌点突变，其中 29% 为早期克隆，5% 为晚期克隆，56% 为未指定克隆，8% 为亚克隆。结果表明癌症驱动基因突变在早期克隆和未指定克隆中富集。&lt;/li&gt;
+&lt;li&gt;按照时间推移，所有癌细胞驱动基因点突变多样性在肿瘤后期增加：所有早期克隆驱动突变的 50% 仅发生在 9 个基因中，而 50% 的晚期和亚克隆突变发生在每个大约有 35 个不同的基因，增加了近四倍。结果表明早期癌症进化事件限制在少数驱动上，而在晚期发展过程中呈现更多元的驱动进化。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635297585311.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;四、体细胞驱动进化事件的相对时间&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;跨样本的概率排序病变分析，检验每个突变在肿瘤进化早期和晚期中的偏好。结果发现APC-KRAS-TP53在肿瘤早期依次有最高的突变几率；拷贝数变异在后期发生。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635317754790.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;五、突变印记的形成时间&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;突变印记（Mutational Signatures）定义为由不同因素，如外源或内源DNA损伤，或DNA复制偏差诱发肿瘤基因组形成的不同突变组合。通过在不同时期体细胞突变的分布，发现外源因素诱发的突变（尼古丁印记SBS4和紫外暴露印记SBS7）更多发生在肿瘤进化早期，印记SBS9,SBS12随时间呈递减趋势，而APOEEC（SBS2和SBS13）和SBS38从早期克隆到晚期克隆中都在增长。由有缺陷的错配修复导致的突变印记（SBS6,14,15,20,21,26,44）从克隆到亚克隆时期呈增长趋势。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635408862729.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;六、时间顺序的肿瘤演化估计&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;分子钟（Molecular Clock）模型结合癌症诊断时间，估计肿瘤演化的时间发展。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635410119295.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;七、癌症发展的一般时间线&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635410827513.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;八、讨论&lt;/strong&gt;&lt;/p&gt;
+">PCAWG系列文献阅读（一）</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/epimap-wen-xian-jing-jie/"" data-c="
+          &lt;p&gt;1&lt;/p&gt;
+">Epimap文献精解</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/gong-neng-ji-yin-zu-zhu-shi/"" data-c="
+          &lt;h1 id=&#34;chromhmm-功能基因组注释基本原理&#34;&gt;ChromHMM 功能基因组注释基本原理&lt;/h1&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;img src=&#34;https://socrates1100.github.io/post-images/1635843650908.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+根据先验的表观遗传学研究结论，不同染色质印记标记下的DNA序列具有不同的功能特征。H3K4me3和活性启动子相关，维持启动子CpG低甲基化；H3K36me3和基因本体相关，维持基因本体高甲基化；H3K9me3和异染色质区域高甲基化维持相关；H3K27me3介导的基因沉默和DNA甲基化是竞争性抑制作用，相互替换通过会维持基因沉默，但有时DNA甲基化替换PRC介导的H3K27me3会激活基因表达。H3K27me3基因沉默比DNA甲基化可塑性更强(Greenberg et al., 2019)。H3K4me1和启动子和增强子有关(Bae et al.，2020)，可方便粘连蛋白的募集，从而促进增强子和启动子长程相互作用(Yan et al., 2018)；H3K27ac和活性增强子相关(Creyghton et al., 2010)。活性调控元件往往出现在开放染色质区域。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;在这种背景下，Ernst和Kellis等人采用多变量隐马尔可夫生成模型，以200bp为单位，计算基因组范围内每个状态单元内可能性最高的状态，再结合先验背景知识对染色质状态进行注释，为启动子、增强子，转录本区域等等。可以设置状态数目，调节注释精度，如ENCODE计划利用9种染色质Marks对9个人类细胞系功能基因组进行注释，采用15-states模型，15个状态为9种Marks中的一种或几种的组合；又如Ernst and Kellis et al., 2015 整合Roadmap和ENCODE共127个细胞组织类型，分别利用5个染色质Marks（15-states model）、6个染色质Marks（18-states model），12个染色质Marks（25-states model）对染色质状态进行了注释，其中25-states模型注释的是ChromImpute推断的染色质状态数据。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1635845542487.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;至于方法里为什么默认采用200bp为状态单元，一方面是因为200bp是差不多一个核小体单位，另一方面200bp接近ChIP-seq reads长度的中位数。这样的状态单元一定程度上能反映组蛋白修饰的作用范围和转录因子的作用范围。当然作者也提到用户也可以根据自己需求重新定义状态单元长度。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;参考文献：&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;1）Greenberg, M.V.C., Bourc’his, D. The diverse roles of DNA methylation in mammalian development and disease. Nat Rev Mol Cell Biol 20, 590–607 (2019).&lt;br&gt;
+2) Bae S, Lesch BJ. H3K4me1 Distribution Predicts Transcription State and Poising at Promoters. Front Cell Dev Biol. 2020;8:289. Published 2020 May 5. doi:10.3389/fcell.2020.00289&lt;br&gt;
+3) Yan J, Chen SA, Local A, et al. Histone H3 lysine 4 monomethylation modulates long-range chromatin interactions at enhancers. Cell Res. 2018;28(3):387. doi:10.1038/cr.2018.18&lt;br&gt;
+4) Creyghton MP, Cheng AW, Welstead GG, et al. Histone H3K27ac separates active from poised enhancers and predicts developmental state. Proc Natl Acad Sci U S A. 2010;107(50):21931-21936. doi:10.1073/pnas.1016071107&lt;/p&gt;
+">ChromHMM 功能基因组注释</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/biao-guan-zu-wen-xian-zheng-li/"" data-c="
+          &lt;!-- more --&gt;
+&lt;p&gt;1）表观遗传可以认为是介于遗传和环境影响之间的一种“遗传”方式，其定义为关于表型遗传的不依赖于DNA序列改变的可逆遗传方式(https://en.wikipedia.org/wiki/Epigenetics)。然而近期研究通过美国白人，非裔，华裔三个人群的甲基化组和基因组发现，人群间甲基化差异部分可由基因组差异解释，有三分之一的甲基化差异不和任何DNA差异相关(Heyn et al., 2013)。另外，人群间的甲基化遗传明显强于mRNA表达水平遗传(Carja et al., 2017)。&lt;br&gt;
+2) DNA甲基化由DNA甲基化转移酶(DNMTs)来完成，DNMTs诱导5mC→T转换，并可在DNA中保留下来。因此，哺乳动物基因组CpG含量总低于期望水平。DNMTs与特定烷基化修复酶 (ALKBH2) 的系统共同进化可能使真核生物能够耐受 DNA 甲基化(Greenberg et al., 2019)。DNA甲基化经常扮演着抑制转座子和基因，同时也和活化基因表达有关(Greenberg et al., 2019)。这种DNA甲基化调控受到组蛋白修饰的影响。富含H3K4me3的活性启动子即使富含CpG，也不会被甲基化，因为H3K4me3阻碍了DNMTs的介入。而富含H3K36me3的活性基因本体区域因诱导DNMTs的介入，常处于高甲基化水平。富含H3K9me2或H3K9me3的异染色质区域也通过泛素化介导使得DNMTs维持DNA甲基化(Greenberg et al., 2019)。DNA甲基化抑制转录的机制可理解为5mC阻碍了转录因子的结合，同样，5mC的形成也可导致与其它转录因子（阻遏因子）的结合(Greenberg et al., 2019)。这里可以考虑，根据是否可和5mC结合，以及下游基因的表达水平，对转录因子进行分类。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1634093206398.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+3) 组蛋白修饰的作用。H3K4me3和活性启动子相关，维持启动子CpG低甲基化；H3K36me3和基因本体相关，维持基因本体高甲基化；H3K9me3和异染色质区域高甲基化维持相关；H3K27me3介导的基因沉默和DNA甲基化是竞争性抑制作用，相互替换通过会维持基因沉默，但有时DNA甲基化替换PRC介导的H3K27me3会激活基因表达。H3K27me3基因沉默比DNA甲基化可塑性更强(Greenberg et al., 2019)。H3K4me1和启动子和增强子有关(Bae et al., 2020)，可方便粘连蛋白Cohesin complex——一种主要的染色质环组织蛋白的募集，从而促进增强子和启动子长程相互作用(Yan et al., 2018)；H3K27ac和活性增强子相关(Creyghton et al., 2010)。&lt;br&gt;
+4) DNA去甲基化由TET双加氧酶介导完成(An at al., 2017)。&lt;br&gt;
+5) 关于三维基因组的介绍https://zhuanlan.zhihu.com/p/338839481   染色质疆域、Compartments A/B、拓扑结构域（TAD）、染色质环。&lt;br&gt;
+6) 染色质环锚点和癌基因组不稳定性(癌症群体变异分布和突变率分析)和生殖细胞重组热点（群体基因组重组热点）有关(Kaiser et al., 2018; Guo et al., 2018; Spence et al., 2019)。&lt;br&gt;
+7) 常见的 DNA 序列变异可以影响 3D 染色质构象，DNA 序列变异影响 3D 染色质构象的几个特征，包括loop strength, contact insulation, contact directionality, 和 density of local cis contacts。有观察到3D基因组的个体重复一致性，个体间差异和群体间差异，可能暗示3D基因组遗传和DNA序列遗传间的某种关联(Gorkin et al., 2019)。&lt;br&gt;
+8) 转录阻遏因子CTCF作为一类重要的转录因子，涉及许多细胞生物学过程，包括转录调控，绝缘子活动，V(D)J重排，和染色质环的调控(https://en.wikipedia.org/wiki/CTCF)。一般染色质环的形成，会认为是粘连蛋白Cohesin和CTCF参与的“环挤出”模型，这两类蛋白在环形成过程中扮演着不同角色，CTCF分离邻近折叠域，维持Cohesin结合位点，而Cohesin用于环的形成。cohesin 破坏后局部染色质相互作用普遍丧失，但拓扑结构域保持完整。然而， CTCF 的消耗不仅减少了域内相互作用，而且增加了域间相互作用(Zuin et al., 2014)。&lt;br&gt;
+9) 大多数TADs依赖于CTCF架构而成，任兵课题组发现了一类灵长类特异性内源性逆转录转座子——人类内源性逆转录病毒亚家族 H (HERV-H)——参与建立人类多能干细胞 (hPSC) 的 TAD 边界。删除这些 HERV-H 元素会消除相应的 TAD 边界，而从头插入 HERV-H 元素可以在 hPSC 中引入新的染色质域边界。此外，这些 TAD 边界高度依赖于 HERV-H 转录，因为在 hPSC 分化过程中 HERV-H 元件的转录沉默，或通过基因操作，削弱或消除了 TAD 边界的绝缘性(Zhang et al., 2019)。&lt;br&gt;
+10) BORIS，是CTCF类蛋白（CTCFL），和CTCF旁系同源，和CTCF具有相同的DNA结合域。CTCF普遍表达，而BORIS仅在生殖细胞和癌细胞中表达。在正常体细胞中聚集的CTCF结合域不利于CTCF同源二聚体的形成，但是表达BORIS的生殖细胞和癌细胞中这种结合域可促使BORIS-CTCF异源二聚体的形成。而且这些异源二聚体结合域在活性启动子和增强子中富集(Pugacheva et al., 2015)。&lt;br&gt;
+11) 神经母细胞瘤中BORIS的过度表达，诱导形成并锚定新的环状结构，同时开启了许多基因的表达，和预后不良有关(David et al., 2019)。&lt;br&gt;
+12) 和绝缘子效应相关的CTCF结合区域序列特征：a) 成串CTCF结合域数目。随着数目的增多，效应也会增强，但是增幅不断减弱；b) CTCF结合域上游侧翼序列；c) 在TAD边界相对于不在TAD边界的CTCF结合域更倾向于发展为绝缘子，与结合强度无关。 绝缘子通过TADs的形成，可以弱化增强子-启动子连接效应(Huang et al., 2021)。&lt;br&gt;
+13) Moon et al., 2019 分析了千人基因组亚非欧三个人群 Fantom 活性增强子区域的最近正选择。&lt;br&gt;
+14) Villar et al., 2015 分析来自6个目 20 个哺乳动物物种的肝脏中活性启动子和增强子的进化，提出：a）基因组的快速增强子和缓慢启动子进化；b）增强子在这些哺乳动物中很少保守；c）最近进化的增强子主导了哺乳动物的调节环境；d）快速进化的增强子与最近正选择 的适应性演化相关。&lt;br&gt;
+15) Wong et al., 2020 发现保守的 TF 结合基序在进化过程中稳定和保留增强子功能。一旦建立，这些增强子就可以作为进化过程中保守基因调控网络模块的一部分进行维护。虽然强大，但这些增强子可以通过新 TF 结合基序的扩展和整合以及其他基序的丢失而进化。&lt;br&gt;
+16) Snetkova et al., 2021对 23 种超保守增强子进行了不同程度的诱变，并检测转基因小鼠报告基因的活性，发现超保守元件的增强子功能对诱变具有鲁棒性。&lt;br&gt;
+17) 最近进化的增强子在个体间是高度不一致的，最近进化的增强子还未能很好融入转录机制，疾病相关的增强子通常是更保守的(Castelijns et al., 2020)。&lt;br&gt;
+18) 进化保守的增强子和个体发育相关，而相对脆弱的增强子和群体适应性演化相关(Li et al., 2019)。&lt;br&gt;
+19) 启动子和增强子具有相同的架构和功能特征，也揭示着它们之间的相互转换可能性。发现的更多转换是从祖先增强子朝启动子的转变，也揭示着下游新基因的起源(Carelli et al., 2018)。&lt;br&gt;
+20) 基因组中存在的大量增强子冗余（shadow enhancers）可缓冲单个或几个增强子的loss-of-function突变，有利于个体表型稳定(Osterwalder et al., 2018; Cannavò et al., 2016)。&lt;br&gt;
+21) Alu序列具有H3K4me1增强子/启动子标记的富集，一部分Alu序列通过体外基因报告试验检测出增强子活性，而且Hi-C数据也显示出Alu序列与基因启动子的长程互作。在基因上游近端的Alu具有更高的保守性。揭示了Alu序列可以作为增强子发挥作用，基因组更多是原增强子，作为新增强子诞生的来源(Su et al., 2014)。&lt;br&gt;
+22) 低甲基化的转座子TE获得增强子标记H3K4me1和p300，可在体外基因报告试验中检测出增强子活性(Xie et al., 2013)。&lt;br&gt;
+23) 冗余增强子的进化起源机制：a) 转座子序列拷贝；b) 不同转座子独立扩展和选择(Barth et al., 2020)。&lt;br&gt;
+24) 沉默子可以靶标启动子降低转录水平，是增强子的拮抗元件。增强子往往存在二价性，在不同细胞环境下可表现为抑制作用或增强子的促进作用。至今还没有明确的关于沉默子的染色质标记(Segert et al., 2021)。这里我猜想启动子、增强子、沉默子，甚至是绝缘子，都具有相似的进化起源和进化机制，比如依赖于转座子的进化机制。所以这几种调控元件序列上没有绝对的特异性，并且许多元件存在二价性，在不同细胞环境，也可以理解为在不同的组蛋白标记，不同的转录因子结合，以及序列甲基化状态等的不同，导致了调控元件不同的功能效应。&lt;br&gt;
+25) 许多反转录转座子充当胚胎植入子宫前特异性基因调控元件；MT2B2反转录转座子启动子对小鼠胚胎植入前发育至关重要；MT2B2驱动的Cdk2ap1可由不同启动子启动；反转录转座启动子可以产生具有特异调控的保守基因异构形式 (Modzelewski et al., 2021)。&lt;/p&gt;
+&lt;p&gt;References:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Heyn H, Moran S, Hernando-Herraez I, et al. DNA methylation contributes to natural human variation. Genome Res. 2013;23(9):1363-1372. doi:10.1101/gr.154187.112&lt;/li&gt;
+&lt;li&gt;Carja O, MacIsaac JL, Mah SM, et al. Worldwide patterns of human epigenetic variation. Nat Ecol Evol. 2017;1(10):1577-1583.&lt;/li&gt;
+&lt;li&gt;Greenberg, M.V.C., Bourc’his, D. The diverse roles of DNA methylation in mammalian development and disease. Nat Rev Mol Cell Biol 20, 590–607 (2019).&lt;/li&gt;
+&lt;li&gt;An, J., Rao, A. &amp;amp; Ko, M. TET family dioxygenases and DNA demethylation in stem cells and cancers. Exp Mol Med 49, e323 (2017).&lt;/li&gt;
+&lt;li&gt;Bae S, Lesch BJ. H3K4me1 Distribution Predicts Transcription State and Poising at Promoters. Front Cell Dev Biol. 2020;8:289. Published 2020 May 5. doi:10.3389/fcell.2020.00289&lt;/li&gt;
+&lt;li&gt;Yan J, Chen SA, Local A, et al. Histone H3 lysine 4 monomethylation modulates long-range chromatin interactions at enhancers. Cell Res. 2018;28(3):387. doi:10.1038/cr.2018.18&lt;/li&gt;
+&lt;li&gt;Creyghton MP, Cheng AW, Welstead GG, et al. Histone H3K27ac separates active from poised enhancers and predicts developmental state. Proc Natl Acad Sci U S A. 2010;107(50):21931-21936. doi:10.1073/pnas.1016071107&lt;/li&gt;
+&lt;li&gt;Kaiser VB, Semple CA. Chromatin loop anchors are associated with genome instability in cancer and recombination hotspots in the germline. Genome Biol. 2018;19(1):101. Published 2018 Jul 30. doi:10.1186/s13059-018-1483-4&lt;/li&gt;
+&lt;li&gt;Guo YA, Chang MM, Huang W, et al. Mutation hotspots at CTCF binding sites coupled to chromosomal instability in gastrointestinal cancers. Nat Commun. 2018;9(1):1520. Published 2018 Apr 18. doi:10.1038/s41467-018-03828-2&lt;/li&gt;
+&lt;li&gt;Spence JP, Song YS. Inference and analysis of population-specific fine-scale recombination maps across 26 diverse human populations. Sci Adv. 2019;5(10):eaaw9206. Published 2019 Oct 23. doi:10.1126/sciadv.aaw9206&lt;/li&gt;
+&lt;li&gt;Gorkin DU, Qiu Y, Hu M, et al. Common DNA sequence variation influences 3-dimensional conformation of the human genome. Genome Biol. 2019;20(1):255.&lt;/li&gt;
+&lt;li&gt;Zhang Y, Li T, Preissl S, et al. Transcriptionally active HERV-H retrotransposons demarcate topologically associating domains in human pluripotent stem cells. Nat Genet. 2019;51(9):1380-1388.&lt;/li&gt;
+&lt;li&gt;Pugacheva EM, Rivero-Hinojosa S, Espinoza CA, et al. Comparative analyses of CTCF and BORIS occupancies uncover two distinct classes of CTCF binding genomic regions. Genome Biol. 2015;16(1):161. Published 2015 Aug 14.&lt;/li&gt;
+&lt;li&gt;David N. Debruyne et al. BORIS promotes chromatin regulatory interactions in treatment-resistant cancer cells. Nature, 2019.&lt;/li&gt;
+&lt;li&gt;Huang H, Zhu Q, Jussila A, et al. CTCF mediates dosage- and sequence-context-dependent transcriptional insulation by forming local chromatin domains. Nat Genet. 2021;53(7):1064-1074.&lt;/li&gt;
+&lt;li&gt;Moon JM, Capra JA, Abbot P, Rokas A. Signatures of Recent Positive Selection in Enhancers Across 41 Human Tissues. G3 (Bethesda). 2019;9(8):2761-2774. Published 2019 Aug 8. doi:10.1534/g3.119.400186&lt;/li&gt;
+&lt;li&gt;Villar D, Berthelot C, Aldridge S, et al. Enhancer evolution across 20 mammalian species. Cell. 2015;160(3):554-566. doi:10.1016/j.cell.2015.01.006&lt;/li&gt;
+&lt;li&gt;Wong ES, Zheng D, Tan SZ, et al. Deep conservation of the enhancer regulatory code in animals. Science. 2020;370(6517):eaax8137.&lt;/li&gt;
+&lt;li&gt;Snetkova V, Ypsilanti AR, Akiyama JA, et al. Ultraconserved enhancer function does not require perfect sequence conservation. Nat Genet. 2021;53(4):521-528. doi:10.1038/s41588-021-00812-3&lt;/li&gt;
+&lt;li&gt;Zuin J, Dixon JR, van der Reijden MI, et al. Cohesin and CTCF differentially affect chromatin architecture and gene expression in human cells. Proc Natl Acad Sci U S A. 2014;111(3):996-1001.&lt;/li&gt;
+&lt;li&gt;Castelijns B, Baak ML, Geeven G, et al. Recently Evolved Enhancers Emerge with High Interindividual Variability and Less Frequently Associate with Disease. Cell Rep. 2020;31(12):107799. doi:10.1016/j.celrep.2020.107799&lt;/li&gt;
+&lt;li&gt;Li S, Kvon EZ, Visel A, Pennacchio LA, Ovcharenko I. Stable enhancers are active in development, and fragile enhancers are associated with evolutionary adaptation. Genome Biol. 2019;20(1):140.&lt;/li&gt;
+&lt;li&gt;Carelli FN, Liechti A, Halbert J, Warnefors M, Kaessmann H. Repurposing of promoters and enhancers during mammalian evolution. Nat Commun. 2018;9(1):4066. Published 2018 Oct 4. doi:10.1038/s41467-018-06544-z&lt;/li&gt;
+&lt;li&gt;Osterwalder M, Barozzi I, Tissières V, et al. Enhancer redundancy provides phenotypic robustness in mammalian development. Nature. 2018;554(7691):239-243. doi:10.1038/nature25461&lt;/li&gt;
+&lt;li&gt;Cannavò E, Khoueiry P, Garfield DA, et al. Shadow Enhancers Are Pervasive Features of Developmental Regulatory Networks. Curr Biol. 2016;26(1):38-51.&lt;/li&gt;
+&lt;li&gt;Su M, Han D, Boyd-Kirkup J, Yu X, Han JJ. Evolution of Alu elements toward enhancers. Cell Rep. 2014;7(2):376-385.&lt;/li&gt;
+&lt;li&gt;Xie M, Hong C, Zhang B, et al. DNA hypomethylation within specific transposable element families associates with tissue-specific enhancer landscape. Nat Genet. 2013;45(7):836-841. doi:10.1038/ng.2649&lt;/li&gt;
+&lt;li&gt;Barth NKH, Li L, Taher L. Independent Transposon Exaptation Is a Widespread Mechanism of Redundant Enhancer Evolution in the Mammalian Genome. Genome Biol Evol. 2020;12(3):1-17. doi:10.1093/gbe/evaa004&lt;/li&gt;
+&lt;li&gt;Segert JA, Gisselbrecht SS, Bulyk ML. Transcriptional Silencers: Driving Gene Expression with the Brakes On. Trends Genet. 2021;37(6):514-527.&lt;/li&gt;
+&lt;li&gt;Modzelewski AJ, Shao W, Chen J, et al. A mouse-specific retrotransposon drives a conserved Cdk2ap1 isoform essential for developmentCell. 2021;S0092-8674(21)01104-1. doi:10.1016/j.cell.2021.09.021&lt;/li&gt;
+&lt;/ol&gt;
+">表观组文献整理</a>
+      </div>
+      
+    </div>
+    <div class="page">
+      <div id="page_ul"></div>
+    </div>
+  </div>
+</div>
+<script>
+  !function () {
+    let searchMask = document.querySelector('#search_mask');
+    let result = document.querySelector('#result');
+    let items = document.querySelectorAll('.item');
+    let searchBox = document.querySelector('#search');
+    let statCount = document.querySelector('#stat_count');
+    let statTimes = document.querySelector('#stat_times');
+    let pageUl = document.querySelector('#page_ul');
+    let close = document.querySelector('#close');
+    
+    close.addEventListener('click', function() {
+      searchMask.style = 'display: none;'
+    })
+
+    let finds = [];
+    let contents = [];
+    let pageSize = 10;
+    items.forEach(item => {
+      let a = item.querySelector('a');
+      contents.push({
+        title: a.innerText,
+        details: a.dataset.c,
+        link: a.href
+      })
+      item.remove();
+    })
+
+    function insertStr(soure, start, count) {
+      let newStr = soure.substr(start, count);
+      return soure.slice(0, start) + '<em>' + newStr + '</em>' + soure.slice(start + count);
+    }
+
+    pageUl.addEventListener('click', function(event) {
+      let target = event.target;
+      if (target.__proto__ === HTMLSpanElement.prototype) {
+        appendResults(parseInt(target.dataset.i));
+      }
+    })
+
+    function appendResults(index) {
+      let htmlResult = '';
+      let start = index || 0;
+      let end = Math.min(start + pageSize, finds.length);
+      for (let i = start; i < end; i++) {
+        const current = finds[i];
+        let html = current.title;
+        let sum = 0;
+        let positions = current.positions;
+        positions.forEach(position => {
+          html = insertStr(html, position.start + sum, position.count);
+          sum += 9;
+        })
+        htmlResult += `<div class="item"><a class="result-title" href="${current.link}">${html}</a></div>`;
+      }
+      result.innerHTML = htmlResult;
+      pageUl.innerHTML = '';
+      let count = finds.length / pageSize;
+      let lis = '';
+      if (start !== 0) {
+        lis += `<span class="fa fa-angle-left" data-i='${start - 1}'></span>`;
+      }
+      for (let i = 0; i < count; i++) {
+        lis += `<span class='${i === start?'current':''}' data-i='${i}'>${i+1}</span>`;     
+      }
+      if (start+1 < count) {
+        lis += `<span class="fa fa-angle-right" data-i='${start+1}'></span>`;  
+      }
+      pageUl.innerHTML = lis;
+    }
+
+    function search(delay) {
+      let timer = null
+      return function () {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          let start = Date.now();
+          let segments = searchBox.value.split(' ').filter(c => c != '');
+          if (segments.length <= 0) {
+            return;
+          }
+          finds = [];
+          let htmlResult = '';
+          contents.forEach(content => {
+            let title = content.title;
+            let positions = [];
+            let find = false;
+            segments.forEach((segment) => {
+              if (content.title.includes(segment)) {
+                find = true;
+                positions.push({
+                  start: content.title.indexOf(segment),
+                  count: segment.length
+                })
+              } else if (content.details.includes(segment)) {
+                find = true;
+              }
+            });
+            if (find) {
+              finds.push({
+                title: content.title,
+                link: content.link,
+                positions
+              });
+            }
+          })
+          appendResults(0);
+          statCount.textContent = finds.length;
+          statTimes.textContent = Date.now() - start;
+        }, delay)
+      }
+    }
+    searchBox.addEventListener('input', search(200));
+  }()
+</script>
+    
+      <input hidden id="copy" />
+      <script>
+        !function () {
+          let times = document.querySelectorAll('.publish-time');
+          for (let i = 0; i < times.length; i++) {
+            let date = times[i].dataset.t;
+            let time = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);
+            if (time < 60) {
+              str = time + '秒之前';
+            } else if (time < 3600) {
+              str = Math.floor(time / 60) + '分钟之前';
+            } else if (time >= 3600 && time < 86400) {
+              str = Math.floor(time / 3600) + '小时之前';
+            } else if (time >= 86400 && time < 259200) {
+              str = Math.floor(time / 86400) + '天之前';
+            } else {
+              str = times[i].textContent;
+            }
+            times[i].textContent = str;
+          }
+        }();
+      </script>
+
+      <script>
+        let language = '';
+        if (language !== '') {
+          let map = new Map();
+          if (language === 'en') {
+            map.set('search', 'Search');
+            map.set('category', 'Categories');
+            map.set('article', 'Articles');
+            map.set('tag', 'Tags');
+            map.set('top', 'Top');
+            map.set('publish', 'published');
+            map.set('minute', ' minutes');
+            map.set('read-more', 'Read More');
+            map.set('view', 'View');
+            map.set('words', ' words');
+            map.set('category-in', 'category in');
+            map.set('preview', 'Meta');
+            map.set('index', 'Toc');
+            map.set('no-archives', "You haven't created yet");
+            map.set('archives', " articles in total");
+            map.set('cloud-tags', " tags in total");
+            map.set('copyright', "Copyright: ");
+            map.set('author', "Author: ");
+            map.set('link', "Link: ");
+            map.set('leave-message', "Leave a message");
+            map.set('format', "Links Format");
+            map.set('site-name', "Name: ");
+            map.set('site-link', "Link: ");
+            map.set('site-desc', "Desc: ");
+            map.set('stat', " related results, taking ");
+            map.set('stat-time', " ms");
+            map.set('site-img', "Image: ");
+          }
+
+          if (map.size > 0) {
+            let lanElems = document.querySelectorAll('.language');
+            lanElems.forEach(elem => {
+              let lan = elem.dataset.lan, text = map.get(lan);
+              if (elem.__proto__ === HTMLInputElement.prototype) {
+                elem.placeholder = text
+              } else {
+                if (elem.dataset.count) {
+                  text = elem.dataset.count + text;
+                }
+                elem.textContent = text;
+              }
+            })
+          }
+        }
+
+        window.Clipboard = (function (window, document, navigator) {
+          var textArea,
+            copy;
+
+          // 判断是不是ios端
+          function isOS() {
+            return navigator.userAgent.match(/ipad|iphone/i);
+          }
+          //创建文本元素
+          function createTextArea(text) {
+            textArea = document.createElement('textArea');
+            textArea.value = text;
+            textArea.style.width = 0;
+            textArea.style.height = 0;
+            textArea.clientHeight = 0;
+            textArea.clientWidth = 0;
+            document.body.appendChild(textArea);
+          }
+          //选择内容
+          function selectText() {
+            var range,
+              selection;
+
+            if (isOS()) {
+              range = document.createRange();
+              range.selectNodeContents(textArea);
+              selection = window.getSelection();
+              selection.removeAllRanges();
+              selection.addRange(range);
+              textArea.setSelectionRange(0, 999999);
+            } else {
+              textArea.select();
+            }
+          }
+
+          //复制到剪贴板
+          function copyToClipboard() {
+            try {
+              document.execCommand("Copy")
+            } catch (err) {
+              alert("复制错误！请手动复制！")
+            }
+            document.body.removeChild(textArea);
+          }
+
+          copy = function (text) {
+            createTextArea(text);
+            selectText();
+            copyToClipboard();
+          };
+
+          return {
+            copy: copy
+          };
+        })(window, document, navigator);
+
+        function copyCode(e) {
+          if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+            let code = e.currentTarget.querySelector('code');
+            var text = code.innerText;
+            if (e.srcElement.textContent === '复制成功') {
+              return;
+            }
+            e.srcElement.textContent = '复制成功';
+            (function (elem) {
+              setTimeout(() => {
+                if (elem.textContent === '复制成功') {
+                  elem.textContent = '复制代码'
+                }
+              }, 1000);
+            })(e.srcElement)
+            Clipboard.copy(text);
+          }
+        }
+
+        let pres = document.querySelectorAll('pre');
+        pres.forEach(pre => {
+          let code = pre.querySelector('code');
+          let copyElem = document.createElement('span');
+          copyElem.classList.add('copy-code');
+          copyElem.textContent = '复制代码';
+          pre.appendChild(copyElem);
+          pre.onclick = copyCode
+        })
+
+      </script>
+      <script src="/media/js/motion.js"></script>
+
+      
+        <script
+          src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+        <script>
+          var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 200
+          });
+        </script>
+        
+          
+<script src="/media/js/mouse/peace.js"></script>
+
+            
+
+                
+</html>

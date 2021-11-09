@@ -1,53 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4001</id>
+    <id>https://socrates1100.github.io</id>
     <title>Socrates&apos; Blogs</title>
-    <updated>2021-11-02T12:03:56.430Z</updated>
+    <updated>2021-11-09T03:09:04.629Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4001"/>
-    <link rel="self" href="http://localhost:4001/atom.xml"/>
+    <link rel="alternate" href="https://socrates1100.github.io"/>
+    <link rel="self" href="https://socrates1100.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>http://localhost:4001/images/avatar.png</logo>
-    <icon>http://localhost:4001/favicon.ico</icon>
+    <logo>https://socrates1100.github.io/images/avatar.png</logo>
+    <icon>https://socrates1100.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Socrates&apos; Blogs</rights>
     <entry>
+        <title type="html"><![CDATA[关于从bam文件中提取fastq reads]]></title>
+        <id>https://socrates1100.github.io/post/guan-yu-cong-bam-wen-jian-zhong-ti-qu-fastq-reads/</id>
+        <link href="https://socrates1100.github.io/post/guan-yu-cong-bam-wen-jian-zhong-ti-qu-fastq-reads/">
+        </link>
+        <updated>2021-11-08T07:42:25.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="从bam文件中提取fastq-reads">从bam文件中提取fastq reads</h1>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="从bam文件中提取fastq-reads">从bam文件中提取fastq reads</h1>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Gridea+github pages搭建个人博客]]></title>
+        <id>https://socrates1100.github.io/post/grideagithub-pages-da-jian-ge-ren-bo-ke/</id>
+        <link href="https://socrates1100.github.io/post/grideagithub-pages-da-jian-ge-ren-bo-ke/">
+        </link>
+        <updated>2021-11-02T14:14:14.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="借助grideagithub-pages进行个人博客搭建">借助Gridea+github pages进行个人博客搭建</h1>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="借助grideagithub-pages进行个人博客搭建">借助Gridea+github pages进行个人博客搭建</h1>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Fantom5如何区分启动子和增强子？]]></title>
-        <id>http://localhost:4001/post/fantom5-ru-he-qu-fen-qi-dong-zi-he-zeng-qiang-zi/</id>
-        <link href="http://localhost:4001/post/fantom5-ru-he-qu-fen-qi-dong-zi-he-zeng-qiang-zi/">
+        <id>https://socrates1100.github.io/post/fantom5-ru-he-qu-fen-qi-dong-zi-he-zeng-qiang-zi/</id>
+        <link href="https://socrates1100.github.io/post/fantom5-ru-he-qu-fen-qi-dong-zi-he-zeng-qiang-zi/">
         </link>
         <updated>2021-11-02T07:33:49.000Z</updated>
-        <summary type="html"><![CDATA[<p><strong>关于Fantom5项目中启动子和增强子RNA的区分</strong></p>
+        <summary type="html"><![CDATA[<h1 id="关于fantom5项目中启动子和增强子rna的区分">关于Fantom5项目中启动子和增强子RNA的区分</h1>
 ]]></summary>
-        <content type="html"><![CDATA[<p><strong>关于Fantom5项目中启动子和增强子RNA的区分</strong></p>
+        <content type="html"><![CDATA[<h1 id="关于fantom5项目中启动子和增强子rna的区分">关于Fantom5项目中启动子和增强子RNA的区分</h1>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[关于]]></title>
-        <id>http://localhost:4001/post/about/</id>
-        <link href="http://localhost:4001/post/about/">
+        <id>https://socrates1100.github.io/post/about/</id>
+        <link href="https://socrates1100.github.io/post/about/">
         </link>
         <updated>2021-10-26T11:09:48.000Z</updated>
     </entry>
     <entry>
-        <title type="html"><![CDATA[PCAWG系列文献阅读（一）]]></title>
-        <id>http://localhost:4001/post/pcawg-wen-xian-yue-du-yi/</id>
-        <link href="http://localhost:4001/post/pcawg-wen-xian-yue-du-yi/">
-        </link>
-        <updated>2021-10-26T01:38:09.000Z</updated>
-        <summary type="html"><![CDATA[<p><strong>题目： The evolutionary history of 2,658 cancers</strong></p>
-]]></summary>
-        <content type="html"><![CDATA[<p><strong>题目： The evolutionary history of 2,658 cancers</strong></p>
-]]></content>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[ChromHMM 功能基因组注释]]></title>
-        <id>http://localhost:4001/post/gong-neng-ji-yin-zu-zhu-shi/</id>
-        <link href="http://localhost:4001/post/gong-neng-ji-yin-zu-zhu-shi/">
+        <id>https://socrates1100.github.io/post/gong-neng-ji-yin-zu-zhu-shi/</id>
+        <link href="https://socrates1100.github.io/post/gong-neng-ji-yin-zu-zhu-shi/">
         </link>
         <updated>2021-10-15T09:06:40.000Z</updated>
-        <summary type="html"><![CDATA[<p><strong>ChromHMM 功能基因组注释基本原理</strong></p>
+        <summary type="html"><![CDATA[<h1 id="chromhmm-功能基因组注释基本原理">ChromHMM 功能基因组注释基本原理</h1>
 ]]></summary>
-        <content type="html"><![CDATA[<p><strong>ChromHMM 功能基因组注释基本原理</strong></p>
+        <content type="html"><![CDATA[<h1 id="chromhmm-功能基因组注释基本原理">ChromHMM 功能基因组注释基本原理</h1>
 ]]></content>
     </entry>
 </feed>
