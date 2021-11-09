@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://socrates1100.github.io</id>
     <title>Socrates&apos; Blogs</title>
-    <updated>2021-11-08T14:09:57.103Z</updated>
+    <updated>2021-11-09T05:08:37.922Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://socrates1100.github.io"/>
     <link rel="self" href="https://socrates1100.github.io/atom.xml"/>
@@ -30,17 +30,6 @@
         <summary type="html"><![CDATA[<h1 id="借助grideagithub-pages进行个人博客搭建">借助Gridea+github pages进行个人博客搭建</h1>
 ]]></summary>
         <content type="html"><![CDATA[<h1 id="借助grideagithub-pages进行个人博客搭建">借助Gridea+github pages进行个人博客搭建</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[从早晨看到的一束光说起]]></title>
-        <id>https://socrates1100.github.io/post/cong-zao-chen-kan-dao-de-yi-shu-guang-shuo-qi/</id>
-        <link href="https://socrates1100.github.io/post/cong-zao-chen-kan-dao-de-yi-shu-guang-shuo-qi/">
-        </link>
-        <updated>2021-11-02T13:46:52.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="从早晨看到的一束光说起">《从早晨看到的一束光说起》</h1>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="从早晨看到的一束光说起">《从早晨看到的一束光说起》</h1>
 ]]></content>
     </entry>
     <entry>
