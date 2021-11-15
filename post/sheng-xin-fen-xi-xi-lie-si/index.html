@@ -9,7 +9,7 @@
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
 <title>生信分析系列（四） | Socrates&#39; Blogs</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1636435633985">
+<link rel="shortcut icon" href="/favicon.ico?v=1636989032011">
 <link rel="stylesheet" href="/media/css/pisces.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -214,7 +214,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">5</span>
+        <span class="site-item-stat-count">6</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -1804,6 +1804,119 @@ b. 大量common SNP与causal SNP连锁，导致其出现和causal SNP高度相�
       <hr>
     </div>
     <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/qun-ti-yi-chuan-xi-lie-si/"" data-c="
+          &lt;h1 id=&#34;hardy-weinberg平衡&#34;&gt;Hardy-Weinberg平衡&lt;/h1&gt;
+&lt;!-- more --&gt;
+">群体遗传系列 （二）</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/qun-ti-yi-chuan-xi-lie-er/"" data-c="
+          &lt;h1 id=&#34;连锁不平衡&#34;&gt;连锁不平衡&lt;/h1&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;连锁不平衡在群体遗传学中，指同一条染色体上两个等位基因在传代中共同遗传的概率。连锁不平衡程度往往会受到同源染色体间重组率的影响。重组率越高，连锁不平衡程度越小。&lt;br&gt;
+连锁不平衡在概率统计上，也反映为同一条染色体上两个等位基因的非随机相关性。因此，假设等位基因A，B，则它们之间的连锁关系可以表示为群体中观测AB基因型频率和随机背景下(Hardy-Weinberg平衡)AB基因型频率之差。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636986324796.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+具体来说，&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636986661328.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+基因频率: p&lt;sub&gt;A&lt;/sub&gt;=u+s; p&lt;sub&gt;a&lt;/sub&gt;=t+v; p&lt;sub&gt;B&lt;/sub&gt;=u+t; p&lt;sub&gt;b&lt;/sub&gt;=s+v&lt;br&gt;
+对于AB来说, D = p&lt;sub&gt;AB&lt;/sub&gt; - p&lt;sub&gt;A&lt;/sub&gt; p&lt;sub&gt;B&lt;/sub&gt; = u - (u+s) (u+t) = u (1-u-s-t) - st = uv - st&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;连锁不平衡的其它度量方法（1）&lt;/strong&gt;&lt;br&gt;
+当uv - st &amp;gt; 0时：&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636987852683.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+当uv - st &amp;lt; 0时：&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636987929865.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+标准化不平衡度Dˊ定义为：&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636987951886.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;连锁不平衡的其它度量方法（2）&lt;/strong&gt;&lt;br&gt;
+将不平衡度平方后除以四种等位基因频率的乘积：&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636988058448.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;r&lt;sup&gt;2&lt;/sup&gt;不平衡度的平方根正好等于两个座位间的相关系数;&lt;/li&gt;
+&lt;li&gt;r&lt;sup&gt;2&lt;/sup&gt;不平衡度乘以总样本量正好等于不平衡检验的 χ2统计量。&lt;br&gt;
+因此，不平衡度参数r2在自然群体的遗传分析中有更广泛的应用。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;总结：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;前面的三种不平衡度参数，各自从不同侧面反映座位间的不平衡程度，难以相互取代。&lt;/li&gt;
+&lt;li&gt;后两者参数的目的是消除基因频率对不平衡度的影响。但是，不平衡度和基因频率都是从配子观测频率计算出来的，这度量方法有时也难以完全排除等位基因频率的影响。&lt;/li&gt;
+&lt;li&gt;此外，这些参数都不能用来判断不平衡度的显著性，不平衡度的显著程度仍然要借助于统计假设检验。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;References:&lt;/strong&gt;&lt;br&gt;
+https://www.isbreeding.net/teaching/?type=detail&amp;amp;id=14&lt;/p&gt;
+">群体遗传系列 （三）</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/ldsc-yi-chuan-guan-lian-fen-xi/"" data-c="
+          &lt;h1 id=&#34;ld-score-regression-连锁分数回归&#34;&gt;LD Score Regression   连锁分数回归&lt;/h1&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;背景：&lt;/strong&gt;&lt;br&gt;
+在GWAS研究中，多基因性（polygenicity，即若干较小的基因效应）和干扰因素引起的偏差（如隐性关联 cryptic relatedness，群体分层population stratification等）都会造成检验的统计量的分布偏高（inflated）。但我们并不能分辨偏高的统计量到底是来自多基因性信号还是干扰因素，所以通过LD score regression，我们可以通过研究检验统计量与连锁不平衡（linkage disequilibrium）之间的关系来定量分析每部分的影响。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;一、关于连锁不平衡（Linkage Disequilibrium，LD）&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;二、LD Score Regression 的基本原理&lt;/strong&gt;&lt;br&gt;
+GWAS检验中，对一个SNP效应量的估计通常也会包含与该SNP成LD的其他SNP的效应，也就是说一个与其他SNP成高LD的SNP，通常也会有更高的卡方检验量。&lt;br&gt;
+&lt;img src=&#34;https://socrates1100.github.io/post-images/1636988794490.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;Reference：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;https://zhuanlan.zhihu.com/p/379628546&lt;/li&gt;
+&lt;li&gt;Bulik-Sullivan, B., Loh, PR., Finucane, H. et al. LD Score regression distinguishes confounding from polygenicity in genome-wide association studies. Nat Genet 47, 291–295 (2015). https://doi.org/10.1038/ng.3211&lt;/li&gt;
+&lt;li&gt;Bulik-Sullivan, B., Finucane, H., Anttila, V. et al. An atlas of genetic correlations across human diseases and traits. Nat Genet 47, 1236–1241 (2015). https://doi.org/10.1038/ng.3406&lt;/li&gt;
+&lt;li&gt;Finucane, H., Bulik-Sullivan, B., Gusev, A. et al. Partitioning heritability by functional annotation using genome-wide association summary statistics. Nat Genet 47, 1228–1235 (2015). https://doi.org/10.1038/ng.3404&lt;/li&gt;
+&lt;/ol&gt;
+">LDSC  遗传关联分析</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/bo-ke-shou-cang/"" data-c="
+          &lt;h1 id=&#34;博客收藏&#34;&gt;博客收藏&lt;/h1&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;1&amp;gt; 序列比对&lt;/strong&gt;&lt;br&gt;
+https://yuzhenpeng.github.io/2019/11/29/multiple-sequence-alignment/#01-Multiple-Sequence-Alignmen&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;2&amp;gt;数分&lt;/strong&gt;&lt;br&gt;
+https://zhuanlan.zhihu.com/p/139018146&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;3&amp;gt; 算法&lt;/strong&gt;&lt;br&gt;
+https://www.cnblogs.com/AdeBC/p/K-mer.html&lt;/p&gt;
+">博客收藏</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/chong-zu-re-dian-he-ran-se-zhi-jie-gou/"" data-c="
+          &lt;h1 id=&#34;genome-wide-variability-in-recombination-activity-is-associated-with-meiotic-chromatin-organization&#34;&gt;Genome-wide variability in recombination activity is associated with meiotic chromatin organization&lt;/h1&gt;
+&lt;!-- more --&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://socrates1100.github.io/post-images/1636524181150.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">重组热点和染色质结构</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/bian-fen-tui-duan/"" data-c="
+          &lt;h1 id=&#34;变分推断学习&#34;&gt;变分推断学习&lt;/h1&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;Reference:&lt;/strong&gt;&lt;br&gt;
+https://zhuanlan.zhihu.com/p/139018146&lt;br&gt;
+参考知乎大佬“烤羚羊”关于变分法的文章，这里复述并学习。&lt;/p&gt;
+&lt;!-- more --&gt;
+">变分推断</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/zeng-qiang-zi-bei-yong-xi-tong/"" data-c="
+          &lt;h1 id=&#34;disease-variant-prediction-with-deep-generative-models-of-evolutionary-data&#34;&gt;Disease variant prediction with deep generative models of evolutionary data&lt;/h1&gt;
+&lt;!-- more --&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://socrates1100.github.io/post-images/1636437315500.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">疾病相关变异预测</a>
+      </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://socrates1100.github.io/post/guan-yu-cong-bam-wen-jian-zhong-ti-qu-fastq-reads/"" data-c="

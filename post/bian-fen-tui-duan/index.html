@@ -8,7 +8,7 @@
 <meta name="keywords" content="Socrates个人博客">
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
-<title>Gridea+github pages搭建个人博客 | Socrates&#39; Blogs</title>
+<title>变分推断 | Socrates&#39; Blogs</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1636989032011">
 <link rel="stylesheet" href="/media/css/pisces.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -41,8 +41,8 @@
 
 
 
-  <meta name="description" content="Gridea+github pages搭建个人博客" />
-  <meta name="keywords" content="技术分享" />
+  <meta name="description" content="变分推断" />
+  <meta name="keywords" content="" />
 </head>
 
 <body>
@@ -251,7 +251,7 @@
   <div class="toc-wrapper  auto"
     id="toc_wrapper">
     <ul class="markdownIt-TOC">
-<li><a href="#%E5%80%9F%E5%8A%A9grideagithub-pages%E8%BF%9B%E8%A1%8C%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA">借助Gridea+github pages进行个人博客搭建</a></li>
+<li><a href="#%E5%8F%98%E5%88%86%E6%8E%A8%E6%96%AD%E5%AD%A6%E4%B9%A0">变分推断学习</a></li>
 </ul>
 
   </div>
@@ -517,32 +517,21 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://socrates1100.github.io/post/grideagithub-pages-da-jian-ge-ren-bo-ke/"> Gridea+github pages搭建个人博客 </a>
+    <a class="post-title-link" href="https://socrates1100.github.io/post/bian-fen-tui-duan/"> 变分推断 </a>
   </h1>
   <div class="post-meta">
     
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-11-02 22:14:14">2021-10-26</span>
+      <span class="publish-time" data-t="2021-11-10 13:58:53">2021-10-26</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">标签:</span>
-       
-      <a href="https://socrates1100.github.io/tag/H7Lz4OvP2/">
-        <span>技术分享</span>
-      </a>
-       
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
       <i class="fa fa-clock-o"></i>
       <span
-        >5<span class="language" data-lan="minute"
+        >1<span class="language" data-lan="minute"
           >分钟</span
         ></span
       >
@@ -551,15 +540,15 @@
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
       <span
-        >1210<span class="pc-show language" data-lan="words"
+        >37<span class="pc-show language" data-lan="words"
           >字数</span
         ></span
       >
     </span>
       
     <span
-      id="/post/grideagithub-pages-da-jian-ge-ren-bo-ke/"
-      data-flag-title="Gridea+github pages搭建个人博客"
+      id="/post/bian-fen-tui-duan/"
+      data-flag-title="变分推断"
       class="meta-item pc-show leancloud_visitors"
     >
       <span class="post-meta-divider">|</span>
@@ -575,66 +564,12 @@
 </section>
 
             <div class="post-body next-md-body" id="post_body">
-              <h1 id="借助grideagithub-pages进行个人博客搭建">借助Gridea+github pages进行个人博客搭建</h1>
+              <h1 id="变分推断学习">变分推断学习</h1>
 <!-- more -->
-<p><strong>一、github pages仓库的开启</strong><br>
-<strong>依赖</strong>：一个github账号</p>
+<p><strong>Reference:</strong><br>
+https://zhuanlan.zhihu.com/p/139018146<br>
+参考知乎大佬“烤羚羊”关于变分法的文章，这里复述并学习。</p>
 <!-- more -->
-<p><strong>第一步：新建一个github repository</strong><br>
-进入个人github然后点击&quot;New&quot;新建一个repository。<br>
-<img src="https://socrates1100.github.io/post-images/1635862949358.png" alt="" loading="lazy"></p>
-<!-- more -->
-<figure data-type="image" tabindex="1"><img src="https://socrates1100.github.io/post-images/1635863474918.png" alt="" loading="lazy"></figure>
-<!-- more -->
-<p>仓库名构建方式须按照   <code>用户名.github.io</code>  格式。这里由于我的仓库是之前已经构建好的，所以这里会显示一个警告。对于该github账号第一次构建github repository时，是不会显示警告的，而会显示一个绿色对勾表示通过。除此之外，该仓库必须公开访问，因为只有开放访问权限，存放在该仓库的博客网页才能被其它人访问。最后，初始化生成该仓库就OK了。</p>
-<!-- more -->
-<p><strong>第二步：进入设置开启github pages</strong><br>
-选择刚才新建好的repository进入，然后进入&quot;Settings&quot;，选择&quot;Pages&quot;子菜单，最后选择开启 github pages。这里默认选择&quot;master&quot;分支，也可以选择或构建其它分支，只要保证gridea远程同步的分支和仓库中个人打算存在博客网页数据的分支名一致就行。除此之外，这里还可以选择不同的github pages &quot;Theme&quot;，但是我感觉没必要，因为gridea主题中有其他好看的主题可以选择。<br>
-<img src="https://socrates1100.github.io/post-images/1635864133455.png" alt="" loading="lazy"><br>
-至此，在浏览器输入 <code>用户名.github.io</code> 就可以访问刚才构建好的github pages了。</p>
-<!-- more -->
-<p><strong>二、gridea客户端的设置</strong><br>
-个人认为，gridea相比于Hexo而言，是一款简单易用，对一般用户而言更友好的博客写作软件。它不想要用户有任何command形式的操作，仅通过图形界面，依次通过写作，预览，同步的操作即可完成一篇在线博客。<br>
-具体操作步骤如下：</p>
-<!-- more -->
-<p><strong>第一步：远程设置</strong><br>
-<img src="https://socrates1100.github.io/post-images/1635913072531.png" alt="" loading="lazy"><br>
-对于令牌，需要在个人github账户内生成，其方式如下：<br>
-<img src="https://socrates1100.github.io/post-images/1635913726164.png" alt="" loading="lazy"><br>
-进入个人github账户&quot;Settings&quot;，然后选择&quot;Developer settings&quot;子菜单，再进入&quot;Personal access tokens&quot;项，点击&quot;Generate new token&quot;生成新令牌。复制刚生成的令牌粘贴到gridea客户端远程设置&quot;令牌&quot;处。<br>
-<img src="https://socrates1100.github.io/post-images/1635914061060.png" alt="" loading="lazy"><br>
-对于gridea客户端远程设置的CNAME设置，这里就不考虑了。</p>
-<!-- more -->
-<p><strong>第二步：评论配置</strong><br>
-这里选择依赖于github issue的Gitalk评论插件。<br>
-<img src="https://socrates1100.github.io/post-images/1635914792331.png" alt="" loading="lazy"><br>
-Client ID 和 Client Secret 需要在个人github账户中设置。设置方法如下：<br>
-进入个人github账户&quot;Settings&quot;，然后选择&quot;Developer settings&quot;子菜单，再进入&quot;OAuth Apps&quot;项，点击&quot;New OAuth App&quot;生成添加评论插件。然后依次填入&quot;Application name&quot;，&quot;Homepage URL&quot; 和 &quot;Authorization callback URL&quot;（后两项为之前构建好的github pages的主页地址），注册App。<br>
-<img src="https://socrates1100.github.io/post-images/1635915426138.png" alt="" loading="lazy"><br>
-<img src="https://socrates1100.github.io/post-images/1635915574188.png" alt="" loading="lazy"><br>
-选择刚新建好的名为&quot;Gitalk&quot;的&quot;OAuth Apps&quot;进入，如图点击&quot;Generate a new client secret&quot;生成对应的密钥。至此，可以将这里对应的Client ID 和 Client Secret 信息填入到gridea客户端评论设置中对应的输入栏中。<br>
-<img src="https://socrates1100.github.io/post-images/1635915296879.png" alt="" loading="lazy"></p>
-<!-- more -->
-<p><strong>第三步：gridea菜单设置</strong><br>
-<img src="https://socrates1100.github.io/post-images/1635914641871.png" alt="" loading="lazy"></p>
-<!-- more -->
-<p><strong>第四步：生成博客和同步</strong><br>
-gridea博客使用的是markdown语法，有提供一些简化的快捷操作菜单，但有更多的文本要求或格式设置可采用markdown语法进行修饰。<br>
-在完成博客书写后，选择保存并发布博客，预览并同步。这样，博客就同步到github仓库了。在浏览器地址栏输入 <code>用户名.github.io</code> 就可以看到自己的博客网站，以及自己刚才发布的博客内容了。<br>
-<img src="https://socrates1100.github.io/post-images/1636035318917.png" alt="" loading="lazy"></p>
-<!-- more -->
-<p><strong>除此之外，用户还可以根据自己喜好选择博客的主题</strong><br>
-用户可以从gridea客户端已配备的主题中选择，也可以选择来自github的更多主题。<br>
-<img src="https://socrates1100.github.io/post-images/1636038828694.png" alt="" loading="lazy"><br>
-点击更多主题就可以进行更广泛的主题选择，选择自己喜欢的一款下载下来解压到gridea配置路径中theme文件内。重新进入主题就可以选择新添的主题元素了。<br>
-<img src="https://socrates1100.github.io/post-images/1636039025056.png" alt="" loading="lazy"></p>
-<!-- more -->
-<p><strong>很多时候，由于网络问题会出现gridea同步失败的情况，这个时候可以采用github desktop或者git命令 进行clone和pull对数据同步。</strong></p>
-<ol>
-<li>进入github desktop 点击&quot;File&quot; 选择&quot;Clone a repository&quot;选择一个仓库或者输入仓库并clone到本地。<br>
-<img src="https://socrates1100.github.io/post-images/1636426603791.png" alt="" loading="lazy"></li>
-<li>将gridea output 路径下(C:\Users\用户名\Documents\Gridea\output)除了<code>.git</code>的所有文件拷贝至github desktop 刚拷贝的远程仓库的本地路径中。然后在github desktop中Commit所有更改，最后选择&quot;Pull origin&quot;同步到远程仓库中即可。这一步可能也是国内github网站受限的因素吧，难以连接和同步，科学上网的话会比较舒畅吧。</li>
-</ol>
 
             </div>
             
@@ -651,7 +586,7 @@ gridea博客使用的是markdown语法，有提供一些简化的快捷操作菜
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://socrates1100.github.io/post/grideagithub-pages-da-jian-ge-ren-bo-ke/" title="Gridea+github pages搭建个人博客">https://socrates1100.github.io/post/grideagithub-pages-da-jian-ge-ren-bo-ke/</a>
+      <a href="https://socrates1100.github.io/post/bian-fen-tui-duan/" title="变分推断">https://socrates1100.github.io/post/bian-fen-tui-duan/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -660,22 +595,12 @@ gridea博客使用的是markdown语法，有提供一些简化的快捷操作菜
   </ul>
   <div class="tags">
     
-      <a href="https://socrates1100.github.io/tag/H7Lz4OvP2/"># 技术分享</a>
-    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="关于从bam文件中提取fastq reads" href="https://socrates1100.github.io/post/guan-yu-cong-bam-wen-jian-zhong-ti-qu-fastq-reads/">关于从bam文件中提取fastq reads</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="关于从bam文件中提取fastq reads" href="https://socrates1100.github.io/post/guan-yu-cong-bam-wen-jian-zhong-ti-qu-fastq-reads/">上一篇</a>
-      
     </div>
     <div class="nav-next">
-      
-        <a class="nav-pc-next" title="Fantom5如何区分启动子和增强子？" href="https://socrates1100.github.io/post/fantom5-ru-he-qu-fen-qi-dong-zi-he-zeng-qiang-zi/">Fantom5如何区分启动子和增强子？</a>
-        <a class="nav-mobile-next" title="Fantom5如何区分启动子和增强子？" href="https://socrates1100.github.io/post/fantom5-ru-he-qu-fen-qi-dong-zi-he-zeng-qiang-zi/">下一篇</a>
-        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
