@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://socrates1100.github.io</id>
     <title>Socrates&apos; Blogs</title>
-    <updated>2021-11-17T03:24:15.004Z</updated>
+    <updated>2021-11-22T08:23:32.445Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://socrates1100.github.io"/>
     <link rel="self" href="https://socrates1100.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://socrates1100.github.io/images/avatar.png</logo>
     <icon>https://socrates1100.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Socrates&apos; Blogs</rights>
+    <entry>
+        <title type="html"><![CDATA[群体遗传系列 （一）]]></title>
+        <id>https://socrates1100.github.io/post/ji-yin-xing-pin-lu-deng-wei-ji-yin-pin-lu-za-he-du-he-duo-tai-xing/</id>
+        <link href="https://socrates1100.github.io/post/ji-yin-xing-pin-lu-deng-wei-ji-yin-pin-lu-za-he-du-he-duo-tai-xing/">
+        </link>
+        <updated>2021-11-22T04:31:16.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="基因型频率-等位基因频率杂合度和多态性">基因型频率、等位基因频率，杂合度和多态性</h1>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="基因型频率-等位基因频率杂合度和多态性">基因型频率、等位基因频率，杂合度和多态性</h1>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[群体遗传系列 （二）]]></title>
         <id>https://socrates1100.github.io/post/qun-ti-yi-chuan-xi-lie-si/</id>
