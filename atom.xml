@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://socrates1100.github.io</id>
     <title>Socrates&apos; Blogs</title>
-    <updated>2021-11-09T05:08:37.922Z</updated>
+    <updated>2021-12-03T06:26:46.070Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://socrates1100.github.io"/>
     <link rel="self" href="https://socrates1100.github.io/atom.xml"/>
@@ -10,6 +10,85 @@
     <logo>https://socrates1100.github.io/images/avatar.png</logo>
     <icon>https://socrates1100.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Socrates&apos; Blogs</rights>
+    <entry>
+        <title type="html"><![CDATA[Permutation test]]></title>
+        <id>https://socrates1100.github.io/post/permutation-test/</id>
+        <link href="https://socrates1100.github.io/post/permutation-test/">
+        </link>
+        <updated>2021-12-01T15:01:13.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="permutation-test">Permutation test</h1>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="permutation-test">Permutation test</h1>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[超几何分布检验]]></title>
+        <id>https://socrates1100.github.io/post/chao-ji-he-fen-bu-jian-yan/</id>
+        <link href="https://socrates1100.github.io/post/chao-ji-he-fen-bu-jian-yan/">
+        </link>
+        <updated>2021-12-01T14:58:34.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="超几何分布检验">超几何分布检验</h1>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="超几何分布检验">超几何分布检验</h1>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[各种机器学习算法的应用场景]]></title>
+        <id>https://socrates1100.github.io/post/ge-chong-ji-qi-xue-xi-suan-fa-de-ying-yong-chang-jing/</id>
+        <link href="https://socrates1100.github.io/post/ge-chong-ji-qi-xue-xi-suan-fa-de-ying-yong-chang-jing/">
+        </link>
+        <updated>2021-11-28T05:20:14.000Z</updated>
+        <summary type="html"><![CDATA[<p>转载自：各种机器学习算法的应用场景分别是什么（比如朴素贝叶斯、决策树、K 近邻、SVM、逻辑回归最大熵模型）？ - xyzh的回答 - 知乎<br>
+https://www.zhihu.com/question/26726794/answer/151282052</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>转载自：各种机器学习算法的应用场景分别是什么（比如朴素贝叶斯、决策树、K 近邻、SVM、逻辑回归最大熵模型）？ - xyzh的回答 - 知乎<br>
+https://www.zhihu.com/question/26726794/answer/151282052</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[机器学习系列 （四）]]></title>
+        <id>https://socrates1100.github.io/post/ji-qi-xue-xi-xi-lie-si/</id>
+        <link href="https://socrates1100.github.io/post/ji-qi-xue-xi-xi-lie-si/">
+        </link>
+        <updated>2021-11-24T04:19:22.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="分类树和回归树">分类树和回归树</h1>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="分类树和回归树">分类树和回归树</h1>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[群体遗传系列 （一）]]></title>
+        <id>https://socrates1100.github.io/post/ji-yin-xing-pin-lu-deng-wei-ji-yin-pin-lu-za-he-du-he-duo-tai-xing/</id>
+        <link href="https://socrates1100.github.io/post/ji-yin-xing-pin-lu-deng-wei-ji-yin-pin-lu-za-he-du-he-duo-tai-xing/">
+        </link>
+        <updated>2021-11-22T04:31:16.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="基因型频率-等位基因频率杂合度和多态性">基因型频率、等位基因频率，杂合度和多态性</h1>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="基因型频率-等位基因频率杂合度和多态性">基因型频率、等位基因频率，杂合度和多态性</h1>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[群体遗传系列 （二）]]></title>
+        <id>https://socrates1100.github.io/post/qun-ti-yi-chuan-xi-lie-si/</id>
+        <link href="https://socrates1100.github.io/post/qun-ti-yi-chuan-xi-lie-si/">
+        </link>
+        <updated>2021-11-15T14:57:06.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="hardy-weinberg平衡">Hardy-Weinberg平衡</h1>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="hardy-weinberg平衡">Hardy-Weinberg平衡</h1>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[群体遗传系列 （三）]]></title>
+        <id>https://socrates1100.github.io/post/qun-ti-yi-chuan-xi-lie-er/</id>
+        <link href="https://socrates1100.github.io/post/qun-ti-yi-chuan-xi-lie-er/">
+        </link>
+        <updated>2021-11-15T14:46:14.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="连锁不平衡">连锁不平衡</h1>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="连锁不平衡">连锁不平衡</h1>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[关于从bam文件中提取fastq reads]]></title>
         <id>https://socrates1100.github.io/post/guan-yu-cong-bam-wen-jian-zhong-ti-qu-fastq-reads/</id>
@@ -41,24 +120,6 @@
         <summary type="html"><![CDATA[<h1 id="关于fantom5项目中启动子和增强子rna的区分">关于Fantom5项目中启动子和增强子RNA的区分</h1>
 ]]></summary>
         <content type="html"><![CDATA[<h1 id="关于fantom5项目中启动子和增强子rna的区分">关于Fantom5项目中启动子和增强子RNA的区分</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[关于]]></title>
-        <id>https://socrates1100.github.io/post/about/</id>
-        <link href="https://socrates1100.github.io/post/about/">
-        </link>
-        <updated>2021-10-26T11:09:48.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ChromHMM 功能基因组注释]]></title>
-        <id>https://socrates1100.github.io/post/gong-neng-ji-yin-zu-zhu-shi/</id>
-        <link href="https://socrates1100.github.io/post/gong-neng-ji-yin-zu-zhu-shi/">
-        </link>
-        <updated>2021-10-15T09:06:40.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="chromhmm-功能基因组注释基本原理">ChromHMM 功能基因组注释基本原理</h1>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="chromhmm-功能基因组注释基本原理">ChromHMM 功能基因组注释基本原理</h1>
 ]]></content>
     </entry>
 </feed>
