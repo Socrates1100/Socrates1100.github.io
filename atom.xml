@@ -1,19 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4001</id>
+    <id>https://socrates1100.github.io</id>
     <title>Socrates&apos; Blogs</title>
-    <updated>2021-12-03T07:54:32.971Z</updated>
+    <updated>2021-12-19T12:03:11.324Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4001"/>
-    <link rel="self" href="http://localhost:4001/atom.xml"/>
+    <link rel="alternate" href="https://socrates1100.github.io"/>
+    <link rel="self" href="https://socrates1100.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>http://localhost:4001/images/avatar.png</logo>
-    <icon>http://localhost:4001/favicon.ico</icon>
+    <logo>https://socrates1100.github.io/images/avatar.png</logo>
+    <icon>https://socrates1100.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Socrates&apos; Blogs</rights>
     <entry>
+        <title type="html"><![CDATA[深度学习预测变异对染色质3D结构的影响]]></title>
+        <id>https://socrates1100.github.io/post/shen-du-xue-xi-yu-ce-bian-yi-dui-ran-se-zhi-3-d-jie-gou-de-ying-xiang/</id>
+        <link href="https://socrates1100.github.io/post/shen-du-xue-xi-yu-ce-bian-yi-dui-ran-se-zhi-3-d-jie-gou-de-ying-xiang/">
+        </link>
+        <updated>2021-12-17T06:36:09.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="deepmilo算法解析">DeepMILO算法解析</h1>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="deepmilo算法解析">DeepMILO算法解析</h1>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[各调控元件数据库的来源]]></title>
+        <id>https://socrates1100.github.io/post/ge-diao-kong-yuan-jian-shu-ju-ku-de-lai-yuan/</id>
+        <link href="https://socrates1100.github.io/post/ge-diao-kong-yuan-jian-shu-ju-ku-de-lai-yuan/">
+        </link>
+        <updated>2021-12-16T07:37:49.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="各调控元件数据库的来源">各调控元件数据库的来源</h1>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="各调控元件数据库的来源">各调控元件数据库的来源</h1>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HLA分型算法（三）]]></title>
+        <id>https://socrates1100.github.io/post/hla-fen-xing-suan-fa-san/</id>
+        <link href="https://socrates1100.github.io/post/hla-fen-xing-suan-fa-san/">
+        </link>
+        <updated>2021-12-15T09:23:41.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="hlala-hlaprg算法">HLA<em>LA &amp; HLA</em>PRG算法</h1>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="hlala-hlaprg算法">HLA<em>LA &amp; HLA</em>PRG算法</h1>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HLA分型算法（二）]]></title>
+        <id>https://socrates1100.github.io/post/hla-fen-xing-suan-fa-er/</id>
+        <link href="https://socrates1100.github.io/post/hla-fen-xing-suan-fa-er/">
+        </link>
+        <updated>2021-12-15T07:03:49.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="hla-vbseq算法">HLA-VBSeq算法</h1>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="hla-vbseq算法">HLA-VBSeq算法</h1>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RegioneR——基因组坐标计算]]></title>
+        <id>https://socrates1100.github.io/post/regioner-ji-yin-zu-zuo-biao-ji-suan/</id>
+        <link href="https://socrates1100.github.io/post/regioner-ji-yin-zu-zuo-biao-ji-suan/">
+        </link>
+        <updated>2021-12-13T06:56:34.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="一款基于permutation-tests的基因组区域关联分析计算软件">一款基于permutation tests的基因组区域关联分析计算软件</h1>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="一款基于permutation-tests的基因组区域关联分析计算软件">一款基于permutation tests的基因组区域关联分析计算软件</h1>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Minimac imputation的单倍型质量HDS]]></title>
+        <id>https://socrates1100.github.io/post/minimac-imputation-de-dan-bei-xing-zhi-liang-hds/</id>
+        <link href="https://socrates1100.github.io/post/minimac-imputation-de-dan-bei-xing-zhi-liang-hds/">
+        </link>
+        <updated>2021-12-10T08:28:16.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="minimac-imputation的单倍型质量hds">Minimac imputation的单倍型质量HDS</h1>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="minimac-imputation的单倍型质量hds">Minimac imputation的单倍型质量HDS</h1>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[基因型质量]]></title>
+        <id>https://socrates1100.github.io/post/ji-yin-xing-zhi-liang/</id>
+        <link href="https://socrates1100.github.io/post/ji-yin-xing-zhi-liang/">
+        </link>
+        <updated>2021-12-10T06:22:17.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="vcf文件中的pl值">vcf文件中的PL值</h1>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="vcf文件中的pl值">vcf文件中的PL值</h1>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HLA分型算法（一）]]></title>
+        <id>https://socrates1100.github.io/post/hla-hd-suan-fa/</id>
+        <link href="https://socrates1100.github.io/post/hla-hd-suan-fa/">
+        </link>
+        <updated>2021-12-09T02:56:43.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="hla-hd算法">HLA-HD算法</h1>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="hla-hd算法">HLA-HD算法</h1>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Permutation test]]></title>
-        <id>http://localhost:4001/post/permutation-test/</id>
-        <link href="http://localhost:4001/post/permutation-test/">
+        <id>https://socrates1100.github.io/post/permutation-test/</id>
+        <link href="https://socrates1100.github.io/post/permutation-test/">
         </link>
         <updated>2021-12-01T15:01:13.000Z</updated>
         <summary type="html"><![CDATA[<h1 id="permutation-test">Permutation test</h1>
@@ -23,103 +111,13 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[超几何分布检验]]></title>
-        <id>http://localhost:4001/post/chao-ji-he-fen-bu-jian-yan/</id>
-        <link href="http://localhost:4001/post/chao-ji-he-fen-bu-jian-yan/">
+        <id>https://socrates1100.github.io/post/chao-ji-he-fen-bu-jian-yan/</id>
+        <link href="https://socrates1100.github.io/post/chao-ji-he-fen-bu-jian-yan/">
         </link>
         <updated>2021-12-01T14:58:34.000Z</updated>
         <summary type="html"><![CDATA[<h1 id="超几何分布检验">超几何分布检验</h1>
 ]]></summary>
         <content type="html"><![CDATA[<h1 id="超几何分布检验">超几何分布检验</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[各种机器学习算法的应用场景]]></title>
-        <id>http://localhost:4001/post/ge-chong-ji-qi-xue-xi-suan-fa-de-ying-yong-chang-jing/</id>
-        <link href="http://localhost:4001/post/ge-chong-ji-qi-xue-xi-suan-fa-de-ying-yong-chang-jing/">
-        </link>
-        <updated>2021-11-28T05:20:14.000Z</updated>
-        <summary type="html"><![CDATA[<p>转载自：各种机器学习算法的应用场景分别是什么（比如朴素贝叶斯、决策树、K 近邻、SVM、逻辑回归最大熵模型）？ - xyzh的回答 - 知乎<br>
-https://www.zhihu.com/question/26726794/answer/151282052</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>转载自：各种机器学习算法的应用场景分别是什么（比如朴素贝叶斯、决策树、K 近邻、SVM、逻辑回归最大熵模型）？ - xyzh的回答 - 知乎<br>
-https://www.zhihu.com/question/26726794/answer/151282052</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[机器学习系列 （四）]]></title>
-        <id>http://localhost:4001/post/ji-qi-xue-xi-xi-lie-si/</id>
-        <link href="http://localhost:4001/post/ji-qi-xue-xi-xi-lie-si/">
-        </link>
-        <updated>2021-11-24T04:19:22.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="分类树和回归树">分类树和回归树</h1>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="分类树和回归树">分类树和回归树</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[群体遗传系列 （一）]]></title>
-        <id>http://localhost:4001/post/ji-yin-xing-pin-lu-deng-wei-ji-yin-pin-lu-za-he-du-he-duo-tai-xing/</id>
-        <link href="http://localhost:4001/post/ji-yin-xing-pin-lu-deng-wei-ji-yin-pin-lu-za-he-du-he-duo-tai-xing/">
-        </link>
-        <updated>2021-11-22T04:31:16.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="基因型频率-等位基因频率杂合度和多态性">基因型频率、等位基因频率，杂合度和多态性</h1>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="基因型频率-等位基因频率杂合度和多态性">基因型频率、等位基因频率，杂合度和多态性</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[群体遗传系列 （二）]]></title>
-        <id>http://localhost:4001/post/qun-ti-yi-chuan-xi-lie-si/</id>
-        <link href="http://localhost:4001/post/qun-ti-yi-chuan-xi-lie-si/">
-        </link>
-        <updated>2021-11-15T14:57:06.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="hardy-weinberg平衡">Hardy-Weinberg平衡</h1>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="hardy-weinberg平衡">Hardy-Weinberg平衡</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[群体遗传系列 （三）]]></title>
-        <id>http://localhost:4001/post/qun-ti-yi-chuan-xi-lie-er/</id>
-        <link href="http://localhost:4001/post/qun-ti-yi-chuan-xi-lie-er/">
-        </link>
-        <updated>2021-11-15T14:46:14.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="连锁不平衡">连锁不平衡</h1>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="连锁不平衡">连锁不平衡</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[关于从bam文件中提取fastq reads]]></title>
-        <id>http://localhost:4001/post/guan-yu-cong-bam-wen-jian-zhong-ti-qu-fastq-reads/</id>
-        <link href="http://localhost:4001/post/guan-yu-cong-bam-wen-jian-zhong-ti-qu-fastq-reads/">
-        </link>
-        <updated>2021-11-08T07:42:25.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="从bam文件中提取fastq-reads">从bam文件中提取fastq reads</h1>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="从bam文件中提取fastq-reads">从bam文件中提取fastq reads</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Gridea+github pages搭建个人博客]]></title>
-        <id>http://localhost:4001/post/grideagithub-pages-da-jian-ge-ren-bo-ke/</id>
-        <link href="http://localhost:4001/post/grideagithub-pages-da-jian-ge-ren-bo-ke/">
-        </link>
-        <updated>2021-11-02T14:14:14.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="借助grideagithub-pages进行个人博客搭建">借助Gridea+github pages进行个人博客搭建</h1>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="借助grideagithub-pages进行个人博客搭建">借助Gridea+github pages进行个人博客搭建</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Fantom5如何区分启动子和增强子？]]></title>
-        <id>http://localhost:4001/post/fantom5-ru-he-qu-fen-qi-dong-zi-he-zeng-qiang-zi/</id>
-        <link href="http://localhost:4001/post/fantom5-ru-he-qu-fen-qi-dong-zi-he-zeng-qiang-zi/">
-        </link>
-        <updated>2021-11-02T07:33:49.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="关于fantom5项目中启动子和增强子rna的区分">关于Fantom5项目中启动子和增强子RNA的区分</h1>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="关于fantom5项目中启动子和增强子rna的区分">关于Fantom5项目中启动子和增强子RNA的区分</h1>
 ]]></content>
     </entry>
 </feed>
