@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://socrates1100.github.io</id>
     <title>Socrates&apos; Blogs</title>
-    <updated>2021-12-19T12:03:11.324Z</updated>
+    <updated>2021-12-22T15:42:14.961Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://socrates1100.github.io"/>
     <link rel="self" href="https://socrates1100.github.io/atom.xml"/>
@@ -10,6 +10,28 @@
     <logo>https://socrates1100.github.io/images/avatar.png</logo>
     <icon>https://socrates1100.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Socrates&apos; Blogs</rights>
+    <entry>
+        <title type="html"><![CDATA[bam/sam文件格式介绍]]></title>
+        <id>https://socrates1100.github.io/post/bamsam-wen-jian-ge-shi-jie-shao/</id>
+        <link href="https://socrates1100.github.io/post/bamsam-wen-jian-ge-shi-jie-shao/">
+        </link>
+        <updated>2021-12-22T13:23:11.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="bamsam文件格式介绍">bam/sam文件格式介绍</h1>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="bamsam文件格式介绍">bam/sam文件格式介绍</h1>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于基于NGS数据对HLA分型精度限制的影响因素的讨论]]></title>
+        <id>https://socrates1100.github.io/post/guan-yu-ji-yu-ngs-shu-ju-dui-hla-fen-xing-jing-du-xian-zhi-de-ying-xiang-yin-su-de-tao-lun/</id>
+        <link href="https://socrates1100.github.io/post/guan-yu-ji-yu-ngs-shu-ju-dui-hla-fen-xing-jing-du-xian-zhi-de-ying-xiang-yin-su-de-tao-lun/">
+        </link>
+        <updated>2021-12-20T07:51:48.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="关于基于ngs数据对hla分型精度限制的影响因素的讨论">关于基于NGS数据对HLA分型精度限制的影响因素的讨论</h1>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="关于基于ngs数据对hla分型精度限制的影响因素的讨论">关于基于NGS数据对HLA分型精度限制的影响因素的讨论</h1>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[深度学习预测变异对染色质3D结构的影响]]></title>
         <id>https://socrates1100.github.io/post/shen-du-xue-xi-yu-ce-bian-yi-dui-ran-se-zhi-3-d-jie-gou-de-ying-xiang/</id>
@@ -96,28 +118,6 @@
         <summary type="html"><![CDATA[<h1 id="hla-hd算法">HLA-HD算法</h1>
 ]]></summary>
         <content type="html"><![CDATA[<h1 id="hla-hd算法">HLA-HD算法</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Permutation test]]></title>
-        <id>https://socrates1100.github.io/post/permutation-test/</id>
-        <link href="https://socrates1100.github.io/post/permutation-test/">
-        </link>
-        <updated>2021-12-01T15:01:13.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="permutation-test">Permutation test</h1>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="permutation-test">Permutation test</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[超几何分布检验]]></title>
-        <id>https://socrates1100.github.io/post/chao-ji-he-fen-bu-jian-yan/</id>
-        <link href="https://socrates1100.github.io/post/chao-ji-he-fen-bu-jian-yan/">
-        </link>
-        <updated>2021-12-01T14:58:34.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="超几何分布检验">超几何分布检验</h1>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="超几何分布检验">超几何分布检验</h1>
 ]]></content>
     </entry>
 </feed>
